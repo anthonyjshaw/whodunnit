@@ -1,6 +1,6 @@
 # Whodunnit?
 
-There's been a murder! Use the clues adn your own investigative skills to find the culprit.
+There's been a murder! Use the clues and your own investigative skills to find the culprit.
 
 ## About
 
