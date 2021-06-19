@@ -1,22 +1,20 @@
-import logo from './logo.svg';
+
 import './App.css';
+import  Character from './Character';
+import Footer  from './Footer';
+import Link from './Link';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-
         <p>
           A murder!
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Whodunnit?
-        </a>
+        <Character name="Marsha"/>
+        <p></p>
+        <Link href='https://www.antshaw.com'>Hi there!</Link>
+      <Footer />
       </header>
     </div>
   );
