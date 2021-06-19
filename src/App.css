@@ -1,6 +1,11 @@
 .App {
   text-align: center;
-  font-family: 'Reenie Beanie', cursive;;
+  font-family: 'Courier New', cursive;;
+}
+
+
+.whodunnit {
+   font-family: 'Reenie Beanie', cursive;;
 }
 
 .App-logo {
