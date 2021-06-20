@@ -3,6 +3,9 @@
   font-family: 'Courier New', cursive;;
 }
 
+.profile {
+  list-style: none;
+}
 
 .whodunnit {
    font-family: 'Reenie Beanie', cursive;;

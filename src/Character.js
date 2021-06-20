@@ -1,12 +1,20 @@
 import React from 'react';
+import { suspects } from './suspectArray';
+
 
 class Character extends React.Component {
   render() {
+    const suspectList = suspects.map((suspect) => {
+      return (
+        <li className='profile' key={suspects.indexOf(suspect)}>{suspect.profile}</li>
+        );
+    })
     return (
-      <>
-      <p>Oh no, {this.props.name} is dead!</p>
-      <p>What should we do?</p>
-      </>
+      <div>
+      <ul>
+        {suspectList}
+      </ul>
+      </div>
       );
   }
 }
