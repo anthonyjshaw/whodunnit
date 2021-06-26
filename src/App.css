@@ -7,8 +7,21 @@
   list-style: none;
 }
 
+.text-left {
+  text-align: left;
+}
+
 .whodunnit {
    font-family: 'Reenie Beanie', cursive;;
+}
+
+.large {
+  font-size:  4.2em;
+}
+
+.links {
+  color: white;
+  text-decoration: none;
 }
 
 .App-logo {
