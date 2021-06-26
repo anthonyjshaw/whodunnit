@@ -1,5 +1,6 @@
+import React from 'react';
 
-import './App.css';
+import './App.scss';
 import  Character from './Character';
 // import Footer  from './Footer';
 // import Link from './Link';
