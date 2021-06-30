@@ -8,7 +8,3 @@ test('renders Whodunnit link', () => {
 });
 
 
-test('renders Character name', () => {
-  render(<App />);
-  const characterName = screen.getByText(<Character name='Hey'>);
-});

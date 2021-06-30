@@ -1,0 +1,154 @@
+.intro{
+}
+
+
+
+@-webkit-keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+@keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  75% { opacity: 1; }
+}
+
+.fade-in {
+    -webkit-animation: 5s ease 0s normal forwards 1 fadein;
+    animation: 2s ease 0s normal forwards 1 fadein;
+}
+
+.fade-in-1 {
+     -webkit-animation: fadeinout 4s linear forwards;
+    animation: fadeinout 1s linear forwards;
+}
+
+.fade-in-2 {
+     -webkit-animation: fadeinout 4s linear forwards;
+    animation: fadeinout 2s linear forwards;
+}
+
+.fade-in-3 {
+    -webkit-animation: fadeinout 4s linear forwards;
+    animation: fadeinout 3s linear forwards;
+}
+
+
+.intro-1 {
+     -webkit-animation: 5s ease 0s normal forwards 1 fadein;
+    animation: 18s ease 0s normal forwards 1 fadein;
+}
+
+.intro-2 {
+   -webkit-animation: 5s ease 0s normal forwards 1 fadein;
+    animation: 22s ease 0s normal forwards 1 fadein;
+}
+
+
+.intro-3 {
+     -webkit-animation: 5s ease 0s normal forwards 1 fadein;
+    animation: 26s ease 0s normal forwards 1 fadein;
+}
+
+
+.intro-4 {
+   -webkit-animation: 5s ease 0s normal forwards 1 fadein;
+    animation: 30s ease 0s normal forwards 1 fadein;
+}
+
+
+.intro-5 {
+   -webkit-animation: 5s ease 0s normal forwards 1 fadein;
+    animation: 34s ease 0s normal forwards 1 fadein;
+}
+
+
+.intro-6 {
+   -webkit-animation: 5s ease 0s normal forwards 1 fadein;
+    animation: 38s ease 0s normal forwards 1 fadein;
+}
+
+
+@keyframes fadeout {
+  0% { opacity:1; }
+  66% { opacity:1; }
+  100% { opacity:0; }
+}
+
+
+@-webkit-keyframes fadeout {
+  0% { opacity:1; }
+  66% { opacity:1; }
+  100% { opacity:0; }
+}
+
+@keyframes fadein{
+    0% { opacity:0; }
+    66% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@-webkit-keyframes fadein{
+    0% { opacity:0; }
+    66% { opacity:0; }
+    100% { opacity:1; }
+}
+
+.App {
+  text-align: center;
+  font-family: 'Courier New', cursive;;
+
+}
+
+.profile {
+  list-style: none;
+}
+
+
+.whodunnit {
+   font-family: 'Reenie Beanie', cursive;;
+}
+
+.large {
+  font-size:  4.2em;
+}
+
+.links {
+  color: white;
+  text-decoration: none;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

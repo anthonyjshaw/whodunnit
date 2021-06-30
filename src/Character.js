@@ -7,10 +7,12 @@ class Character extends React.Component {
     const suspectList = suspects.map((suspect) => {
       return (
         <li className='profile' key={suspects.indexOf(suspect)}>
-        <p>{suspect.profile}<span><a href="#" className='links'>Interview</a></span></p>
+        <p>{suspect.profile}<span><a href="https://www.antshaw.com" className='links'>Interview</a></span></p>
         </li>
         );
     })
+
+
     return (
       <div>
         <ul>
