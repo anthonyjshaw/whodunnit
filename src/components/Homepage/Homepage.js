@@ -1,10 +1,13 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function Homepage(props) {
+    const gameText = '';
+    
     return (
         <div className="container">
-            <h1>Whodunnit?</h1>
+            <h1 className="page-header">Whodunnit?</h1>
+            <Link to='/characters'><button>{gameText} Game</button></Link>
         </div>
     );
 }
