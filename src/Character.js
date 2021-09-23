@@ -1,27 +1,25 @@
-import React from 'react';
+import {React, useState} from 'react';
 import { suspects } from './suspectArray';
+import { useParams } from 'react-router-dom';
 
 
-class Character extends React.Component {
-  render() {
-    const suspectList = suspects.map((suspect) => {
-      return (
-        <li className='profile' key={suspects.indexOf(suspect)}>
-        <p>{suspect.profile}<span><a href="https://www.antshaw.com" className='links'>Interview</a></span></p>
-        </li>
-        );
-    })
-
+export default function Character(props) {
+    let { name } = useParams();
+    name = removeDashes(name);
+    const character = suspects.find(e => e.name === name);
+    const suspicious = useState(true);
 
     return (
-      <div>
+      <div className="container">
+        <h1>{name}</h1>
         <ul>
-          {suspectList}
+          <p>Bio: {character.profile}</p>
+          <p>Age: {character.age}</p>
         </ul>
       </div>
-      );
+    );
   }
+
+function removeDashes(name) {
+  return name.replace(/-/g, ' ');
 }
-
-
-export default Character;
