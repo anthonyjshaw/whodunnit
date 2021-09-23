@@ -1,3 +1,23 @@
+.suspect {
+  border: 1px solid grey;
+  border-radius: 4px;
+  text-align: center;
+  height: 282px;
+}
+
+.suspect-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(282px, auto);
+  gap: 10px;
+}
+
+.page-header {
+  text-align: center;
+  font-family: "Reenie Beanie";
+  font-size: 54px;
+}
+
 .homepage-btn {
   margin-bottom: 5em;
   background: transparent;
@@ -6,12 +26,10 @@
   padding: 10px;
   width: 7em;
   font-size: 1em;
+  font-family: "Courier New", Courier, monospace;
   border-radius: 2px;
 }
 
-h1 {
-  font-family: "Reenie Beanie", Courier, monospace;
-}
 .homepage-btn:hover {
   color: #282c34;
   background: white;
@@ -193,14 +211,13 @@ h1 {
     margin: auto;
     width: 70%;
   }
-} 
+}
 @media (min-width: 576px) {
   .container {
     margin: auto;
     width: 500px;
   }
 }
-
 @media (min-width: 768px) {
   .container {
     margin: auto;
