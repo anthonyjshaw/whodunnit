@@ -1,116 +1,166 @@
-.intro{
+.suspect {
+  border: 1px solid grey;
+  border-radius: 4px;
+  text-align: center;
+  height: 282px;
 }
 
+.suspect-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(282px, auto);
+  gap: 10px;
+}
 
+.page-header {
+  text-align: center;
+  font-family: "Reenie Beanie";
+  font-size: 54px;
+}
+
+.homepage-btn {
+  margin-bottom: 5em;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 10px;
+  width: 7em;
+  font-size: 1em;
+  font-family: "Courier New", Courier, monospace;
+  border-radius: 2px;
+}
+
+.homepage-btn:hover {
+  color: #282c34;
+  background: white;
+  cursor: pointer;
+}
 
 @-webkit-keyframes fadeinout {
-  0%,100% { opacity: 0; }
-  50% { opacity: 1; }
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
 }
-
 @keyframes fadeinout {
-  0%,100% { opacity: 0; }
-  75% { opacity: 1; }
+  0%, 100% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
 }
-
 .fade-in {
-    -webkit-animation: 5s ease 0s normal forwards 1 fadein;
-    animation: 2s ease 0s normal forwards 1 fadein;
+  -webkit-animation: 5s ease 0s normal forwards 1 fadein;
+  animation: 2s ease 0s normal forwards 1 fadein;
 }
 
 .fade-in-1 {
-     -webkit-animation: fadeinout 4s linear forwards;
-    animation: fadeinout 1s linear forwards;
+  -webkit-animation: fadeinout 4s linear forwards;
+  animation: fadeinout 1s linear forwards;
 }
 
 .fade-in-2 {
-     -webkit-animation: fadeinout 4s linear forwards;
-    animation: fadeinout 2s linear forwards;
+  -webkit-animation: fadeinout 4s linear forwards;
+  animation: fadeinout 2s linear forwards;
 }
 
 .fade-in-3 {
-    -webkit-animation: fadeinout 4s linear forwards;
-    animation: fadeinout 3s linear forwards;
+  -webkit-animation: fadeinout 4s linear forwards;
+  animation: fadeinout 3s linear forwards;
 }
 
-
 .intro-1 {
-     -webkit-animation: 5s ease 0s normal forwards 1 fadein;
-    animation: 18s ease 0s normal forwards 1 fadein;
+  -webkit-animation: 5s ease 0s normal forwards 1 fadein;
+  animation: 18s ease 0s normal forwards 1 fadein;
 }
 
 .intro-2 {
-   -webkit-animation: 5s ease 0s normal forwards 1 fadein;
-    animation: 22s ease 0s normal forwards 1 fadein;
+  -webkit-animation: 5s ease 0s normal forwards 1 fadein;
+  animation: 22s ease 0s normal forwards 1 fadein;
 }
-
 
 .intro-3 {
-     -webkit-animation: 5s ease 0s normal forwards 1 fadein;
-    animation: 26s ease 0s normal forwards 1 fadein;
+  -webkit-animation: 5s ease 0s normal forwards 1 fadein;
+  animation: 26s ease 0s normal forwards 1 fadein;
 }
-
 
 .intro-4 {
-   -webkit-animation: 5s ease 0s normal forwards 1 fadein;
-    animation: 30s ease 0s normal forwards 1 fadein;
+  -webkit-animation: 5s ease 0s normal forwards 1 fadein;
+  animation: 30s ease 0s normal forwards 1 fadein;
 }
-
 
 .intro-5 {
-   -webkit-animation: 5s ease 0s normal forwards 1 fadein;
-    animation: 34s ease 0s normal forwards 1 fadein;
+  -webkit-animation: 5s ease 0s normal forwards 1 fadein;
+  animation: 34s ease 0s normal forwards 1 fadein;
 }
-
 
 .intro-6 {
-   -webkit-animation: 5s ease 0s normal forwards 1 fadein;
-    animation: 38s ease 0s normal forwards 1 fadein;
+  -webkit-animation: 5s ease 0s normal forwards 1 fadein;
+  animation: 38s ease 0s normal forwards 1 fadein;
 }
-
 
 @keyframes fadeout {
-  0% { opacity:1; }
-  66% { opacity:1; }
-  100% { opacity:0; }
+  0% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
-
-
 @-webkit-keyframes fadeout {
-  0% { opacity:1; }
-  66% { opacity:1; }
-  100% { opacity:0; }
+  0% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
-
-@keyframes fadein{
-    0% { opacity:0; }
-    66% { opacity:0; }
-    100% { opacity:1; }
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-
-@-webkit-keyframes fadein{
-    0% { opacity:0; }
-    66% { opacity:0; }
-    100% { opacity:1; }
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-
 .App {
   text-align: center;
-  font-family: 'Courier New', cursive;;
-
+  font-family: "Courier New", cursive;
 }
 
 .profile {
   list-style: none;
 }
 
-
 .whodunnit {
-   font-family: 'Reenie Beanie', cursive;;
+  font-family: "Reenie Beanie", cursive;
 }
 
 .large {
-  font-size:  4.2em;
+  font-size: 4.2em;
 }
 
 .links {
@@ -128,7 +178,6 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -152,3 +201,34 @@
     transform: rotate(360deg);
   }
 }
+.container {
+  margin: auto;
+  width: 900px;
+}
+
+@media (min-width: 375px) {
+  .container {
+    margin: auto;
+    width: 70%;
+  }
+}
+@media (min-width: 576px) {
+  .container {
+    margin: auto;
+    width: 500px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    margin: auto;
+    width: 500px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    margin: auto;
+    width: 900px;
+  }
+}
+
+/*# sourceMappingURL=App.css.map */
