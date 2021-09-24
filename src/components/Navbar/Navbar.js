@@ -1,13 +1,13 @@
 import React from "react";
 import {Link } from 'react-router-dom';
 export default function Navbar(props) {
-    const paths = ['Characters', 'Crime', 'Intro'].map(e => <li key={e.replaceAll('/', '')} className="nav-link"><Link to={`/${e.toLowerCase()}`}>{e}</Link></li>);
+    const paths = ['Characters', 'Crime', 'Intro'].map(e => <div key={e.replaceAll('/', '')} className="nav-link"><Link to={`/${e.toLowerCase()}`}>{e}</Link></div>);
     return (
         <div>
-            <ul>
-                <li className='nav-link'><Link to='/'>Home</Link></li>
+            <div className="nav-links">
+                <div className='nav-link'><Link to='/'>Home</Link></div>
                {paths}
-            </ul>
+            </div>
         </div>
     )
 }

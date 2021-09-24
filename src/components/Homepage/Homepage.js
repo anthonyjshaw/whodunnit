@@ -7,7 +7,7 @@ export default function Homepage(props) {
     return (
         <div className="container">
             <h1 className="page-header">Whodunnit?</h1>
-            <Link to='/characters'><button>{gameText} Game</button></Link>
+            <Link to='/characters'><button className="homepage-btn">{gameText} Game</button></Link>
         </div>
     );
 }

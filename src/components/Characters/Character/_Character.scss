@@ -1,0 +1,32 @@
+$height: 282px;
+
+.character {
+    border: 1px solid grey;
+    border-radius: 4px;
+    text-align: center;
+    height: $height;
+    
+}
+
+.character:hover {
+    box-shadow: 4px 4px 0px 2px black;
+    // animation: doY 2s ease-in 2s;
+}
+
+.check {
+    color:green;
+}
+
+.cross {
+    color: red;
+}
+
+// @-webkit-keyframes doY {
+//     0% { translateY: 100%;}
+//     100% { translateY: 0}
+//   }
+  
+//   @keyframes doY {
+//     0% { translateY: 100%; }
+//     100% { translateY: 0 ; }
+//   }

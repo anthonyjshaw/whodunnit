@@ -1,9 +1,0 @@
-@import './Character/Character';
-
-.suspect-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax($height, auto);
-    gap: 10px;
-
-}

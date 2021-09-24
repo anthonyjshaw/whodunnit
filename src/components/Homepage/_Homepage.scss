@@ -1,0 +1,14 @@
+.homepage-btn {
+    border: solid 1px black;
+    background: none;
+    width: 200px;
+    height: 56px;
+    color: black;
+}
+
+.homepage-btn:hover {
+    background: black;
+    color: white;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+}

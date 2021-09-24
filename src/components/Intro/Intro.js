@@ -1,11 +1,13 @@
 import React from 'react';
-import Typed from 'typed.js'
+import Typed from 'typed.js';
+
 export default class Intro extends React.Component {
+    
     componentDidMount() {
     const { strings } = this.props;
     const options = {
       strings: strings,
-      typeSpeed: 50,
+      typeSpeed: 60,
       startDelay: 1000,
       backSpeed: 100
     };
@@ -25,7 +27,6 @@ export default class Intro extends React.Component {
         <span
           style={{ whiteSpace: 'pre' }}
           ref={(el) => { this.el = el; }}
-          className='fade-in'
         />
       <div className={'text-left'}>
         <ol>
@@ -34,6 +35,7 @@ export default class Intro extends React.Component {
       </div>
       
       <p className="fade-in">Use your investigative skills to uncover the mystery of Marberry and find out <span className="whodunnit">"Whodunnit?"</span></p>
+
       </div>
       );
   }

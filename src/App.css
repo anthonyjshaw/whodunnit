@@ -1,39 +1,136 @@
-.suspect {
+.character {
   border: 1px solid grey;
   border-radius: 4px;
   text-align: center;
   height: 282px;
 }
 
-.suspect-list {
+.character:hover {
+  box-shadow: 4px 4px 0px 2px black;
+}
+
+.check {
+  color: green;
+}
+
+.cross {
+  color: red;
+}
+
+.character-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(282px, auto);
   gap: 10px;
 }
+.character-list a {
+  color: black;
+  text-decoration: none;
+}
+
+@-webkit-keyframes translateY {
+  0% {
+    translateY: 100%;
+  }
+  100% {
+    translateY: 0;
+  }
+}
+@keyframes translateY {
+  0% {
+    translateY: 100%;
+  }
+  100% {
+    translateY: 0;
+  }
+}
+@media (min-width: 375px) {
+  .character-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: minmax(282px, auto);
+    gap: 10px;
+  }
+}
+@media (min-width: 576px) {
+  .character-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: minmax(282px, auto);
+    gap: 10px;
+  }
+}
+@media (min-width: 768px) {
+  .character-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(282px, auto);
+    gap: 10px;
+  }
+}
+@media (min-width: 1200px) {
+  .character-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(282px, auto);
+    gap: 10px;
+  }
+}
+.nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.nav-link a {
+  color: black;
+  text-decoration: none;
+}
+.nav-link a:hover {
+  text-decoration: underline;
+}
+
+.homepage-btn {
+  border: solid 1px black;
+  background: none;
+  width: 200px;
+  height: 56px;
+  color: black;
+}
+
+.homepage-btn:hover {
+  background: black;
+  color: white;
+  cursor: pointer;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.crime {
+  display: flex;
+}
 
 .page-header {
   text-align: center;
   font-family: "Reenie Beanie";
-  font-size: 54px;
+  font-size: 4.2em;
 }
 
-.homepage-btn {
-  margin-bottom: 5em;
-  background: transparent;
-  border: 1px solid white;
-  color: white;
-  padding: 10px;
-  width: 7em;
-  font-size: 1em;
-  font-family: "Courier New", Courier, monospace;
-  border-radius: 2px;
+body {
+  margin: 0;
+  font-family: "Courier New", "Courier", "monospace", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body a {
+  color: black;
+  text-decoration: none;
 }
 
-.homepage-btn:hover {
-  color: #282c34;
-  background: white;
-  cursor: pointer;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 @-webkit-keyframes fadeinout {
@@ -228,6 +325,11 @@
   .container {
     margin: auto;
     width: 900px;
+  }
+}
+@media (min-width: 1400px) {
+  .avatar {
+    width: 100px;
   }
 }
 
