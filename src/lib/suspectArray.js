@@ -5,7 +5,7 @@ const maid = new Suspect('Maid', 'Recent addition to the household.', 22, 180);
 const ladyOfTheHouse = new Suspect('Lady Of The House', 'Unhappy marriage, secret lover.', 44, 180);
 const waywordSon = new Suspect('Wayword Son', 'Boozer, also ran, moneygrubbing brat.', 20, 180);
 const bestFriend = new Suspect('The best friend', 'boorish lout, relationship with the lady.', 49, 200);
-const frenchTeacher = new Suspect('French Teacher', 'Long time servant of the house.', 56, 180);
+const frenchTeacher = new Suspect('French Teacher', 'Family owns a failing vineyard in Bordeaux.', 33, 180);
 
 
 const suspects = [butler, ladyOfTheHouse, waywordSon, maid, frenchTeacher, bestFriend];

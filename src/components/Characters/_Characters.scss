@@ -12,16 +12,6 @@
 }
 
 
-@-webkit-keyframes translateY {
-    0% { translateY: 100%;}
-    100% { translateY: 0}
-  }
-  
-  @keyframes translateY {
-    0% { translateY: 100%; }
-    100% { translateY: 0 ; }
-  }
-
 @media (min-width: 375px) {
     .character-list {
         display: grid;

@@ -1,14 +1,17 @@
 .homepage-btn {
     border: solid 1px black;
-    background: none;
+    background: white;
     width: 200px;
     height: 56px;
     color: black;
+    font-family: "Reenie Beanie", 'Courier New', Courier, monospace;
+    font-size: 24px;
+    border-radius: 8px;
 }
 
 .homepage-btn:hover {
     background: black;
     color: white;
     cursor: pointer;
-    font-family: 'Courier New', Courier, monospace;
+
 }

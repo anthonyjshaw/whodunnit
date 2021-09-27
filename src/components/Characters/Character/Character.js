@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import  {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { addDashesToName } from '../Characters';
+
 export default function Character(props) {
     let { name } = useParams();
     name = removeDashes(name);
@@ -26,15 +27,15 @@ export default function Character(props) {
     console.log(source);
     return (
       <div className="container">
-        <h1>{name}</h1>
+        <h1 className="page-header">{name}</h1>
         <div>
           <img src={source} alt={`${character.name}`}/>
           <p>Bio: {character.profile}</p>
           <p>Age: {character.age}</p>
-          <p>Suspicious? {suspicious === 'true' ? "Yes": "No"}</p>
+          <p>Suspicious? {suspicious === 'false' ? "No": "Yes"}</p>
           <div>
-            <FontAwesomeIcon className="check" icon={faCheck} onClick={isSuspicous}/>
-            <FontAwesomeIcon className="cross" icon={faTimes} onClick={notSuspicious}/>
+            <FontAwesomeIcon className="check character-icon" icon={faCheck} onClick={isSuspicous}/>
+            <FontAwesomeIcon className="cross character-icon" icon={faTimes} onClick={notSuspicious}/>
           </div>
         </div>
       </div>

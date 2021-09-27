@@ -1,12 +1,16 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, useParams } from 'react-router-dom';
+
 import Character from './components/Characters/Character/Character';
 import Characters from './components/Characters/Characters';
-import Homepage from './components/Homepage/Homepage';
-import Navbar from './components/Navbar/Navbar';
-import './App.css';
 import Crime from './components/Crime/Crime';
+import Footer from './components/Footer/Footer';
+import Homepage from './components/Homepage/Homepage';
 import IntroContainer from './components/Intro/IntroContainer';
+import Location from './components/Locations/Location/Location';
+import Navbar from './components/Navbar/Navbar';
+
+import './App.css';
 
 function App() {
 
@@ -19,7 +23,11 @@ function App() {
         <Route exact path="/characters" component={Characters} />
         <Route exact path="/characters/:name" component={Character}/>
         <Route exact path="/intro" component={IntroContainer} />
+        <Route exact path="/locations/:location">
+           <Location name={useParams()} />
+        </Route>
       </Switch>
+      <Footer />
     </>
   );
 }
