@@ -8,3 +8,40 @@
     font-family: 'Reenie Beanie';
     font-size: 4.2em;
 }
+
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+.flex-column {
+    flex-direction: column;
+}
+
+@keyframes fromMinusY {
+    from {
+        transform: translateY(-5%);
+    } to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes containerFadeIn {
+    from {
+        opacity: 0;
+    } 
+    
+    to {
+        opacity: 1;
+    }
+}
+
+.container-fade-in {
+    animation: containerFadeIn 1 1.5s ease-in;
+}
+
+.from-minus-y {
+    animation: fromMinusY 1 1.5s ease-out;
+}

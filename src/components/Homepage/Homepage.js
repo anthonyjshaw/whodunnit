@@ -25,11 +25,15 @@ export default function Homepage(props) {
     } 
     
     return (
-        <div className="container">
+        <div className="container container-fade-in">
             <h1 className="page-header">Whodunnit?</h1>
-            <img src="/homepage-logo.svg" alt='homepage icon'/>
-            <Link to='/characters'><button className="homepage-btn">{gameText} investigation</button></Link>
-            <button className='homepage-btn' onClick={quitGame}>Quit Game</button>
+            <div className="flex flex-column"> 
+                <img src="/homepage-logo.svg" alt='homepage icon' className="homepage-icon"/>
+                <div className="button-container">
+                    <Link to='/characters'><button className="homepage-btn">{gameText} investigation</button></Link>
+                    <button className='homepage-btn' onClick={quitGame}>Quit Game</button>
+                </div>
+            </div>
         </div>
     );
 }

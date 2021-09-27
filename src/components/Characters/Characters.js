@@ -13,7 +13,7 @@ export default function Characters() {
         </Link>
     });
     return (
-        <div className="container">
+        <div className="container container-fade-in from-minus-y">
             <h1 className="page-header">Characters</h1>
             <div className='character-list'>
                 {characterList}

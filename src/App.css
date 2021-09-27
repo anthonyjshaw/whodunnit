@@ -1,5 +1,6 @@
 .character {
   border: 1px solid black;
+  font-family: "Reenie Beanie";
   border-radius: 4px;
   text-align: center;
   height: 282px;
@@ -73,6 +74,7 @@
   margin-bottom: 8px;
   font-weight: bold;
   font-size: 1.5em;
+  font-family: "Reenie Beanie";
 }
 
 .nav-link a {
@@ -100,6 +102,15 @@
   cursor: pointer;
 }
 
+.homepage-icon {
+  height: 150px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .crime {
   display: flex;
 }
@@ -110,12 +121,48 @@
   font-size: 4.2em;
 }
 
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+@keyframes fromMinusY {
+  from {
+    transform: translateY(-5%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+@keyframes containerFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.container-fade-in {
+  animation: containerFadeIn 1 1.5s ease-in;
+}
+
+.from-minus-y {
+  animation: fromMinusY 1 1.5s ease-out;
+}
+
 body {
   margin: 0;
   font-family: "Courier New", "Courier", "monospace", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: cadetblue;
+  background-color: white;
 }
 body a {
   color: black;
