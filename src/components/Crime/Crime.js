@@ -9,7 +9,7 @@ export default function Crime(props) {
     const location = locations;
     const randomDeath = deaths[Math.floor(Math.random() * deaths.length)];
     const randomLocation = location[Math.floor(Math.random() * location.length)];
-    console.log(randomLocation);
+    
     if (localStorage.death === '') localStorage.setItem('death', randomDeath);
     if (localStorage.location === '') localStorage.setItem('location', randomLocation);
     const [death, setDeath] = useState(() => {
@@ -25,7 +25,7 @@ export default function Crime(props) {
     })
     
     return (
-        <div className="container">
+        <div className="container container-fade-in-and-translate">
             <h1 className="page-header">Crime</h1>
             <div className="crime">
                 <img src="/lord_of_the_manor.svg" alt="lord of the manor" className="avatar" />

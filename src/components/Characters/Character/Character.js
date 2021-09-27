@@ -26,7 +26,7 @@ export default function Character(props) {
     const source = `/${addDashesToName(character.name)}.svg`
     console.log(source);
     return (
-      <div className="container">
+      <div className="container container-fade-in-and-translate">
         <h1 className="page-header">{name}</h1>
         <div>
           <img src={source} alt={`${character.name}`}/>

@@ -27,7 +27,6 @@ function App() {
            <Location name={useParams()} />
         </Route>
       </Switch>
-      <Footer />
     </>
   );
 }

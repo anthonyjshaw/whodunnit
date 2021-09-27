@@ -7,11 +7,14 @@ $height: 282px;
     text-align: center;
     height: $height;
     background-color: white;
+    transition-property: box-shadow;
+    transition-duration: 0.5s;
+    box-shadow: 4px 4px 0px 2px rgba(0,0,0,0);
     
 }
 
 .character:hover {
-    box-shadow: 4px 4px 0px 2px black;
+    box-shadow: 4px 4px 0px 2px rgba(0,0,0,1);
     // animation: doY 2s ease-in 2s;
 }
 

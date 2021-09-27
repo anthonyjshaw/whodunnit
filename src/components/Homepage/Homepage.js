@@ -14,14 +14,13 @@ export default function Homepage(props) {
     function quitGame() {
         if (window.confirm('Are you sure you want to quit?')) {
             localStorage.removeItem('hasSession')
-        suspects.forEach(element => {
-            localStorage.removeItem(`${element.name}-suspicious`);
-        });
-        localStorage.setItem('death', '');
-        localStorage.setItem('location', '');
-        setGameText('New');
-        }
-        
+            suspects.forEach(element => {
+                localStorage.removeItem(`${element.name}-suspicious`);
+            });
+            localStorage.setItem('death', '');
+            localStorage.setItem('location', '');
+            setGameText('New');
+        }     
     } 
     
     return (

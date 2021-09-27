@@ -8,12 +8,12 @@ export default function Characters() {
        return <Link to={`/characters/${addDashesToName(e.name)}`} key={`${suspects.indexOf(e) + 1}: ${e.name}`}>
             <div className="character">
                 <h2>{e.name}</h2>
-                <img src={`${addDashesToName(e.name.toLowerCase())}.svg` || `https://source.unsplash.com/1600x900/?${addDashesToName(e.name).toLowerCase()}`} alt={e.name}/>
+                <img src={`${addDashesToName(e.name.toLowerCase())}.svg` || `https://source.unsplash.com/1600x900/?${addDashesToName(e.name).toLowerCase()}`} alt={e.name} className='character-icon'/>
             </div>
         </Link>
     });
     return (
-        <div className="container container-fade-in from-minus-y">
+        <div className="container container-fade-in-and-translate">
             <h1 className="page-header">Characters</h1>
             <div className='character-list'>
                 {characterList}

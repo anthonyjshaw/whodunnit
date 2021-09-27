@@ -28,20 +28,41 @@
     }
 }
 
-@keyframes containerFadeIn {
+@keyframes containerFadeInAndTranslate {
     from {
         opacity: 0;
+        transform: translateY(-5%);
     } 
     
     to {
         opacity: 1;
+        transform: translateY(0%);
     }
 }
 
 .container-fade-in {
-    animation: containerFadeIn 1 1.5s ease-in;
+    animation-name: containerFadeInAndTranslate;
+    animation-iteration-count: 1;
+    animation-duration: 0.5s;
+    animation-delay: 0s;
+    animation-timing-function: ease-out;
+    
 }
 
+.container-fade-in-and-translate {
+    animation-name: containerFadeInAndTranslate;
+    animation-iteration-count: 1;
+    animation-duration: 0.5s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in;
+
+}
+
+
 .from-minus-y {
-    animation: fromMinusY 1 1.5s ease-out;
+    animation-name: containerFadeIn;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-delay: 2s;
 }
