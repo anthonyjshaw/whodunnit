@@ -7,7 +7,7 @@ export default function Navbar() {
     useEffect(() => {
         localStorage.setItem('display', 'display');
     })
-    const paths = ['Crime', 'Characters', 'Locations', 'Intro',].map(e => <div key={e.replaceAll('/', '')} className="nav-link"><Link to={`/${e.toLowerCase()}`}>{e}</Link></div>);
+    const paths = ['Intro', 'Crime', 'Characters', 'Locations'].map(e => <div key={e.replaceAll('/', '')} className="nav-link"><Link to={`/${e.toLowerCase()}`}>{e}</Link></div>);
     return (
         <div className="nav-container">
             <div className={`nav-links`} >

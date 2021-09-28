@@ -4,7 +4,7 @@ import { removeDashes } from '../Character';
 import { addDashesToName } from '../../Characters';
 export default function Interview(props) {
     let {name} = useParams();
-    let actions = ['location', 'action', 'relationship', 'other characters'];
+    let actions = ['Where were you?', 'What where you doing?', "What's your relationship with Marberry?", 'Thoughts on other characters?'];
     let mappedActions = actions.map(e => {
         return <div className="interview-actions" key={actions.indexOf(e) + 1}><h2>{e}</h2></div>
     });

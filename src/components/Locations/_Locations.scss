@@ -4,6 +4,9 @@
     grid-auto-rows: minmax($height, auto);
     gap: 10px;
     grid-gap: 10px;
+    a:hover {
+        font-size: 1.5em;
+      }
 }
 
 .location-card {
@@ -19,26 +22,45 @@
 
 .location-card:hover {
     box-shadow: 8px 8px 0px black;
+    
 }
 
-@media (min-width: 375px) {
-    .location-grid {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-auto-rows: minmax(282px, auto);
-        grid-gap: 100px;
-        gap: 10px;
-    }
+// @media (min-width: 375px) {
+//     .location-grid {
+//         display: grid;
+//         grid-template-columns: repeat(1, 1fr);
+//         grid-auto-rows: minmax(282px, auto);
+//         grid-gap: 100px;
+//         gap: 10px;
+//     }
+// }
+
+.location-carousel-wrapper {
+    overflow: hidden;
+    width: 90%;
+
+}
+.location-carousel-wrapper *{
+    box-sizing: border-box;
+
+
 }
 
 .location-carousel {
-    box-sizing: border-box;
-    overflow: hidden;
-    width: 90%;
+    transform-style: preserve-3d;
 }
 
 .location-carousel-card {
-    transform-style: preserve-3d;
+    border: 1px solid black;
+    height: 150px;
+    font-family: "Reenie Beanie";
+    text-align: center;
+    border-radius: 4px;
+    transition-property: box-shadow;
+    transition-timing-function: ease-in;
+    transition-duration: 0.2s;
+    position: relative;
+  z-index: 900;
 }
 
 .carousel__button--prev,
@@ -75,4 +97,8 @@
 .carousel__button--next::after {
   left: 47%;
   transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.location-image {
+    max-height: 64%;
 }
