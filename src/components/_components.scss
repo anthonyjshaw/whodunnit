@@ -13,6 +13,16 @@
     font-size: 4.2em;
 }
 
+@media (min-width: 280px) {
+    .page-header {
+        font-size: 3.2em;
+    }
+}
+@media (min-width: 320px) {
+    .page-header {
+        font-size: 3.2em;
+    }
+}
 .flex {
     display: flex;
 }

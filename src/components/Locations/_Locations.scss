@@ -7,10 +7,18 @@
 }
 
 .location-card {
-    border: 1px solid grey;
-    height: 262px;
+    border: 1px solid black;
+    height: 400px;
     font-family: "Reenie Beanie";
     text-align: center;
+    border-radius: 4px;
+    transition-property: box-shadow;
+    transition-timing-function: ease-in;
+    transition-duration: 0.2s;
+}
+
+.location-card:hover {
+    box-shadow: 8px 8px 0px black;
 }
 
 @media (min-width: 375px) {
@@ -21,4 +29,50 @@
         grid-gap: 100px;
         gap: 10px;
     }
+}
+
+.location-carousel {
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 90%;
+}
+
+.location-carousel-card {
+    transform-style: preserve-3d;
+}
+
+.carousel__button--prev,
+.carousel__button--next {
+  position: absolute;
+  top:50%;
+  width: 3rem;
+  height: 3rem;
+  background-color: #FFF;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  cursor: pointer; 
+  z-index: 1001; /* Sit on top of everything */
+  border: 1px solid black;
+}
+.carousel__button--prev {
+  left:0;
+}
+.carousel__button--next {
+  right:0;
+}
+.carousel__button--prev::after,
+.carousel__button--next::after {
+  content: " ";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 54%;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+.carousel__button--next::after {
+  left: 47%;
+  transform: translate(-50%, -50%) rotate(-45deg);
 }

@@ -1,6 +1,6 @@
 {
   "short_name": "Whodunnit?",
-  "name": "Create React App Sample",
+  "name": "Whodunnit: A murder mystery game",
   "icons": [
     {
       "src": "favicon.ico",
