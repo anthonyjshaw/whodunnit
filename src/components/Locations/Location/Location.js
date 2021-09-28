@@ -1,9 +1,15 @@
 import React from 'react';
+import { useParams } from 'react-router';
+import { locations } from '../../../lib/locations';
+export default function Location() {
+    const {location} = useParams();
+    console.log(location)
+    const loc = locations.find(e => e === location);
 
-export default function Location(props) {
     return (
         <div>
-            <h1>{props.name}</h1>
+            <h1 className="page-header">{location}</h1>
+            <h2>{loc}</h2>
         </div>
     )
 }

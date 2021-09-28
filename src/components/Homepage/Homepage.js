@@ -9,27 +9,30 @@ export default function Homepage(props) {
 
     useEffect(() => {
         localStorage.setItem('hasSession', 'true');
+        
     })
 
     function quitGame() {
-        if (window.confirm('Are you sure you want to quit?')) {
-            localStorage.removeItem('hasSession')
+        
             suspects.forEach(element => {
                 localStorage.removeItem(`${element.name}-suspicious`);
             });
             localStorage.setItem('death', '');
             localStorage.setItem('location', '');
-            setGameText('New');
-        }     
+            localStorage.removeItem('hasSession');
+            localStorage.setItem('display', 'no-display')
+            setGameText('Start');
+    
     } 
+    const link = localStorage.getItem('hasSession') === 'true' ? '/characters' : 'crime';
     
     return (
         <div className="container container-fade-in">
             <h1 className="page-header">Whodunnit?</h1>
             <div className="flex flex-column"> 
-                <img src="/homepage-logo.svg" alt='homepage icon' className="homepage-icon"/>
+                <img src="/assets/homepage-logo.svg" alt='homepage icon' className="homepage-icon"/>
                 <div className="button-container">
-                    <Link to='/characters'><button className="homepage-btn">{gameText} investigation</button></Link>
+                    <Link to={link}><button className="homepage-btn">{gameText} investigation</button></Link>
                     <button className='homepage-btn' onClick={quitGame}>Quit Game</button>
                 </div>
             </div>

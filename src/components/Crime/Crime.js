@@ -28,12 +28,12 @@ export default function Crime(props) {
         <div className="container container-fade-in-and-translate">
             <h1 className="page-header">Crime</h1>
             <div className="crime">
-                <img src="/lord_of_the_manor.svg" alt="lord of the manor" className="avatar" />
+                <img src="assets/character-avis/lord_of_the_manor.svg" alt="lord of the manor" className="avatar" />
                 <div>
                     <p>Victim: Lord Marberry</p>
                     <p>Cause of death: {death}</p>
                     <p>Location: {loc}</p>
-                    <p>Start by <Link to="/characters">interviewing the suspects</Link></p>
+                    <p>Start by <em><Link to="/characters" className="underline">interviewing the suspects</Link></em></p>
                 </div>
             </div>
         </div>

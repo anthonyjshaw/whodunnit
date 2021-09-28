@@ -2,6 +2,10 @@
 @import './Navbar/Navbar';
 @import './Homepage/Homepage';
 @import './Crime/Crime';
+@import './Footer/Footer';
+@import './Characters/Character/Interview/Interview';
+@import './Locations/Locations';
+@import './Locations/Location/Location';
 
 .page-header {
     text-align: center;
@@ -65,4 +69,8 @@
     animation-duration: 2s;
     animation-timing-function: ease-in;
     animation-delay: 2s;
+}
+
+.no-display {
+    display: none;
 }

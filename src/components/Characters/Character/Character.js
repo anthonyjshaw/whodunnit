@@ -1,6 +1,6 @@
 import {React, useState, useEffect} from 'react';
 import  suspects  from '../../../lib/suspectArray';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import  {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { addDashesToName } from '../Characters';
@@ -23,8 +23,7 @@ export default function Character(props) {
       setSuspicious('false');
     }
 
-    const source = `/${addDashesToName(character.name)}.svg`
-    console.log(source);
+    const source = `/assets/character-avis/${addDashesToName(character.name)}.svg`
     return (
       <div className="container container-fade-in-and-translate">
         <h1 className="page-header">{name}</h1>
@@ -37,11 +36,14 @@ export default function Character(props) {
             <FontAwesomeIcon className="check character-icon" icon={faCheck} onClick={isSuspicous}/>
             <FontAwesomeIcon className="cross character-icon" icon={faTimes} onClick={notSuspicious}/>
           </div>
+          <div>
+          <Link to={`/characters/${addDashesToName(character.name)}/interview`}>Interview</Link>
+          </div>
         </div>
       </div>
     );
   }
 
-function removeDashes(name) {
+export function removeDashes(name) {
   return name.replace(/-/g, ' ');
 }

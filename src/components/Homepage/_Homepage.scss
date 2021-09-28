@@ -17,7 +17,7 @@
 }
 
 .homepage-icon {
-    height: 150px;
+    height: 140px;
 
 }
 
@@ -26,3 +26,51 @@
     display: flex;
     justify-content: space-evenly;
 }
+
+@media (min-width: 320px) {
+    .button-container {
+        display: block;
+    }
+
+    .homepage-btn {
+        width: 100%;
+        margin: 32px 0px;
+    }
+  } 
+  @media (min-width: 576px) {
+    
+  }
+  
+  @media (min-width: 768px) {
+    .button-container {
+        display: block;
+    }
+
+  }
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) {
+    .button-container {
+        display: block;
+        justify-content: space-evenly;
+    }
+   }
+  
+  @media (min-width: 1200px) {
+    .button-container {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .homepage-btn {
+        width: 200px;
+    }
+  }
+    @media (min-width: 1400px) { 
+        .button-container {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .homepage-btn {
+            width: 200px;
+        }
+    }
+  
