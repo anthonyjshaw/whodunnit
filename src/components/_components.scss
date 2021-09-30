@@ -1,0 +1,86 @@
+@import './page_components/Characters/Characters';
+@import './page_components/Navbar/Navbar';
+@import './page_components/Homepage/Homepage';
+@import './page_components/Crime/Crime';
+@import './page_components/Footer/Footer';
+@import './page_components/Characters/Character/Interview/Interview';
+@import './page_components/Locations/Locations';
+@import './page_components/Locations/Location/Location';
+
+.page-header {
+    text-align: center;
+    font-family: 'Reenie Beanie';
+    font-size: 4.2em;
+}
+
+@media (min-width: 280px) {
+    .page-header {
+        font-size: 3.2em;
+    }
+}
+@media (min-width: 320px) {
+    .page-header {
+        font-size: 3.2em;
+    }
+}
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+.flex-column {
+    flex-direction: column;
+}
+
+@keyframes fromMinusY {
+    from {
+        transform: translateY(-5%);
+    } to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes containerFadeInAndTranslate {
+    from {
+        opacity: 0;
+        transform: translateY(-5%);
+    } 
+    
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.container-fade-in {
+    animation-name: containerFadeInAndTranslate;
+    animation-iteration-count: 1;
+    animation-duration: 0.5s;
+    animation-delay: 0s;
+    animation-timing-function: ease-out;
+    
+}
+
+.container-fade-in-and-translate {
+    animation-name: containerFadeInAndTranslate;
+    animation-iteration-count: 1;
+    animation-duration: 0.5s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in;
+
+}
+
+
+.from-minus-y {
+    animation-name: containerFadeIn;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-delay: 2s;
+}
+
+.no-display {
+    display: none;
+}

@@ -1,39 +1,281 @@
-.suspect {
-  border: 1px solid grey;
+.character {
+  border: 1px solid black;
+  font-family: "Reenie Beanie";
   border-radius: 4px;
   text-align: center;
   height: 282px;
+  background-color: white;
+  transition-property: box-shadow;
+  transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  box-shadow: 4px 4px 0px 2px rgba(0, 0, 0, 0);
 }
 
-.suspect-list {
+.character:hover {
+  box-shadow: 4px 4px 0px 2px black;
+}
+
+.check {
+  color: green;
+}
+
+.cross {
+  color: red;
+}
+
+.character-icon {
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+.character-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(282px, auto);
   gap: 10px;
 }
+.character-list a {
+  color: black;
+  text-decoration: none;
+  transition-property: font-size;
+  transition-duration: 1s;
+}
+.character-list a:hover {
+  font-size: 1.5em;
+}
+
+.character-icon {
+  max-height: 150px;
+}
+
+@media (min-width: 375px) {
+  .character-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: minmax(282px, auto);
+    gap: 10px;
+  }
+}
+@media (min-width: 576px) {
+  .character-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: minmax(282px, auto);
+    gap: 10px;
+  }
+}
+@media (min-width: 768px) {
+  .character-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(282px, auto);
+    gap: 10px;
+  }
+}
+@media (min-width: 1200px) {
+  .character-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(282px, auto);
+    gap: 10px;
+  }
+}
+.nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 1.5em;
+  font-family: "Reenie Beanie";
+}
+
+.nav-link {
+  transform: translateY(0%);
+  transition-property: transform;
+  transition-timing-function: ease-in;
+  transition-duration: 0.2s;
+}
+.nav-link a {
+  color: black;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  transform: translateY(5%);
+}
+
+.nav-container {
+  width: 100%;
+}
+
+.homepage-btn {
+  border: solid 1px black;
+  background: white;
+  width: 200px;
+  height: 56px;
+  color: black;
+  font-family: "Reenie Beanie", "Courier New", Courier, monospace;
+  font-size: 24px;
+  border-radius: 8px;
+}
+
+.homepage-btn:hover {
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+.homepage-icon {
+  height: 140px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media (min-width: 375px) {
+  .button-container {
+    display: block;
+  }
+
+  .homepage-btn {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .button-container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .homepage-btn {
+    width: 200px;
+  }
+}
+@media (min-width: 992px) {
+  .button-container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 1200px) {
+  .button-container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .homepage-btn {
+    width: 200px;
+  }
+}
+@media (min-width: 1400px) {
+  .button-container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .homepage-btn {
+    width: 200px;
+  }
+}
+.crime {
+  display: flex;
+}
+
+.underline {
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+  transition-property: border-bottom;
+  transition-timing-function: ease-in;
+}
+
+.underline:hover {
+  border-bottom: 1px solid black;
+}
 
 .page-header {
   text-align: center;
   font-family: "Reenie Beanie";
-  font-size: 54px;
+  font-size: 4.2em;
 }
 
-.homepage-btn {
-  margin-bottom: 5em;
-  background: transparent;
-  border: 1px solid white;
-  color: white;
-  padding: 10px;
-  width: 7em;
-  font-size: 1em;
-  font-family: "Courier New", Courier, monospace;
-  border-radius: 2px;
+.flex {
+  display: flex;
 }
 
-.homepage-btn:hover {
-  color: #282c34;
-  background: white;
-  cursor: pointer;
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+@keyframes fromMinusY {
+  from {
+    transform: translateY(-5%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+@keyframes containerFadeInAndTranslate {
+  from {
+    opacity: 0;
+    transform: translateY(-5%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+.container-fade-in {
+  animation-name: containerFadeInAndTranslate;
+  animation-iteration-count: 1;
+  animation-duration: 0.5s;
+  animation-delay: 0s;
+  animation-timing-function: ease-out;
+}
+
+.container-fade-in-and-translate {
+  animation-name: containerFadeInAndTranslate;
+  animation-iteration-count: 1;
+  animation-duration: 0.5s;
+  animation-delay: 0s;
+  animation-timing-function: ease-in;
+}
+
+.from-minus-y {
+  animation-name: containerFadeIn;
+  animation-iteration-count: 1;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  animation-delay: 2s;
+}
+
+.no-display {
+  display: none;
+}
+
+body {
+  margin: 0;
+  font-family: "Courier New", "Courier", "monospace", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: white;
+}
+body a {
+  color: black;
+  text-decoration: none;
+}
+body p {
+  font-family: "Courier Prime", monospace;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 @-webkit-keyframes fadeinout {
@@ -179,14 +421,14 @@
   }
 }
 .App-header {
-  background-color: #282c34;
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
 .App-link {
@@ -228,6 +470,11 @@
   .container {
     margin: auto;
     width: 900px;
+  }
+}
+@media (min-width: 1400px) {
+  .avatar {
+    width: 100px;
   }
 }
 
