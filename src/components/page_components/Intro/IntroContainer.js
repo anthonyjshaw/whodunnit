@@ -1,5 +1,5 @@
 import React from 'react';
-import InitTyped from '../Typed/InitTyped';
+import InitTyped from '../../Typed/InitTyped';
 
 
 export default function IntroContainer() {

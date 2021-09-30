@@ -1,9 +1,16 @@
+@import './Location/Location';
+
 .location-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax($height, auto);
     gap: 10px;
     grid-gap: 10px;
+    a {
+      transition-property: font-size;
+      transition-timing-function: ease-in;
+      transition-duration: 0.5s;
+    }
     a:hover {
         font-size: 1.5em;
       }
@@ -63,42 +70,7 @@
   z-index: 900;
 }
 
-.carousel__button--prev,
-.carousel__button--next {
-  position: absolute;
-  top:50%;
-  width: 3rem;
-  height: 3rem;
-  background-color: #FFF;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  cursor: pointer; 
-  z-index: 1001; /* Sit on top of everything */
-  border: 1px solid black;
-}
-.carousel__button--prev {
-  left:0;
-}
-.carousel__button--next {
-  right:0;
-}
-.carousel__button--prev::after,
-.carousel__button--next::after {
-  content: " ";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  top: 50%;
-  left: 54%;
-  border-right: 2px solid black;
-  border-bottom: 2px solid black;
-  transform: translate(-50%, -50%) rotate(135deg);
-}
-.carousel__button--next::after {
-  left: 47%;
-  transform: translate(-50%, -50%) rotate(-45deg);
-}
 
-.location-image {
+.location-card-image {
     max-height: 64%;
 }

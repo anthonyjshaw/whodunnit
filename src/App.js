@@ -1,16 +1,16 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import Character from './components/Characters/Character/Character';
-import Characters from './components/Characters/Characters';
-import Crime from './components/Crime/Crime';
-import Footer from './components/Footer/Footer';
-import Homepage from './components/Homepage/Homepage';
-import Interview from './components/Characters/Character/Interview/Interview';
-import IntroContainer from './components/Intro/IntroContainer';
-import Location from './components/Locations/Location/Location';
-import Locations from './components/Locations/Locations';
-import Navbar from './components/Navbar/Navbar';
+import Character from './components/page_components/Characters/Character/Character';
+import Characters from './components/page_components/Characters/Characters';
+import Crime from './components/page_components/Crime/Crime';
+import Footer from './components/page_components/Footer/Footer';
+import Homepage from './components/page_components/Homepage/Homepage';
+import Interview from './components/page_components/Characters/Character/Interview/Interview';
+import IntroContainer from './components/page_components/Intro/IntroContainer';
+import Location from './components/page_components/Locations/Location/Location';
+import Locations from './components/page_components/Locations/Locations';
+import Navbar from './components/page_components/Navbar/Navbar';
 
 import './App.scss';
 

@@ -1,6 +1,6 @@
 import {React, useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
-import suspects from '../../lib/suspectArray';
+import suspects from '../../../lib/suspect_array';
 export default function Homepage(props) {
     
     const [gameText, setGameText] = useState(() => {
