@@ -3,5 +3,24 @@
 }
 
 .location-image {
-    max-height: 480px;
+    max-height: 1em;
+}
+
+@media (min-width: 320px) {
+    .location-image {
+        max-height: 24vh;
+    }
+}
+
+@media (min-width: 1200px) {
+    .location-image {
+        max-height: 70vh;
+    }
+    
+    .location-wrapper {
+        display: flex;
+    }
+    .location-image-wrapper{
+        flex-grow: 2;
+    }
 }

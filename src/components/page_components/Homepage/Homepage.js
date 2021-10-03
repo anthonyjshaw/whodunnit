@@ -6,11 +6,11 @@ export default function Homepage(props) {
     const [gameText, setGameText] = useState(() => {
         return localStorage.getItem('hasSession') === 'true' ? 'Continue': "Start";
     });
-
+    
     useEffect(() => {
         localStorage.setItem('hasSession', 'true');
         
-    })
+    });
 
     function quitGame() {
         
@@ -19,9 +19,10 @@ export default function Homepage(props) {
             });
             localStorage.setItem('death', '');
             localStorage.setItem('location', '');
-            localStorage.removeItem('hasSession');
+            localStorage.setItem('hasSession', 'false');
             localStorage.setItem('display', 'no-display')
             setGameText('Start');
+    
     
     } 
     const link = localStorage.getItem('hasSession') === 'true' ? '/characters' : 'crime';
