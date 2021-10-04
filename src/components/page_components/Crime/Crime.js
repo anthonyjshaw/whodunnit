@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { murderMethods } from '../../../lib/murder_methods';
 import { locations } from '../../../lib/locations';
 
-
 export default function Crime(props) {
     const deaths = murderMethods;
     const location = locations;
@@ -34,7 +33,7 @@ export default function Crime(props) {
                     <p>Victim: Lord Marberry</p>
                     <p>Cause of death: {death}</p>
                     <p>Location: {loc}</p>
-                    <p>Start by <em><Link to="/characters" className="underline">interviewing the suspects</Link></em></p>
+                    <p>Start by <em><Link to="/characters" className="underline">interviewing the suspects</Link></em> or by <em><Link to={`/locations/${loc}`} className="underline">visiting the crime scene</Link></em></p>
                 </div>
             </div>
         </div>

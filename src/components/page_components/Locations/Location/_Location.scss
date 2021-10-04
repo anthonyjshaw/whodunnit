@@ -9,12 +9,13 @@
 @media (min-width: 320px) {
     .location-image {
         max-height: 24vh;
+        max-width: 70vw;
     }
 }
 
 @media (min-width: 1200px) {
     .location-image {
-        max-height: 70vh;
+        max-height: 400px;
         max-width: 400px;
     }
     

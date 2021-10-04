@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 
 import Character from './components/page_components/Characters/Character/Character';
 import Characters from './components/page_components/Characters/Characters';
+import Clues from './components/page_components/Clues/Clues';
 import Crime from './components/page_components/Crime/Crime';
 import Footer from './components/page_components/Footer/Footer';
 import Homepage from './components/page_components/Homepage/Homepage';
@@ -27,6 +28,7 @@ function App() {
         <Route exact path="/intro" component={IntroContainer} />
         <Route exact path="/locations" component={Locations} />
         <Route exact path="/locations/:location" component={LocationContainer}/>
+        <Route exact path="/clues" component={Clues} />
       </Switch>
       <Footer />
     </div>

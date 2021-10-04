@@ -13,18 +13,21 @@ export default function Homepage(props) {
     });
 
     function quitGame() {
-        
-            suspects.forEach(element => {
-                localStorage.removeItem(`${element.name}-suspicious`);
-            });
-            localStorage.setItem('death', '');
-            localStorage.setItem('location', '');
-            localStorage.setItem('hasSession', 'false');
-            localStorage.setItem('display', 'no-display')
-            localStorage.removeItem('clueList');
-            setGameText('Start');
-    
-    
+            const confirm  = window.confirm("Are you sure you want to quit?");
+            if (confirm) {
+                suspects.forEach(element => {
+                    localStorage.removeItem(`${element.name}-suspicious`);
+                });
+                localStorage.setItem('death', '');
+                localStorage.setItem('location', '');
+                localStorage.setItem('culprit', '');
+                localStorage.setItem('hasSession', 'false');
+                localStorage.setItem('display', 'no-display')
+                localStorage.removeItem('clueList');
+                setGameText('Start');
+            } else {
+                return;
+            }
     } 
     const link = localStorage.getItem('hasSession') === 'true' ? '/characters' : 'crime';
     

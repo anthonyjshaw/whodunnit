@@ -1,3 +1,3 @@
-export function addDashesToName(name) {
+export default function addDashesToName(name) {
     return name.replaceAll(/\s/g, '-');
 }

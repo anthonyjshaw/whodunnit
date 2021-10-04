@@ -3,12 +3,11 @@ import { locations } from '../../../lib/locations';
 import { Link } from 'react-router-dom';
 // import bootstrap from 'bootstrap';
 // import  Carousel  from 'react-bootstrap/Carousel';
-import { addDashesToName } from '../Characters/Characters';
+import addDashesToName from '../../../lib/add_dashes_to_name';
 import { faSkull } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Locations() {
-
     const murderLocation = useState(() => {
         return localStorage.getItem('location');
     });

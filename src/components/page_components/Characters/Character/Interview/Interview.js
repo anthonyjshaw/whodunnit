@@ -1,10 +1,10 @@
 import React from 'react';
 import { useParams } from 'react-router';
 import { removeDashes } from '../Character';
-import { addDashesToName } from '../../Characters';
+import addDashesToName from '../../../../../lib/add_dashes_to_name';
 export default function Interview(props) {
     let {name} = useParams();
-    let actions = ['Where were you?', 'What where you doing?', "What's your relationship with Marberry?", 'Thoughts on other characters?'];
+    let actions = ['Where were you?', 'What where you doing?', "How was your relationship with Marberry?", 'Thoughts on other characters?'];
     let mappedActions = actions.map(e => {
         return <div className="interview-actions" key={actions.indexOf(e) + 1}><h2>{e}</h2></div>
     });

@@ -3,7 +3,7 @@ import  suspects  from '../../../../lib/suspect_array';
 import { Link, useParams } from 'react-router-dom';
 // import  {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 // import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
-import { addDashesToName } from '../Characters';
+import addDashesToName from '../../../../lib/add_dashes_to_name';
 
 export default function Character(props) {
     let { name } = useParams();
