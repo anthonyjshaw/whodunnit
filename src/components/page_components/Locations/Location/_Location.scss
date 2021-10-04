@@ -15,7 +15,9 @@
 @media (min-width: 1200px) {
     .location-image {
         max-height: 70vh;
+        max-width: 400px;
     }
+    
     
     .location-wrapper {
         display: flex;
@@ -24,3 +26,12 @@
         flex-grow: 2;
     }
 }
+
+svg {
+    pointer-events: none;
+}
+
+path{
+    pointer-events: auto;
+}
+ 

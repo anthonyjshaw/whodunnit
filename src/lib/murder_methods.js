@@ -1,4 +1,4 @@
-const murderMethods = ['poison', 'shooting', 'stabbing', 'pushed out of window','run over', 'set on fire'];
+const murderMethods = ['poison', 'shooting', 'stabbing', 'pushed out of window', 'set on fire'];
 
 export {murderMethods};
 

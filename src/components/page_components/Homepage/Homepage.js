@@ -21,6 +21,7 @@ export default function Homepage(props) {
             localStorage.setItem('location', '');
             localStorage.setItem('hasSession', 'false');
             localStorage.setItem('display', 'no-display')
+            localStorage.removeItem('clueList');
             setGameText('Start');
     
     
