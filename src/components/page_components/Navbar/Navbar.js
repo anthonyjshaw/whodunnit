@@ -1,22 +1,32 @@
-import {React, useState, useEffect} from "react";
+import {React, useState, useEffect, useRef} from "react";
 import {Link } from 'react-router-dom';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
-    const [display] = useState(() => {
-        return localStorage.getItem('hasSession') === 'true' ? '' : 'no-display';
-    });
+    const navItems = useRef(null);
+    const [hidden, setHidden] = useState(true);
+    
     useEffect(() => {
         localStorage.setItem('display', 'display');
     })
-    const paths = ['Intro', 'Crime', 'Characters', 'Locations', 'About', 'Clues'].map(e => <div key={e.replaceAll('/', '')} className="nav-link"><Link to={`/${e.toLowerCase()}`}>{e}</Link></div>);
+    
+
+    function navbarToggle(e) {
+        setHidden(!hidden);
+        navItems.current.classList.toggle('navbar-toggle-show')
+    }
+    const paths = ['Intro', 'Crime', 'Characters', 'Locations', 'About', 'Clues'].map(e => <div key={e.replaceAll('/', '')} className="nav-link" ><Link to={`/${e.toLowerCase()}`}>{e}</Link></div>);
     return (
         <div className="nav-container">
-            <div className="container">
-                <div className={`nav-links`} >
-                    <div className='nav-link'><Link to='/'>Home</Link></div>
+                <button className='navbar-toggle' onClick={navbarToggle}>
+                    {hidden ? <FontAwesomeIcon icon={faBars} /> : <FontAwesomeIcon icon={faTimes} /> }
+                </button>
+                <div className={`nav-links`} ref={navItems} >
+                    <div className='nav-link' ><Link to='/'>Home</Link></div>
                 {paths}
                 </div>
-            </div>
+     
         </div>
     )
 }

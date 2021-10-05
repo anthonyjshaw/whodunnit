@@ -13,13 +13,23 @@
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
     .location-image {
         max-height: 400px;
         max-width: 400px;
     }
-    
-    
+}
+@media (min-width: 1200px) {
+    .location-image {
+        max-width: 1000px;
+    }
+}  
+
+@media (min-width: 1400px) {
+    .location-image {
+        max-height: 500px;
+    }
+      
     .location-wrapper {
         display: flex;
     }

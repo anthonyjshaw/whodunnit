@@ -11,6 +11,7 @@ export default function Crime(props) {
     
     if (localStorage.death === '') localStorage.setItem('death', randomDeath);
     if (localStorage.location === '') localStorage.setItem('location', randomLocation);
+    
     const [death, setDeath] = useState(() => {
         return localStorage.getItem('death');
     });

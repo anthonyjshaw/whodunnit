@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Bedroom(props) {
     return (
-        <svg width="1183" height="888" viewBox="0 0 1183 888" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="1183" height="888" viewBox="0 0 1183 888" fill="none" xmlns="http://www.w3.org/2000/svg" className="location-image bedroom">
 <rect y="429" width="1182" height="458" fill="#9C1313"/>
 <path d="M1178 52.5L656 166.5V528L1178 603.5V52.5Z" fill="#C4C4C4"/>
 <path d="M0 0H105.5L656 169.5V528L0 645.5V0Z" fill="#C1BCB4"/>

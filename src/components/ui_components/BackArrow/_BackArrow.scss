@@ -1,0 +1,14 @@
+.back-arrow {
+    position: relative;
+    top: 72px;
+    span {
+        opacity: 0;
+        transition: opacity 0.2s ease-in;
+    }
+}
+
+.back-arrow:hover {
+    span {
+        opacity: 1;
+    }
+}

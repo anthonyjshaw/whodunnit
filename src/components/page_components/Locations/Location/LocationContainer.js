@@ -24,19 +24,19 @@ export default function LocationContainer() {
         "lounge": <Lounge mouseOver={handleMouseOver} click={handleClick} mouseOut={handleMouseOut}/>,
         "diningRoom": <DiningRoom mouseOver={handleMouseOver} click={handleClick} mouseOut={handleMouseOut}/>,
         "study": <Study mouseOver={handleMouseOver} click={handleClick} mouseOut={handleMouseOut}/>,
-        "kitchen": <Kitchen />,
+        "kitchen": <Kitchen mouseOver={handleMouseOver} click={handleClick} mouseOut={handleMouseOut}/>,
         "bedroom": <Bedroom />
         
     }
     const locationSvg = locationSvgs[`${camelCaseName(location)}`]
-    const mappedClues = (clueList === undefined || clueList === null) ? [] : clueList.filter(e => e !== '').map(e => <li key={clueList.indexOf(e)}><p>{e}</p></li>);
-    
+
     useEffect(() => {
         localStorage.setItem(`clueList`, clueList.join(','))
         document.title = `Whodunnit | Locations | ${location}`;
     })
     
     function handleMouseOver(e) {
+        console.log(e);
         setClue(e.target.dataset.name)
     }
 

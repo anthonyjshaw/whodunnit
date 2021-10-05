@@ -7,6 +7,7 @@
     border-bottom: 1px solid rgba($color: #000000, $alpha: 0.0);
     transition-property: border-bottom;
     transition-timing-function: ease-in;
+    transition-duration: 0.2s;
 }
 
 .underline:hover {

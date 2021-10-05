@@ -1,8 +1,7 @@
 import {React, useState, useEffect} from 'react';
 import  suspects  from '../../../../lib/suspect_array';
 import { Link, useParams } from 'react-router-dom';
-// import  {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-// import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
+import BackArrow from '../../../ui_components/BackArrow/BackArrow';
 import addDashesToName from '../../../../lib/add_dashes_to_name';
 
 export default function Character(props) {
@@ -17,29 +16,22 @@ export default function Character(props) {
       localStorage.setItem(`${character.name}-suspicious`, suspicious);
       document.title = `Whodunnit? | Characters | ${character.name}`;
     });
-    // function isSuspicous(){
-    //   setSuspicious('true');
-    // }
-    // function notSuspicious(){
-    //   setSuspicious('false');
-    // }
+    
 
     const source = `/assets/character-avis/${addDashesToName(character.name)}.svg`
     return (
       <div className="container container-fade-in-and-translate">
-        <h1 className="page-header">{name}</h1>
+        <div className=''>
+          <BackArrow link="characters" text="characters" />
+          <h1 className="page-header">{name}</h1>
+        </div>
         <div className='character-profile-wrapper'>
             <img src={source} alt={`${character.name}`}/>
           <div className='character-profile'>
             <p>Bio: {character.profile}</p>
             <p>Age: {character.age}</p>
-            <Link to={`/characters/${addDashesToName(character.name)}/interview`}><p><em>Interview</em></p></Link>
-          </div>
-          {/* <div>
-            <FontAwesomeIcon className="check character-icon" icon={faCheck} onClick={isSuspicous}/>
-            <FontAwesomeIcon className="cross character-icon" icon={faTimes} onClick={notSuspicious}/>
-          </div> */}
-          
+            <p><em><Link to={`/characters/${addDashesToName(character.name)}/interview`} className="underline">Interview</Link></em></p>
+          </div>    
         </div>
       </div>
     );

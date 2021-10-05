@@ -12,6 +12,12 @@ export default function Homepage(props) {
         
     });
 
+    function newGame() {
+        const random = Math.floor(Math.random() * suspects.length)
+        const culprit = suspects[random].name;
+        if (localStorage.getItem('culprit') === '' || localStorage.getItem('culprit') === null ) localStorage.setItem('culprit', culprit);
+    }
+
     function quitGame() {
             const confirm  = window.confirm("Are you sure you want to quit?");
             if (confirm) {
@@ -37,7 +43,7 @@ export default function Homepage(props) {
             <div className="flex flex-column"> 
                 <img src="/assets/homepage-logo.svg" alt='homepage icon' className="homepage-icon"/>
                 <div className="button-container">
-                    <Link to={link}><button className="homepage-btn">{gameText} investigation</button></Link>
+                    <Link to={link}><button className="homepage-btn" onClick={newGame}>{gameText} investigation</button></Link>
                     <button className='homepage-btn' onClick={quitGame}>Quit Game</button>
                 </div>
             </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { capitalize } from '../../../../lib/capitalize';
+import BackArrow from '../../../ui_components/BackArrow/BackArrow';
 
 const pStyle = {
     textAlign: 'center'
@@ -7,10 +8,13 @@ const pStyle = {
 export default function Location(props) {
     return (
         <div className="container container-fade-in-and-translate">
+            <div>
+                <BackArrow link="locations" text='locations'/>
+            </div>
             <h1 className="page-header">{capitalize(props.location)} {props.icon}</h1>
             <div className='location-wrapper'>
                 <div className='location-image-wrapper'>
-                    <p>Item: {props.clue}</p>  
+                    <p>Check: {props.clue}</p>  
                         {props.svg}
                     {/* <img src={`/assets/locations/${addDashesToName(location)}.svg`} alt={location} className='location-image'/>  */}
                 </div>
