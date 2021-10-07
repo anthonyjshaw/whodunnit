@@ -48,7 +48,7 @@ export default function Crime(props) {
                     <p>Location: {loc}</p>
                     <p>Start by <em><Link to="/characters" className="underline">interviewing the suspects</Link></em> or by <em><Link to={`/locations/${loc}`} className="underline">visiting the crime scene</Link></em></p>
                 </div>
-            </div>
+            
 
             <div>
                 <h2 className="page-header"> 
@@ -59,6 +59,7 @@ export default function Crime(props) {
                     {mappedSuspects}
                 </ul>
                 <p>{answer}</p>
+            </div>
             </div>
         </div>
         
