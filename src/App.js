@@ -1,6 +1,5 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-
 import Character from './components/page_components/Characters/Character/Character';
 import Characters from './components/page_components/Characters/Characters';
 import Clues from './components/page_components/Clues/Clues';

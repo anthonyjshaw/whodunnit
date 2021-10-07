@@ -46,21 +46,23 @@
 
     }
     .nav-links {
-        // display: none;
-        height: 0px;
-        margin-top: 40px;
+        display: none;
+        // height: 0px;
+        // margin-top: 40px;
+        // transform: translateY(9999px);
         padding: 24px;
-        opacity: 0;
-        transition-property: height, opacity;
-        transition-duration: 0.5s;
-        transition-timing-function: ease-out;
+        // opacity: 0;
+        // // transition-property: transform;
+        // transition-duration: 0.5s;
+        // transition-timing-function: ease-out;
         
     }
 
     .navbar-toggle-show {
-        opacity: 1;
-        height: 128px;
+        // opacity: 1;
+        // height: 128px;
         display: flex;
+        transform: translateY(0px);
         padding: 24px;
     }
 

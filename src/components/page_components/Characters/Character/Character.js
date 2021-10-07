@@ -14,17 +14,17 @@ export default function Character(props) {
 
     useEffect(() => {
       localStorage.setItem(`${character.name}-suspicious`, suspicious);
-      document.title = `Whodunnit? | Characters | ${character.name}`;
+      document.title = `Characters | ${character.name}`;
     });
     
 
     const source = `/assets/character-avis/${addDashesToName(character.name)}.svg`
     return (
       <div className="container container-fade-in-and-translate">
-        <div className=''>
+        <div className='arrow'>
           <BackArrow link="characters" text="characters" />
-          <h1 className="page-header">{name}</h1>
         </div>
+          <h1 className="page-header">{name}</h1>
         <div className='character-profile-wrapper'>
             <img src={source} alt={`${character.name}`}/>
           <div className='character-profile'>

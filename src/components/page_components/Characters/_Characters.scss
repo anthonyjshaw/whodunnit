@@ -20,6 +20,9 @@
 .character-icon {
   max-height: 150px;
 }
+.carousel-item {
+  display: none;
+}
 
 @media (min-width: 280px) {
   .character-list {
@@ -29,20 +32,14 @@
 
 @media (min-width: 320px) {
     .character-list {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-auto-rows: minmax($height, auto);
-        gap: 10px;
+        display: none;
+       
     
     }
   } 
   @media (min-width: 576px) {
     .character-list {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-auto-rows: minmax($height, auto);
-        gap: 10px;
-    
+        display: none;
     }
   }
   
@@ -57,6 +54,9 @@
     
   }
   @media (min-width: 1200px) {
+    .carousel {
+      display: none;
+    }
     .character-list {
         display: grid;
         grid-template-columns: repeat(3, 1fr);

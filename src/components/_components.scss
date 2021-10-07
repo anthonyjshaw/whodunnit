@@ -7,6 +7,9 @@
 @import './page_components/Locations/Locations';
 @import './page_components/Locations/Location/Location';
 @import './ui_components/BackArrow/BackArrow';
+@import './ui_components/ui_components';
+
+
 
 .page-header {
     text-align: center;
@@ -22,6 +25,18 @@
 @media (min-width: 320px) {
     .page-header {
         font-size: 3.2em;
+    }
+}
+
+@media (min-width: 1920px) {
+    .page-header {
+        font-size: 4.2em;
+    }
+}
+
+@media (min-width: 2560px) {
+    .page-header {
+        font-size: 4.2em;
     }
 }
 .flex {

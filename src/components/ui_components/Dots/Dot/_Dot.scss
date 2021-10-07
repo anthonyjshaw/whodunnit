@@ -1,0 +1,16 @@
+.dot {
+    color: grey;
+    cursor: pointer;
+    transition: color 0.2s ease-in
+}
+
+.dot:hover {
+    color: black;
+}
+
+
+@media (min-width: 1200px) {
+    .dot {
+        display: none;
+    }
+}

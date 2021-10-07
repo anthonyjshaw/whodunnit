@@ -13,7 +13,7 @@ export default function Locations() {
     });
 
     useEffect(() => {
-        document.title = `Whodunnit? | Locations |`;
+        document.title = `Locations`;
     })
 
     let loc = locations.find(e => e === murderLocation[0]);

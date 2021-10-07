@@ -1,6 +1,19 @@
 .crime {
     display: flex;
     justify-content: center;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+@media (max-width: 769px) {
+    .crime {
+        display: block;
+        text-align: center;
+    }
+    
+    .crime-avatar {
+        margin-top: 12px;
+    }
 }
 
 .underline {
@@ -17,9 +30,7 @@
 .crime-info {
     margin: 0 1rem;
     max-width: 300px;
-    border: 1px black solid;
-    border-radius: 4px;
-    padding: 24px;
+    padding: 16px;
     text-align: center;
 }
 

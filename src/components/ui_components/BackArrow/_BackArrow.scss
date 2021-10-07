@@ -12,3 +12,15 @@
         opacity: 1;
     }
 }
+
+@media (max-width: 1119px) {
+    .arrow {
+        text-align: center;
+    }
+    .back-arrow {
+        position: revert;
+        span {
+            opacity: 1;
+        }
+    }
+}

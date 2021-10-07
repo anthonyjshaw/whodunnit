@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
+import Location from './Location';
 
 import Bedroom from '../../../ui_components/svg_components/Bedroom';
 import DiningRoom from '../../../ui_components/svg_components/DiningRoom';
+import Garden from '../../../ui_components/svg_components/Garden';
 import Kitchen from '../../../ui_components/svg_components/Kitchen';
-import Location from './Location';
 import Lounge from '../../../ui_components/svg_components/Lounge';
 import Study from '../../../ui_components/svg_components/Study';
 
@@ -25,18 +26,18 @@ export default function LocationContainer() {
         "diningRoom": <DiningRoom mouseOver={handleMouseOver} click={handleClick} mouseOut={handleMouseOut}/>,
         "study": <Study mouseOver={handleMouseOver} click={handleClick} mouseOut={handleMouseOut}/>,
         "kitchen": <Kitchen mouseOver={handleMouseOver} click={handleClick} mouseOut={handleMouseOut}/>,
-        "bedroom": <Bedroom />
+        "garden": <Garden mouseOver={handleMouseOver} click={handleClick} mouseOut={handleMouseOut} />,
+        "bedroom": <Bedroom mouseOver={handleMouseOver} click={handleClick} mouseOut={handleMouseOut}/>
         
     }
     const locationSvg = locationSvgs[`${camelCaseName(location)}`]
 
     useEffect(() => {
         localStorage.setItem(`clueList`, clueList.join(','))
-        document.title = `Whodunnit | Locations | ${location}`;
+        document.title = `Locations | ${location}`;
     })
     
     function handleMouseOver(e) {
-        console.log(e);
         setClue(e.target.dataset.name)
     }
 
