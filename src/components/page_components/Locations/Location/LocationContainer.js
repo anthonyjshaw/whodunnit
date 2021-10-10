@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 import Location from './Location';
-
+import removeDashes from '../../../../lib/remove_dashes';
 import Bedroom from '../../../ui_components/svg_components/Bedroom';
 import DiningRoom from '../../../ui_components/svg_components/DiningRoom';
 import Garden from '../../../ui_components/svg_components/Garden';
@@ -14,7 +14,8 @@ import { faSkull } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function LocationContainer() {
-    const {location} = useParams();
+    let {location} = (useParams());
+    location = removeDashes(location)
     const icon = localStorage.getItem('location') === location ? <FontAwesomeIcon icon={faSkull} /> : "";
     const [clue, setClue] = useState();
     const [clueList, setClueList] = useState(() => {
