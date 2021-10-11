@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import addDashesToName from '../../../lib/add_dashes_to_name';
 import { faSkull } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Card from '../../ui_components/Card';
 
 export default function Locations() {
     let index = 1;
@@ -56,12 +57,14 @@ export default function Locations() {
     const murderLoc = e => e === loc ? " location" : "";
     const locationCarousel = locations.map((e) => {
         return (
-            <Link to={`/locations/${addDashesToName(e)}`} key={`${locations.indexOf(e) + 1}: ${e}`} className='carousel-item'>
-            <div className={`location-card${murderLoc(e)}`} >
-                    <h2>{e} {icon(e)}</h2>
-                    <img src={`assets/locations/${addDashesToName(e.toLowerCase())}.svg`} alt={e} className='location-card-image'/>
-                </div>
-            </Link>
+
+            <Card icon={icon(e)} link={`/locations/${addDashesToName(e)}`} linkClass={'carousel-item'} key={`${locations.indexOf(e) + 1}: ${e}`} divClass={`location-card${murderLoc(e)}`} image={`assets/locations/${addDashesToName(e.toLowerCase())}.svg`} imageClass='location' text={e}/>
+            // <Link to={`/locations/${addDashesToName(e)}`} key={`${locations.indexOf(e) + 1}: ${e}`} className='carousel-item'>
+            // <div className={`location-card${murderLoc(e)}`} >
+            //         <h2>{e} {icon(e)}</h2>
+            //         <img src={`assets/locations/${addDashesToName(e.toLowerCase())}.svg`} alt={e} className='location-card-image'/>
+            //     </div>
+            // </Link>
         );
     });
 

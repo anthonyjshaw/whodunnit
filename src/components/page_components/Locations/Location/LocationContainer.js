@@ -15,7 +15,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function LocationContainer() {
     let {location} = (useParams());
-    location = removeDashes(location)
+    location = removeDashes(location);
     const icon = localStorage.getItem('location') === location ? <FontAwesomeIcon icon={faSkull} /> : "";
     const [clue, setClue] = useState();
     const [clueList, setClueList] = useState(() => {

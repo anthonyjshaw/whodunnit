@@ -4,7 +4,7 @@ import { Link, useParams } from 'react-router-dom';
 import BackArrow from '../../../ui_components/BackArrow/BackArrow';
 import addDashesToName from '../../../../lib/add_dashes_to_name';
 import removeDashes from '../../../../lib/remove_dashes';
-import { locations } from '../../../../lib/locations';
+
 
 export default function Character(props) {
     let { name } = useParams();
@@ -38,7 +38,7 @@ export default function Character(props) {
           <div className='character-profile'>
             <p>Bio: {character.profile}</p>
             <p>Age: {character.age}</p>
-            <p>Location: ? </p>
+            <p>Location: {loc} </p>
             <p>Action at time of death: ? </p>
             <p>Possible motive: ?</p>
             <p><em><Link to={`/characters/${addDashesToName(character.name)}/interview`} className="underline">Interview</Link></em></p>
