@@ -1,12 +1,26 @@
 .crime {
     display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+@media (max-width: 769px) {
+    .crime {
+        display: block;
+        text-align: center;
+    }
     
+    .crime-avatar {
+        margin-top: 12px;
+    }
 }
 
 .underline {
     border-bottom: 1px solid rgba($color: #000000, $alpha: 0.0);
     transition-property: border-bottom;
     transition-timing-function: ease-in;
+    transition-duration: 0.2s;
 }
 
 .underline:hover {
@@ -14,5 +28,12 @@
 }
 
 .crime-info {
-    margin: 0 56px;
+    margin: 0 1rem;
+    max-width: 300px;
+    padding: 16px;
+    text-align: center;
+}
+
+.crime-avatar {
+ max-height: 300px;   
 }

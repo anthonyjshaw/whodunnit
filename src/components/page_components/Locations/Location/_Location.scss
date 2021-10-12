@@ -3,5 +3,46 @@
 }
 
 .location-image {
-    max-height: 480px;
+    max-height: 1em;
 }
+
+@media (min-width: 320px) {
+    .location-image {
+        max-height: 24vh;
+        max-width: 70vw;
+    }
+}
+
+@media (min-width: 992px) {
+    .location-image {
+        max-height: 400px;
+        max-width: 400px;
+    }
+}
+@media (min-width: 1200px) {
+    .location-image {
+        max-width: 1000px;
+    }
+}  
+
+@media (min-width: 1400px) {
+    .location-image {
+        max-height: 500px;
+    }
+      
+    .location-wrapper {
+        display: flex;
+    }
+    .location-image-wrapper{
+        flex-grow: 2;
+    }
+}
+
+svg {
+    pointer-events: none;
+}
+
+path{
+    pointer-events: auto;
+}
+ 

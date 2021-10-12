@@ -1,0 +1,26 @@
+.back-arrow {
+    position: relative;
+    top: 72px;
+    span {
+        opacity: 0;
+        transition: opacity 0.2s ease-in;
+    }
+}
+
+.back-arrow:hover {
+    span {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1119px) {
+    .arrow {
+        text-align: center;
+    }
+    .back-arrow {
+        position: revert;
+        span {
+            opacity: 1;
+        }
+    }
+}

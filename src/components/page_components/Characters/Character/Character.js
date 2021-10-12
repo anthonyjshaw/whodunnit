@@ -1,9 +1,10 @@
 import {React, useState, useEffect} from 'react';
 import  suspects  from '../../../../lib/suspect_array';
 import { Link, useParams } from 'react-router-dom';
-// import  {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-// import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
-import { addDashesToName } from '../Characters';
+import BackArrow from '../../../ui_components/BackArrow/BackArrow';
+import addDashesToName from '../../../../lib/add_dashes_to_name';
+import removeDashes from '../../../../lib/remove_dashes';
+
 
 export default function Character(props) {
     let { name } = useParams();
@@ -12,39 +13,38 @@ export default function Character(props) {
     const [suspicious, /*setSuspicious*/] = useState(() => {
       return localStorage.getItem(`${character.name}-suspicious`);
     });
+    let location = useState(() => {
+      return localStorage.getItem(`${character.name}-location`);
+    })
 
+    const loc = location === '' ? '?' : 'location';
+    
     useEffect(() => {
       localStorage.setItem(`${character.name}-suspicious`, suspicious);
-      document.title = `Whodunnit? | Characters | ${character.name}`;
+      localStorage.setItem(`${character.name}-location`, '');
+      document.title = `Characters | ${character.name}`;
     });
-    // function isSuspicous(){
-    //   setSuspicious('true');
-    // }
-    // function notSuspicious(){
-    //   setSuspicious('false');
-    // }
+    
 
     const source = `/assets/character-avis/${addDashesToName(character.name)}.svg`
     return (
       <div className="container container-fade-in-and-translate">
-        <h1 className="page-header">{name}</h1>
+        <div className='arrow'>
+          <BackArrow link="characters" text="characters" />
+        </div>
+          <h1 className="page-header">{name}</h1>
         <div className='character-profile-wrapper'>
             <img src={source} alt={`${character.name}`}/>
           <div className='character-profile'>
             <p>Bio: {character.profile}</p>
             <p>Age: {character.age}</p>
-            <Link to={`/characters/${addDashesToName(character.name)}/interview`}><p><em>Interview</em></p></Link>
-          </div>
-          {/* <div>
-            <FontAwesomeIcon className="check character-icon" icon={faCheck} onClick={isSuspicous}/>
-            <FontAwesomeIcon className="cross character-icon" icon={faTimes} onClick={notSuspicious}/>
-          </div> */}
-          
+            <p>Location: {loc} </p>
+            <p>Action at time of death: ? </p>
+            <p>Possible motive: ?</p>
+            <p><em><Link to={`/characters/${addDashesToName(character.name)}/interview`} className="underline">Interview</Link></em></p>
+          </div>    
         </div>
       </div>
     );
   }
 
-export function removeDashes(name) {
-  return name.replace(/-/g, ' ');
-}

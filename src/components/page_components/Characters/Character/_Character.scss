@@ -1,23 +1,22 @@
 $height: 282px;
 
 .character {
-    border: 1px solid black;
+   border: 1px solid black;
     font-family: "Reenie Beanie";
     border-radius: 4px;
     text-align: center;
     height: $height;
     background-color: white;
     transition-property: box-shadow;
-    transition-duration: 0.5s;
-    transition-duration: 0.5s;
+    transition-duration: 0.2s;
     box-shadow: 4px 4px 0px 2px rgba(0,0,0,0);
-    
 }
 
 .character:hover {
     box-shadow: 4px 4px 0px 2px rgba(0,0,0,1);
-    // animation: doY 2s ease-in 2s;
+   
 }
+
 
 .check {
     color:green;
@@ -34,20 +33,32 @@ $height: 282px;
 
 .character-profile-wrapper {
     display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 50%;
+    margin: auto;
+    background-color: white;
+
 }
 
 .character-profile {
-    border: 1px solid black;
+
     max-width: 300px;
     padding: 24px;
+    margin: auto;
     border-radius: 4px;
 }
-// @-webkit-keyframes doY {
-//     0% { translateY: 100%;}
-//     100% { translateY: 0}
-//   }
-  
-//   @keyframes doY {
-//     0% { translateY: 100%; }
-//     100% { translateY: 0 ; }
-//   }
+
+@media (max-width: 1119px) {
+    .character-profile-wrapper {
+        display: block;
+        text-align: center;
+        width: 100%;
+        img {
+            margin-top: 24px;
+            margin-bottom: 24px;
+        }
+    }
+    
+}

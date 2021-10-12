@@ -5,11 +5,11 @@
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax($height, auto);
     gap: 10px;
-    grid-gap: 10px;
     a {
-      transition-property: font-size;
-      transition-timing-function: ease-in;
-      transition-duration: 0.5s;
+        color: black;
+        text-decoration: none;
+        transition-property: font-size;
+        transition-duration: 0.1s;
     }
     a:hover {
         font-size: 1.5em;
@@ -17,13 +17,13 @@
 }
 
 .location-card {
+    background-color: #FFF;
     border: 1px solid black;
-    height: 400px;
+    height: 282px;
     font-family: "Reenie Beanie";
     text-align: center;
     border-radius: 4px;
     transition-property: box-shadow;
-    transition-timing-function: ease-in;
     transition-duration: 0.2s;
 }
 
@@ -73,4 +73,44 @@
 
 .location-card-image {
     max-height: 64%;
+}
+
+// Breakpoints
+
+@media (min-width: 374px) {
+    .location-grid {
+       
+        display: none;
+      
+    }
+
+    .location-card-image {
+        max-height: 200px;
+    } 
+}
+
+@media (min-width: 1200px) {
+    
+    .location-grid {
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax($height, auto);
+        gap: 10px;
+        grid-gap: 10px;
+
+        a {
+          transition-property: font-size;
+          transition-timing-function: ease-in;
+          transition-duration: 0.3s;
+        }
+
+        a:hover {
+            font-size: 1.5em;
+        }
+    }
+
+    .location-card-image {
+        max-height: 168px;
+    }
 }
