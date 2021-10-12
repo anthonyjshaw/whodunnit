@@ -17,6 +17,10 @@ $height: 282px;
    
 }
 
+.character-profile-icon {
+    height: 150px;
+    margin: auto;
+}
 
 .check {
     color:green;
@@ -34,8 +38,8 @@ $height: 282px;
 .character-profile-wrapper {
     display: flex;
     justify-content: center;
-    border: 1px solid black;
-    border-radius: 4px;
+    // border: 1px solid black;
+    // border-radius: 4px;
     width: 50%;
     margin: auto;
     background-color: white;
