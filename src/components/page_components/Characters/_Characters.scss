@@ -22,7 +22,7 @@
 }
 .carousel-item {
   .character, .location-card {
-    transition: transform height 0.2s ease-out ;
+    transition: transform, height 0.2s ease-out ;
     transform: translateX(900px);
     height: 0;
     overflow: hidden;
