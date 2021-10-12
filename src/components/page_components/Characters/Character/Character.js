@@ -30,7 +30,7 @@ export default function Character(props) {
     });
     
 
-    const source = `/assets/character-avis/${addDashesToName(character.name)}.svg`
+    const source = `/assets/character-avis/${addDashesToName(character.name).toLowerCase()}.svg`
     return (
       <div className="container container-fade-in-and-translate">
         <div className='arrow'>
