@@ -35,12 +35,7 @@ export default function Characters() {
             divClass={`character`} text={e.name} 
             image={`assets/character-avis/${addDashesToName(e.name.toLowerCase())}.svg`} 
             imageClass='character-icon'/>
-            //  <Link to={`/characters/${addDashesToName(e.name)}`} key={`${suspects.indexOf(e) + 1}: ${e.name}`} className='carousel-item'>
-            // <div className={`character`} >
-            //         <h2>{e.name}</h2>
-            //         <img src={`assets/character-avis/${addDashesToName(e.name.toLowerCase())}.svg`} alt={e.name} className='character-icon'/>
-            //     </div>
-            // </Link>
+         
         );
     });
 
