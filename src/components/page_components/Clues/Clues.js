@@ -1,7 +1,7 @@
 import {React, useState} from "react";
 
 export default function Clues() {
-    const [clues, setClues] = useState(() => {
+    const [clues] = useState(() => {
         const clues = localStorage.getItem('clueList');
         if (clues) {
             return clues.split(',');

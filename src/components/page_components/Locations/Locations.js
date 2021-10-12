@@ -58,7 +58,7 @@ export default function Locations() {
     const locationCarousel = locations.map((e) => {
         return (
 
-            <Card icon={icon(e)} link={`/locations/${addDashesToName(e)}`} linkClass={'carousel-item'} key={`${locations.indexOf(e) + 1}: ${e}`} divClass={`location-card${murderLoc(e)}`} image={`assets/locations/${addDashesToName(e.toLowerCase())}.svg`} imageClass='location' text={e}/>
+            <Card icon={icon(e)} link={`/locations/${addDashesToName(e)}`} linkClass={'carousel-item'} key={`${locations.indexOf(e) + 1}: ${e}`} divClass={`location-card${murderLoc(e)}`} image={`assets/locations/${addDashesToName(e.toLowerCase())}.svg`} imageClass='location-card-image' text={e}/>
             // <Link to={`/locations/${addDashesToName(e)}`} key={`${locations.indexOf(e) + 1}: ${e}`} className='carousel-item'>
             // <div className={`location-card${murderLoc(e)}`} >
             //         <h2>{e} {icon(e)}</h2>

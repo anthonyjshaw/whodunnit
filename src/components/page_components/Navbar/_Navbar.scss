@@ -36,32 +36,27 @@
     }
 }
 .nav-container {
-    display: flex;
+
     width: 100%;
 }
 
-@media (min-width: 375px) {
+@media (max-width: 1199px) {
     .nav-container, .nav-links {
         flex-direction: column;
 
     }
     .nav-links {
-        display: none;
-        // height: 0px;
-        // margin-top: 40px;
-        // transform: translateY(9999px);
-        padding: 24px;
-        // opacity: 0;
-        // // transition-property: transform;
-        // transition-duration: 0.5s;
-        // transition-timing-function: ease-out;
+        transition: transform, height 0.2s ;
+        transform: translateY(-900px);
+        height: 0;
+        overflow: hidden;
         
     }
 
     .navbar-toggle-show {
         // opacity: 1;
-        // height: 128px;
-        display: flex;
+        height: 128px;
+        transition: transform, height 0.2s;
         transform: translateY(0px);
         padding: 24px;
     }
