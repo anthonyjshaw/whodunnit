@@ -29,7 +29,12 @@ export default function Characters() {
     const characterCarousel = suspects.map((e) => {
      
         return (
-            <Card linkClass='carousel-item' link={`/characters/${addDashesToName(e.name)}`} key={`${suspects.indexOf(e) + 1}: ${e.name}`} divClass={`character`} text={e.name} image={`assets/character-avis/${addDashesToName(e.name.toLowerCase())}.svg`} imageClass='character-icon'/>
+            <Card linkClass='carousel-item' 
+            link={`/characters/${addDashesToName(e.name)}`} 
+            key={`${suspects.indexOf(e) + 1}: ${e.name}`} 
+            divClass={`character`} text={e.name} 
+            image={`assets/character-avis/${addDashesToName(e.name.toLowerCase())}.svg`} 
+            imageClass='character-icon'/>
             //  <Link to={`/characters/${addDashesToName(e.name)}`} key={`${suspects.indexOf(e) + 1}: ${e.name}`} className='carousel-item'>
             // <div className={`character`} >
             //         <h2>{e.name}</h2>
@@ -44,11 +49,9 @@ export default function Characters() {
         if (index === suspects.length) {
             carousel.current.children[index - n].className ='carousel-item';
             index = 0;
-            console.log(index)
             carousel.current.children[index].className ='active-item';
             carousel.current.children[index + n].className ='carousel-item';
         } else {
-            console.log(index)
             carousel.current.children[index - n].className ='carousel-item';
             carousel.current.children[index].className ='active-item';     
         }
@@ -65,7 +68,6 @@ export default function Characters() {
             index = 6;
         } else {
             index = index - 1;
-            console.log(index)
             carousel.current.children[index].className = 'carousel-item'
             carousel.current.children[index - 1].className = 'active-item'; 
         }
