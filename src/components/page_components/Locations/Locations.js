@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import addDashesToName from '../../../lib/add_dashes_to_name';
 import { faSkull } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Card from '../../ui_components/Card';
+import Card from '../../ui_components/Card/Card';
 
 export default function Locations() {
     let index = 1;

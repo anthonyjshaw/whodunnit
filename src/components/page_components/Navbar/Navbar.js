@@ -24,7 +24,7 @@ export default function Navbar() {
                     </button>
                 </div>
                 <div className={`nav-links`} ref={navItems} >
-                    <div className='nav-link' ><Link to='/'>Home</Link></div>
+                    <div className='nav-link' onClick={navbarToggle}><Link to='/'>Home</Link></div>
                 {paths}
                 </div>
      

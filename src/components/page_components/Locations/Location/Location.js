@@ -8,7 +8,7 @@ const pStyle = {
 export default function Location(props) {
     return (
         <div className="container container-fade-in-and-translate">
-            <div>
+            <div className='arrow'>
                 <BackArrow link="locations" text='locations'/>
             </div>
             <h1 className="page-header">{capitalize(props.location)} {props.icon}</h1>

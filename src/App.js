@@ -17,6 +17,7 @@ function App() {
 
   return (
     <div>
+        <div id='top'></div>
       <Navbar/>
       <Switch>
         <Route exact path="/" component={Homepage}/>

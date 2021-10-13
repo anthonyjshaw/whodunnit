@@ -37,6 +37,24 @@
   }
 }
 
+.carousel-item-x {
+  .character, .location-card {
+    transform: translateX(-900px);
+    height: 0;
+    overflow: hidden;
+  }
+}
+
+.active-item-x {
+  .character, .location-card {
+    transform: translateX(0px);
+    transition: transform 0.5s ease;
+    height: 300px;
+
+  }
+}
+
+
 .carousel {
   width: 100vw;
   overflow: hidden;
