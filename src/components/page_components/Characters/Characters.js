@@ -1,4 +1,4 @@
-import {React, useEffect, useRef} from "react";
+import {React, useEffect, useRef, useState} from "react";
 import suspects from '../../../lib/suspect_array';
 import { Link } from 'react-router-dom';
 import addDashesToName from "../../../lib/add_dashes_to_name";
@@ -7,10 +7,16 @@ import Card from "../../ui_components/Card";
 export default function Characters() {
     let index = 1;
     const carousel = useRef(null)
-   
+    const [lastIndex, setLastIndex] = useState(() => {
+        return localStorage.getItem('lastIndex-character')
+    });
     useEffect(() => {
-        console.log(index)
-        carousel.current.children[index-1].className ='active-item'
+        localStorage.setItem('lastIndex-character', lastIndex);
+        console.log(lastIndex)
+        if (lastIndex !== 1) {
+            carousel.current.children[index].className = 'carousel-item'
+            carousel.current.children[0].className ='active-item'
+        }
         document.title = 'Characters';        
     });
 
@@ -38,7 +44,7 @@ export default function Characters() {
          
         );
     });
-
+ 
 
     const moveSlide = (n) =>{
         if (index === suspects.length) {
@@ -48,9 +54,15 @@ export default function Characters() {
             carousel.current.children[index + n].className ='carousel-item';
         } else {
             carousel.current.children[index - n].className ='carousel-item';
-            carousel.current.children[index].className ='active-item';     
+            carousel.current.children[index].className ='active-item';
+  
         }
         index++;
+        // setLastIndex(index)
+    }
+    function handleClick() {
+        
+        setLastIndex(index);
     }
     const pStyle = {
         textAlign: 'center'
@@ -73,13 +85,13 @@ export default function Characters() {
                 <div className="mobile-wrapper">
 
                 <div className='carousel-wrapper'>
-                    <button className='carousel-button' onClick={()=> moveSlideBack()}>&#10094;</button>
+                    <button className='carousel-button' onClick={()=> {moveSlideBack()}}>&#10094;</button>
                     <div className="carousel" ref={carousel}>
                         {characterCarousel}
                     </div>
                     <button className='carousel-button' onClick={()=> moveSlide(1)}>&#10095;</button>
                 </div>
-                   <p style={pStyle}>Click the {window.innerWidth < 1200 ? 'arrows': 'pictures'} to see character profiles</p>
+                  
                 </div>
             <div className='character-list'>
                 {characterGrid}

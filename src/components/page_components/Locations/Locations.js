@@ -12,9 +12,7 @@ export default function Locations() {
     const carousel = useRef(null);
    
     useEffect(() => {
-        if (carousel.current.children[index-1] !== 0) {
-            index = 1;
-        } carousel.current.children[index-1].className ='active-item'
+        carousel.current.children[index-1].className ='active-item'
         document.title = `Locations`;
     });
 
@@ -35,9 +33,7 @@ export default function Locations() {
         }
         index++        
     }
-    const pStyle = {
-        textAlign: 'center'
-    };
+
 
     function moveSlideBack() {
         if (index < 1) {
