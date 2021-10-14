@@ -2,7 +2,7 @@ import {React, useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import { murderMethods } from '../../../lib/murder_methods';
 import { locations } from '../../../lib/locations';
-import suspects from '../../../lib/suspect_array';
+// import suspects from '../../../lib/suspect_array';
 
 export default function Crime(props) {
     const deaths = murderMethods;
@@ -20,46 +20,61 @@ export default function Crime(props) {
         return localStorage.getItem('location');
     });
 
-    const [answer, setAnswer] = useState('');
-
     useEffect(()=> {
         localStorage.setItem('death', death);
         localStorage.setItem('location', loc);
         document.title = "Whodunnit? | Crime";
     })
 
-    function handleClick(e){
-        if (e.target.innerText === localStorage.getItem('culprit')) {
-            setAnswer('Congratulations, you super sleuth!')
-            localStorage.setItem('culprit', '');
-        } else {
-            setAnswer(`Ooo no, it was the ${localStorage.getItem('culprit')}!`);
+    const crimeobj = {
+        deaths: {
+            'stabbing': 'knife.svg',
+            'shooting': 'pistol.svg',
+            'pushed out of window': 'window.svg',
+            'set on fire': 'fire.svg',
+            'poison': 'poison.svg'
+        },
+        location: {
+            'kitchen': 'kitchen-crime-icon.svg',
+            'study': 'study-crime-icon.svg',
+            'dining room': 'dining-room-crime-icon.svg',
+            'lounge': 'lounge-crime-icon.svg',
+            'garden': 'garden-crime-icon.svg',
+            'bedroom': 'bedroom-crime-icon.svg'
         }
     }
-    const mappedSuspects = suspects.map(e => <li key={suspects.indexOf(e) + 1} onClick={handleClick}>{e.name}</li>)
+
+
     return (
         <div className="container container-fade-in-and-translate">
             <h1 className="page-header">Crime</h1>
-            <div className="crime">
-                <img src="assets/character-avis/lord_of_the_manor.svg" alt="lord of the manor" className="crime-avatar" />
+            <div className="crime-wrapper">
                 <div className="crime-info">
+                <img src="assets/character-avis/lord_of_the_manor.svg" alt="lord of the manor" className="crime-avatar" />
                     <p>Victim: Lord Marberry</p>
-                    <p>Cause of death: {death}</p>
-                    <p>Location: {loc}</p>
-                    <p>Start by <em><Link to="/characters" className="underline">interviewing the suspects</Link></em> or by <em><Link to={`/locations/${loc}`} className="underline">visiting the crime scene</Link></em></p>
                 </div>
-            
-
-            <div>
-                <h2 className="page-header"> 
-                    Whodunnit?
-                </h2>
-                <p>It was the...</p>
-                <ul>
-                    {mappedSuspects}
-                </ul>
-                <p>{answer}</p>
+                <div className='crime-info'>
+                    <img src={`/assets/items/${crimeobj.deaths[`${death}`]}`} className='crime-icon' alt={death}/>
+                    <p>Cause of death: {death}</p>
+                </div>
+                <div className='crime-info'>
+                    <img src={`/assets/items/${crimeobj.location[`${loc}`]}`} alt={loc} className='crime-icon'/>
+                    <p>Location: {loc}</p>
+                </div>
             </div>
+            <div className="crime-actions">
+                    <Link to={`/characters`}>
+                        <div className='action'>
+                                <img src='/assets/items/question.svg' alt="question clip art" className="crime-icon"/>
+                                <p>Question suspects</p>
+                        </div>
+                    </Link>
+                    <Link to={`/locations/${loc}`}>
+                        <div className='action'>
+                                <img src='/assets/items/chalk-outline.svg' alt='chalk outline' className='crime-icon'/>
+                                <p>Visit crime scene</p>
+                        </div>
+                    </Link>
             </div>
         </div>
         

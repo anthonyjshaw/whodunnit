@@ -2,14 +2,12 @@
     text-align: center;
 }
 
-.location-image {
-    max-height: 1em;
-}
+
 
 @media (min-width: 320px) {
     .location-image {
-        max-height: 24vh;
-        max-width: 70vw;
+        max-height: 100px;
+        max-width: 200px;
     }
 }
 

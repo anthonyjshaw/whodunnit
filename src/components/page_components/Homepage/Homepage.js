@@ -8,17 +8,16 @@ export default function Homepage(props) {
         return localStorage.getItem('hasSession') === 'true' ? 'Continue': "Start";
     });
     const initSettings = ['death', 'location', 'culprit', 'hasSession'];
+    
     useEffect(() => {
+        localStorage.setItem('hasSession', 'true')
         document.title = 'Whodunnit?';
-        initSettings.forEach(e => {
-            e === 'hasSession' ? localStorage.setItem(e, 'true') : localStorage.setItem(e, '');
-        });
     });
 
     function newGame() {
-        const random = Math.floor(Math.random() * suspects.length)
-        const culprit = suspects[random].name;
-        if (localStorage.getItem('culprit') === '' || localStorage.getItem('culprit') === null) localStorage.setItem('culprit', culprit);
+                const random = Math.floor(Math.random() * suspects.length)
+                const culprit = suspects[random].name;
+                localStorage.setItem('culprit', culprit);
     }
 
     function quitGame() {
@@ -37,7 +36,7 @@ export default function Homepage(props) {
                 return;
             }
     } 
-    const link = localStorage.getItem('hasSession') === 'true' ? '/characters' : 'crime';
+    const link = localStorage.getItem('hasSession') === 'true' ? '/characters' : '/crime';
     
     return (
         <div className="container container-fade-in">

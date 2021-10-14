@@ -1,6 +1,8 @@
 .back-arrow {
     position: relative;
     top: 72px;
+    color: white;
+    font-family: 'Indie Flower', cursive;
     span {
         opacity: 0;
         transition: opacity 0.2s ease-in;
