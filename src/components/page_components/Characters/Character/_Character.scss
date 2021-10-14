@@ -1,14 +1,14 @@
 $height: 282px;
 
 .character {
-   border: 1px solid;
+//    border: 1px solid;
     font-family: "Reenie Beanie";
     border-radius: 4px;
     text-align: center;
     height: $height;
-    background-color: white;
+    color: white;
     transition-property: box-shadow;
-    transition-duration: 0.2s;
+    transition-duration: 0.5s;
     box-shadow: 4px 4px 0px 2px rgba(0,0,0,0);
 }
 
@@ -42,7 +42,6 @@ $height: 282px;
     // border-radius: 4px;
     width: 50%;
     margin: auto;
-    background-color: white;
 
 }
 

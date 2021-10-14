@@ -1,4 +1,4 @@
-import {React, useEffect, useRef, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import suspects from '../../../lib/suspect_array';
 import { Link } from 'react-router-dom';
 import addDashesToName from "../../../lib/add_dashes_to_name";
@@ -45,15 +45,20 @@ export default function Characters() {
     });
  
 
-    const moveSlide = (n) =>{
-        if (index === suspects.length) {
-            carousel.current.children[index - n].className ='carousel-item';
-            index = 0;
-            carousel.current.children[index].className ='active-item';
-            carousel.current.children[index + n].className ='carousel-item';
-        } else {
-            carousel.current.children[index - n].className ='carousel-item';
-            carousel.current.children[index].className ='active-item';
+    const moveSlide = (n) => {
+        try {
+            if (index === suspects.length) {
+                carousel.current.children[index - n].className ='carousel-item';
+                index = 0;
+                carousel.current.children[index].className ='active-item';
+                carousel.current.children[index + n].className ='carousel-item';
+            } else {
+                carousel.current.children[index - n].className ='carousel-item';
+                carousel.current.children[index].className ='active-item';
+            }
+            
+        } catch (error) {
+            console.error(error)
         }
         index++;
        

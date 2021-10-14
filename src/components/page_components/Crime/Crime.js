@@ -63,14 +63,19 @@ export default function Crime(props) {
                 </div>
             </div>
             <div className="crime-actions">
-                <div className='action'>
-                    <p>Question suspects</p>
-                </div>
-                <div className='action'>
-                    <p>Visit locations</p>
-                </div>
+                    <Link to={`/characters`}>
+                        <div className='action'>
+                                <img src='/assets/items/question.svg' alt="question clip art" className="crime-icon"/>
+                                <p>Question suspects</p>
+                        </div>
+                    </Link>
+                    <Link to={`/locations/${loc}`}>
+                        <div className='action'>
+                                <img src='/assets/items/chalk-outline.svg' alt='chalk outline' className='crime-icon'/>
+                                <p>Visit crime scene</p>
+                        </div>
+                    </Link>
             </div>
-            {/* <p>Start by <em><Link to="/characters" className="underline">interviewing the suspects</Link></em> or by <em><Link to={`/locations/${loc}`} className="underline">visiting the crime scene</Link></em></p> */}
         </div>
         
     );

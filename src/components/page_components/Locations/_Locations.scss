@@ -17,11 +17,9 @@
 }
 
 .location-card {
-    background-color: #FFF;
-    border: 1px solid black;
-    height: 282px;
     font-family: "Reenie Beanie";
     text-align: center;
+    color: #fff;
     border-radius: 4px;
     transition-property: box-shadow;
     transition-duration: 0.2s;
@@ -58,7 +56,6 @@
 }
 
 .location-carousel-card {
-    border: 1px solid black;
     height: 150px;
     font-family: "Reenie Beanie";
     text-align: center;
@@ -71,15 +68,10 @@
 }
 
 
-.location-card-image {
-    max-height: 64%;
-}
-
 // Breakpoints
 
 @media (min-width: 374px) {
     .location-grid {
-       
         display: none;
       
     }

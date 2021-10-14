@@ -5,6 +5,7 @@
     font-weight: bold;
     font-size: 1.5em;
     font-family: "Reenie Beanie";
+
 }
 
 .navbar-toggle {
@@ -18,13 +19,13 @@
     transition-property: transform;
     transition-timing-function: ease-in;
     transition-duration: 0.2s;
+
      a {
-    color: black;
+    color: white;
     border-bottom: 1px solid rgba(0,0,0,0);
     transition-property: border-bottom;
     transition-timing-function: ease-in;
     transition-duration: 0.2s;
-
     }
 }
 .nav-link:hover {
@@ -65,17 +66,24 @@
     }
     
   } 
-  @media (min-width: 576px) {
-    
-  }
-  
-  @media (min-width: 768px) {
-    
-  }
-  @media (min-width: 1200px) {
-      .navbar-toggle {
-          display: none;
-      }
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1200px) {
+    .navbar-toggle {
+        display: none;
+    }
+
+    .nav-container {
+        width: 50%;
+        margin: auto;
+    }
+
     .nav-links {
         padding: 8px 0;
         height: auto;
@@ -84,22 +92,22 @@
         // margin-bottom: 8px;
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: space-between;
+        // border-bottom: 1px solid black;
     }
+
     .nav-link {
         display: flex;
         transform: translateY(0%);
         transition-property: transform;
         transition-timing-function: ease-in;
         transition-duration: 0.2s;
-         a {
-        color: black;
-        border-bottom: 1px solid rgba(0,0,0,0);
+
+        a {
+        // border-bottom: 1px solid rgba(0,0,0,0);
         transition-property: border-bottom;
         transition-timing-function: ease-in;
         transition-duration: 0.2s;
-    
         }
     }
-
-  }
+}

@@ -1,10 +1,10 @@
-import {React, useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect, useRef, Suspense} from 'react';
 import { locations } from '../../../lib/locations';
 import { Link } from 'react-router-dom';
 import addDashesToName from '../../../lib/add_dashes_to_name';
 import { faSkull } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Card from '../../ui_components/Card/Card';
+const Card = React.lazy(() => import('../../ui_components/Card/Card'));
 
 export default function Locations() {
     let index = 1;
@@ -38,7 +38,6 @@ export default function Locations() {
     function moveSlideBack() {
         if (index < 1) {
             index = locations.length;
-         
             carousel.current.children[0].className ='carousel-item';
             carousel.current.children[index].className ='active-item';
         } else {
@@ -54,13 +53,14 @@ export default function Locations() {
     const locationCarousel = locations.map((e) => {
         return (
 
-            <Card icon={icon(e)} link={`/locations/${addDashesToName(e)}`} linkClass={'carousel-item'} key={`${locations.indexOf(e) + 1}: ${e}`} divClass={`location-card${murderLoc(e)}`} image={`assets/locations/${addDashesToName(e.toLowerCase())}.svg`} imageClass='location-card-image' text={e}/>
-            // <Link to={`/locations/${addDashesToName(e)}`} key={`${locations.indexOf(e) + 1}: ${e}`} className='carousel-item'>
-            // <div className={`location-card${murderLoc(e)}`} >
-            //         <h2>{e} {icon(e)}</h2>
-            //         <img src={`assets/locations/${addDashesToName(e.toLowerCase())}.svg`} alt={e} className='location-card-image'/>
-            //     </div>
-            // </Link>
+            <Card icon={icon(e)} 
+            link={`/locations/${addDashesToName(e)}`} 
+            linkClass={'carousel-item'} 
+            key={`${locations.indexOf(e) + 1}: ${e}`} 
+            divClass={`location-card${murderLoc(e)}`} 
+            image={`assets/locations/${addDashesToName(e.toLowerCase())}.svg`} 
+            imageClass='location-card-image' 
+            text={e}/>
         );
     });
 
@@ -81,7 +81,9 @@ export default function Locations() {
             <div className='carousel-wrapper'>
                     <button className='carousel-button' onClick={moveSlideBack}>&#10094;</button>
                     <div className="carousel" ref={carousel}>
+                        <Suspense fallback={<div>Loading...</div>}>
                         {locationCarousel}
+                        </Suspense>
                     </div>
                     <button className='carousel-button' onClick={moveSlide}>&#10095;</button>
                 </div>

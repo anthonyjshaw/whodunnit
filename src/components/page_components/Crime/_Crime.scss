@@ -1,30 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 .crime-wrapper {
-    display: flex;
     justify-content: center;
-    border: none;
+    // border: none;
     border-radius: 4px;
     font-family: 'Indie Flower', cursive;
+    border-bottom: 1px solid white;
 }
 
-.crime-wrapper, .crime-actions {
-    color: black;
+.action, .crime-info {
+    color: white;
 }
 .crime-info {
-    background: white;
-    border: 1px solid;
+    border: none;
     text-align: center;
 }
 
+.crime-info {
+    border-radius: 16px;
+}
 .crime-avatar, .crime-icon, .crime-info {
     margin: auto;
 }
 
+.crime-info, .crime-actions, .crime-wrapper, .action {
+    display: flex;
+}
+.crime-info, .action {
+    flex-direction: column;
+}
 
+.action {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    box-shadow: 0px 0px 4px 3px white;
+    transition: box-shadow 0.2s;
+}
+
+.action:hover {
+    box-shadow: 0px 0px 22px 3px white;
+}
 
 @media (max-width: 769px) {
-    .crime-wrapper {
+
+    .crime-wrapper, .action, .crime-info {
         flex-direction: column;
     }
     
@@ -41,6 +60,9 @@
         width: 288px;
         margin-bottom: 16px;
     }
+    .crime-actions {
+        flex-direction: column;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -48,8 +70,8 @@
         height: 100px;
         width: 100px;
     }
-    .crime-wrapper {
-        font-size: 1em;
+    .crime-wrapper, .crime-actions {
+        font-size: 1.5em;
     }
     .crime-info {
         height: 200px;
@@ -60,10 +82,14 @@
     }
     .crime-actions {
         margin-top: 100px;
-        background: white;
         display: flex;
+        justify-content: space-around;
 
         .action {
+            padding: 24px;
+            height: 200px;
+            text-align: center;
+            width: 200px;
             margin: auto;
         }
     }
