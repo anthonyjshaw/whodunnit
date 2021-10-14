@@ -21,8 +21,9 @@
 }
 
 .homepage-icon {
+    width: 120px;
     height: 140px;
-
+    margin: auto;
 }
 
 .button-container {
@@ -47,10 +48,7 @@
         margin-bottom: 16px;
         width: 100%;
     }
-    .homepage-icon {
-        height: 25vh;
-    }
-
+  
   } 
   @media (min-width: 576px) {
     

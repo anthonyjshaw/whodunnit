@@ -1,7 +1,7 @@
 import React from "react";
 
 const About = () => {
-    const divStyle = {textAlign: 'center'};
+    const divStyle = {textAlign: 'center', fontSize: '2em'};
     return (
         <div className="container container-fade-in-and-translate">
             <h1 className="page-header">About</h1>

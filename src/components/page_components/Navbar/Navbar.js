@@ -7,7 +7,7 @@ export default function Navbar() {
     const navItems = useRef(null);
     const [hidden, setHidden] = useState(true);
     
- 
+    const styles = {color: 'white'}
 
     function navbarToggle(e) {
         setHidden(!hidden);
@@ -19,8 +19,8 @@ export default function Navbar() {
     return (
         <div className="nav-container">
                 <div>
-                    <button className='navbar-toggle' onClick={navbarToggle}>
-                        {hidden ? <FontAwesomeIcon icon={faBars} /> : <FontAwesomeIcon icon={faTimes} /> }
+                    <button className='navbar-toggle' onClick={navbarToggle} aria-label="navbar-toggle" style={{color: 'white'}}>
+                        {hidden ? <FontAwesomeIcon icon={faBars} className="white"/> : <FontAwesomeIcon icon={faTimes}  className="white"/> }
                     </button>
                 </div>
                 <div className={`nav-links`} ref={navItems} >

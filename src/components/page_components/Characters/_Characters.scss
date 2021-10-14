@@ -2,6 +2,8 @@
 
 .character-list {
     display: grid;
+    // border-top: 1px solid;
+    // border-bottom: 1px solid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax($height, auto);
     gap: 10px;
@@ -12,13 +14,14 @@
         transition-property: font-size;
         transition-duration: 0.2s;
     }
-    // a:hover {
-    //   font-size: 1.5em;
-    // }
+    a:hover {
+      font-size: 1.5em;
+    }
 }
 
 .character-icon {
-  max-height: 150px;
+  width: 105px;
+  height: 150px;
 }
 .carousel-item {
   .character, .location-card {
@@ -89,6 +92,13 @@
   //   }
     
   // }
+
+@media (min-width: 769px) {
+  
+      .character-icon {
+          height: 400px;
+      }
+}
 
 @media (max-width: 1119px) {
   .character-list {

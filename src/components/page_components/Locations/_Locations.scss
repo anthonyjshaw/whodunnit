@@ -11,9 +11,7 @@
         transition-property: font-size;
         transition-duration: 0.1s;
     }
-    a:hover {
-        font-size: 1.5em;
-      }
+    
 }
 
 .location-card {
@@ -21,12 +19,15 @@
     text-align: center;
     color: #fff;
     border-radius: 4px;
-    transition-property: box-shadow;
+    transition-property: box-shadow, font-size;
     transition-duration: 0.2s;
+    padding: 16px;
+    height: 282px;
 }
 
 .location-card:hover {
-    box-shadow: 8px 8px 0px black;
+    font-size: 1.5em;
+    box-shadow: 0px 0px 10px 0px white;
     
 }
 
@@ -91,15 +92,7 @@
         gap: 10px;
         grid-gap: 10px;
 
-        a {
-          transition-property: font-size;
-          transition-timing-function: ease-in;
-          transition-duration: 0.3s;
-        }
 
-        a:hover {
-            font-size: 1.5em;
-        }
     }
 
     .location-card-image {
