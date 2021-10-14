@@ -116,7 +116,10 @@
       grid-auto-rows: minmax($height, auto);
       gap: 10px;
   
-  }
+   }
+   .character-icon {
+    height: 200px;
+}
 }
 
 .initial {
