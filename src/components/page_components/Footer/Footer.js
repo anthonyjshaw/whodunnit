@@ -9,7 +9,7 @@ import ExtLink from '../../ui_components/ExtLink/ExtLink';
 
 const Footer = () => {
   const links = [
-    {link: 'github.com/anthonyjshaw', icon: faGithub}, 
+    {link: 'github.com/anthonyjshaw/whodunnit', icon: faGithub}, 
     {link: 'twitter.com/anthonyjshaw', icon: faTwitter}, 
     {link: 'instagram.com/antjjshaw', icon: faInstagram}, 
     {link: 'linkedin.com/in/anthonyjjshaw', icon: faLinkedin},

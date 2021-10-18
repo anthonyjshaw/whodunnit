@@ -5,8 +5,10 @@ html {
   scroll-behavior: smooth;
 }
 
-.App {
-  
+.flex-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 body {
@@ -71,6 +73,9 @@ code {
   //   display: flex;
   //   flex-direction: column;
   }
+  .flex-wrapper {
+    min-height: 90vh;
+  }
 } 
 @media (min-width: 576px) {
   .container {
@@ -88,7 +93,7 @@ code {
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   .container {
-    width: 88%;
+    width: 88vw;
   }
  }
 
@@ -96,6 +101,9 @@ code {
   .container {
     margin: auto;
     width: 77%;
+  }
+  .flex-wrapper {
+    min-height: 88vh;
   }
 }
   @media (min-width: 1400px) { 
