@@ -45,7 +45,7 @@ export default function Crime(props) {
             'bedroom': 'bedroom-crime-icon.svg'
         }
     }
-    const actions = [{link: `/characters`, text: 'Question suspects', alt: 'question clip art', src: 'question.svg'}, {link: `/locations/${loc}`, text: 'Visit crime scene', alt: 'chalk outline', src:'chalk-outline.svg'}];
+    const actions = [{link: `characters`, text: 'Question suspects', alt: 'question clip art', src: 'question.svg'}, {link: `locations/${loc}`, text: 'Visit crime scene', alt: 'chalk outline', src:'chalk-outline.svg'}];
     const mappedActions = actions.map(e => <Action key={actions.indexOf(e) + 1} link={e.link} text={e.text} alt={e.alt} imgSrc={e.src}/>);
     return (
         <div className="container container-fade-in-and-translate">
