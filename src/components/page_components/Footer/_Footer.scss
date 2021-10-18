@@ -1,11 +1,22 @@
 .footer {
-    display: none;
+    display: flex;
+    padding: 8px;
+    border-top: 1px solid black;
     align-items: flex-end;
     justify-content: space-around;
-    height: 200px;
     width: 100%;
+    a {
+        transition: color 0.2s ease;
+    }
+    a:hover {
+        color: white;
+    }
 }
 
-.footer * {
-    margin: 0;
+@media (min-width: 1200px) {
+    .footer {
+        font-size: 1.5em;
+        position: absolute;
+        bottom: 0;
+    }
 }

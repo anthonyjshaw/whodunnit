@@ -1,7 +1,9 @@
 import {React, useState, useEffect} from 'react';
+import Action from '../../ui_components/Action/Action';
 import { Link } from 'react-router-dom';
 import { murderMethods } from '../../../lib/murder_methods';
 import { locations } from '../../../lib/locations';
+
 // import suspects from '../../../lib/suspect_array';
 
 export default function Crime(props) {
@@ -43,8 +45,8 @@ export default function Crime(props) {
             'bedroom': 'bedroom-crime-icon.svg'
         }
     }
-
-
+    const actions = [{link: `/characters`, text: 'Question suspects', alt: 'question clip art', src: 'question.svg'}, {link: `/locations/${loc}`, text: 'Visit crime scene', alt: 'chalk outline', src:'chalk-outline.svg'}];
+    const mappedActions = actions.map(e => <Action key={actions.indexOf(e) + 1} link={e.link} text={e.text} alt={e.alt} imgSrc={e.src}/>);
     return (
         <div className="container container-fade-in-and-translate">
             <h1 className="page-header">Crime</h1>
@@ -63,7 +65,8 @@ export default function Crime(props) {
                 </div>
             </div>
             <div className="crime-actions">
-                    <Link to={`/characters`}>
+                    {mappedActions}
+                    {/* <Link to={`/characters`}>
                         <div className='action'>
                                 <img src='/assets/items/question.svg' alt="question clip art" className="crime-icon"/>
                                 <p>Question suspects</p>
@@ -74,7 +77,7 @@ export default function Crime(props) {
                                 <img src='/assets/items/chalk-outline.svg' alt='chalk outline' className='crime-icon'/>
                                 <p>Visit crime scene</p>
                         </div>
-                    </Link>
+                    </Link> */}
             </div>
         </div>
         

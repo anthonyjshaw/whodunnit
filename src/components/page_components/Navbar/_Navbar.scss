@@ -89,13 +89,10 @@
         height: auto;
         opacity: 1;
         font-size: 1.5em;
-        // margin-top: 8px;
-        // margin-bottom: 8px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         font-family: 'Indie Flower';
-        // border-bottom: 1px solid black;
     }
 
     .nav-link {
@@ -106,7 +103,6 @@
         transition-duration: 0.2s;
 
         a {
-        // border-bottom: 1px solid rgba(0,0,0,0);
         transition-property: border-bottom;
         transition-timing-function: ease-in;
         transition-duration: 0.2s;
