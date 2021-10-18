@@ -54,6 +54,7 @@ export default function Locations() {
         return (
             <Card icon={icon(e)} 
             link={`/locations/${addDashesToName(e)}`} 
+            linkClass='carousel-item'
             key={`${locations.indexOf(e) + 1}: ${e}`} 
             divClass={`card${murderLoc(e)}`} 
             image={`assets/locations/${addDashesToName(e.toLowerCase())}.svg`} 

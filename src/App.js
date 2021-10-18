@@ -16,10 +16,11 @@ import './App.scss';
 import EmptyDiv from './components/ui_components/EmptyDiv/EmptyDiv';
 
 function App() {
-
+  
   return (
-    <div>
-      <Navbar/>
+    <>
+    <Navbar/>
+    <div className='flex-wrapper'>
       <Switch>
         <Route exact path="/" component={Homepage}/>
         <Route exact path='/crime' component={Crime} />
@@ -32,9 +33,10 @@ function App() {
         <Route exact path="/locations/:location" component={LocationContainer}/>
         <Route exact path="/clues" component={Clues} />
       </Switch>
-      {/* <EmptyDiv /> */}
-      <Footer />
     </div>
+      <Footer />
+      {/* <EmptyDiv /> */}
+    </>
   );
 }
 

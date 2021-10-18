@@ -4,4 +4,4 @@ There's been a murder! Use the clues and your own investigative skills to find t
 
 ## About
 
-A murder mystery web application game built with React. You can find the app at [https://whodunnit.herokuapp.com](https://whodunnit.herokuapp.com).
+A murder mystery web application game built with React. You can find the app at [https://whodunnitgame.com](here).
