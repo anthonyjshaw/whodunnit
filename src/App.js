@@ -13,6 +13,7 @@ import Locations from './components/page_components/Locations/Locations';
 import LocationContainer from './components/page_components/Locations/Location/LocationContainer';
 import Navbar from './components/page_components/Navbar/Navbar';
 import './App.scss';
+import EmptyDiv from './components/ui_components/EmptyDiv/EmptyDiv';
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
         <Route exact path="/locations/:location" component={LocationContainer}/>
         <Route exact path="/clues" component={Clues} />
       </Switch>
+      {/* <EmptyDiv /> */}
       <Footer />
     </div>
   );
