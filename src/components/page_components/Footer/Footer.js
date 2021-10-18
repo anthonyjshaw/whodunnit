@@ -14,10 +14,12 @@ const Footer = () => {
     {link: 'instagram.com/antjjshaw', icon: faInstagram}, 
     {link: 'linkedin.com/in/anthonyjjshaw', icon: faLinkedin},
   ]
-  const mappedLinks = links.map(e => <ExtLink key={links.indexOf(e) + 1} link={`https://${e.link}`}><FontAwesomeIcon icon={e.icon}/></ExtLink>)
+  const mappedLinks = links.map(e => <div className="footer-icon" key={links.indexOf(e) + 1}><ExtLink  link={`https://${e.link}`}><FontAwesomeIcon icon={e.icon}/></ExtLink></div>)
     return (
-      <div className="footer">
-      {mappedLinks}
+      <div className='footer-container'>
+        <div className="footer">
+            {mappedLinks}
+        </div>
       </div>
       );
 }
