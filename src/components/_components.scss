@@ -22,6 +22,15 @@
     }
 }
 
+@media (min-width: 1200px) {
+    .page-header {
+        font-size: 4.2em;
+        margin: auto;
+        padding: 16px 0;
+    }
+}
+
+
 @media (min-width: 1920px) {
     .page-header {
         font-size: 4.2em;

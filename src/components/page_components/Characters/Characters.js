@@ -23,7 +23,7 @@ export default function Characters() {
     const characterGrid = suspects.map((e) => {
        return (
             <Link to={`/characters/${addDashesToName(e.name)}`} key={`${suspects.indexOf(e) + 1}: ${e.name}`}>
-                <div className="character">
+                <div className="card">
                     <h2>{e.name}</h2>
                     <img src={`assets/character-avis/${addDashesToName(e.name.toLowerCase())}.svg`} alt={e.name} className='character-icon'/>
                 </div>
@@ -36,9 +36,9 @@ export default function Characters() {
      
         return (
             <Card linkClass='carousel-item' 
-            link={`/characters/${addDashesToName(e.name)}`} 
+            link={`${process.env.PUBLIC_URL}/characters/${addDashesToName(e.name)}`} 
             key={`${suspects.indexOf(e) + 1}: ${e.name}`} 
-            divClass={`character`} text={e.name} 
+            divClass={`card`} text={e.name} 
             image={`assets/character-avis/${addDashesToName(e.name.toLowerCase())}.svg`} 
             imageClass='character-icon'/>
         );
@@ -67,7 +67,7 @@ export default function Characters() {
     function moveSlideBack() {
         if (index === 1) {
             carousel.current.children[0].className = 'carousel-item';
-            carousel.current.children[5].className = 'active-item-x';
+            carousel.current.children[5].className = 'active-item';
             index = 6;
         } else {
             index = index - 1;

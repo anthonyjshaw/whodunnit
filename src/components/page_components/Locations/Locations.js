@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import addDashesToName from '../../../lib/add_dashes_to_name';
 import { faSkull } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-const Card = React.lazy(() => import('../../ui_components/Card/Card'));
+import Card from '../../ui_components/Card/Card';
 
 export default function Locations() {
     let index = 1;
@@ -52,12 +52,10 @@ export default function Locations() {
     const murderLoc = e => e === loc ? " location" : "";
     const locationCarousel = locations.map((e) => {
         return (
-
             <Card icon={icon(e)} 
             link={`/locations/${addDashesToName(e)}`} 
-            linkClass={'carousel-item'} 
             key={`${locations.indexOf(e) + 1}: ${e}`} 
-            divClass={`location-card${murderLoc(e)}`} 
+            divClass={`card${murderLoc(e)}`} 
             image={`assets/locations/${addDashesToName(e.toLowerCase())}.svg`} 
             imageClass='location-card-image' 
             text={e}/>
@@ -66,13 +64,13 @@ export default function Locations() {
 
 
     const mappedLocations = locations.map(e => {
-   
-       return <Link to={`/locations/${e}`} key={locations.indexOf(e) + 1}>
-            <div className={`location-card${murderLoc(e)}`} >
-                <h2>{e} {icon(e)}</h2>
-                <img src={`/assets/locations/${addDashesToName(e)}.svg`} className='location-card-image' alt={e}/>
-            </div>
-        </Link>
+       return <Card icon={icon(e)} 
+       link={`/locations/${addDashesToName(e)}`} 
+       key={`${locations.indexOf(e) + 1}: ${e}`} 
+       divClass={`card${murderLoc(e)}`} 
+       image={`${process.env.PUBLIC_URL}/assets/locations/${addDashesToName(e.toLowerCase())}.svg`} 
+       imageClass='location-card-image' 
+       text={e}/>
     });
 
     return (
@@ -81,9 +79,7 @@ export default function Locations() {
             <div className='carousel-wrapper'>
                     <button className='carousel-button' onClick={moveSlideBack}>&#10094;</button>
                     <div className="carousel" ref={carousel}>
-                        <Suspense fallback={<div>Loading...</div>}>
                         {locationCarousel}
-                        </Suspense>
                     </div>
                     <button className='carousel-button' onClick={moveSlide}>&#10095;</button>
                 </div>

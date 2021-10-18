@@ -21,8 +21,6 @@
 }
 
 .homepage-icon {
-    width: 120px;
-    height: 140px;
     margin: auto;
 }
 
@@ -74,16 +72,24 @@
         justify-content: space-evenly;
     }
     .homepage-btn {
-        width: 200px;
+        width: 339px;
+        height: 87px;
+        font-size: 2em;
     }
+    .homepage-icon {
+        width: 234px;
+        height: 227px;
+    }
+
   }
-     @media (min-width: 1400px) { 
-        .button-container {
-            display: flex;
-            justify-content: space-evenly;
-        }
-        .homepage-btn {
-            width: 200px;
-        }
-    }
-  
+
+  @media (min-width: 1920px) {
+      .homepage-btn {
+        width: 400px;
+        height: 97px;
+      }
+      .homepage-icon {
+          width: 300px;
+          height: 250px;
+      }
+  }

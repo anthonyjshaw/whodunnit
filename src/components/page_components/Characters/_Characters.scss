@@ -24,7 +24,7 @@
   height: 150px;
 }
 .carousel-item {
-  .character, .location-card {
+  .card {
     transform: translateX(900px);
     height: 0;
     overflow: hidden;
@@ -32,7 +32,7 @@
 }
 
 .active-item {
-  .character, .location-card {
+  .card {
     transform: translateX(0px);
     transition: transform 0.5s ease;
     height: 300px;
@@ -118,7 +118,7 @@
   
    }
    .character-icon {
-    height: 200px;
+    height: 150px;
 }
 }
 

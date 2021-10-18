@@ -19,13 +19,11 @@ export default function Character(props) {
       return localStorage.getItem(`${character.name}-location`);
     })
 
-    console.log(location);
-
     const loc = location === "" ? '?' : `${location}`;
     
     useEffect(() => {
       localStorage.setItem(`${character.name}-suspicious`, suspicious);
-      localStorage.setItem(`${character.name}-location`, '');
+      localStorage.setItem(`${character.name}-location`, location)
       document.title = `Characters | ${character.name}`;
     });
     

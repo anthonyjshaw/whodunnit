@@ -28,14 +28,14 @@ export default function Interview(props) {
     let mappedActions = actions.map(e => {
         return <div className="interview-actions" onClick={characterLocation} key={actions.indexOf(e) + 1}><h2>{e}</h2></div>
     });
-    name = removeDashes(name);
+    const newName = removeDashes(name).toLowerCase();
     return (
         <div className="container container-fade-in-and-translate">
             <BackArrow link={`characters/${name}`} text={name} />
             <h1 className="page-header">Interview {name}</h1>
             <div className="interview-container">
                 <div>
-                    <img src={`/assets/character-avis/${addDashesToName(name).tolowerCase()}.svg`} alt={name}/> 
+                    <img src={`/assets/character-avis/${addDashesToName(newName)}.svg`} alt={name}/> 
                 </div>
                 <div className="interview-action-wrapper">
                     {mappedActions}
