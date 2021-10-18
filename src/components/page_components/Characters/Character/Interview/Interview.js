@@ -35,7 +35,7 @@ export default function Interview(props) {
             <h1 className="page-header">Interview {name}</h1>
             <div className="interview-container">
                 <div>
-                    <img src={`/assets/character-avis/${addDashesToName(name)}.svg`} alt={name}/> 
+                    <img src={`/assets/character-avis/${addDashesToName(name).tolowerCase()}.svg`} alt={name}/> 
                 </div>
                 <div className="interview-action-wrapper">
                     {mappedActions}

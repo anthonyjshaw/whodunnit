@@ -9,7 +9,7 @@ export default function Clues() {
             return [];
         }
     })
-    const mappedClues = clues.map(e => <div key={clues.indexOf(e) + 1}>{e}</div>)
+    const mappedClues = clues.length === 0 ? <p>No clues!</p> : clues.map(e => <div key={clues.indexOf(e) + 1}>{e}</div>)
     return (
         <div className='container container-fade-in-and-translate'>
             <h1 className="page-header">Clues</h1>
