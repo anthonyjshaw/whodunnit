@@ -2,20 +2,23 @@ import {React, useState, useEffect} from 'react';
 import  suspects  from '../../../../lib/suspect_array';
 import { Link, useParams } from 'react-router-dom';
 import BackArrow from '../../../ui_components/BackArrow/BackArrow';
-import addDashesToName from '../../../../lib/add_dashes_to_name';
-import removeDashes from '../../../../lib/remove_dashes';
+import addDashesToName from '../../../../lib/__utils__/add_dashes_to_name';
+import removeDashes from '../../../../lib/__utils__/remove_dashes';
+import { capitalizeMultipleWords } from '../../../../lib/__utils__/capitalize_multiple_words';
 
 
 export default function Character(props) {
     let { name } = useParams();
     name = removeDashes(name);
-    const character = suspects.find(e => e.name === name);
+    console.log(capitalizeMultipleWords(name));
+    const character = suspects.find(e => e.name === capitalizeMultipleWords(name));
+    console.log(character)
     const [suspicious, setSuspicious] = useState(() => {
       return localStorage.getItem(`${character.name}-suspicious`);
     });
 
 
-    let [location, setLocation] = useState(() => {
+    const [location, setLocation] = useState(() => {
       return localStorage.getItem(`${character.name}-location`);
     })
 
@@ -34,7 +37,7 @@ export default function Character(props) {
         <div className='arrow'>
           <BackArrow link="characters" text="characters" />
         </div>
-          <h1 className="page-header">{name}</h1>
+          <h1 className="page-header">{capitalizeMultipleWords(name)}</h1>
         <div className='character-profile-wrapper'>
             <img src={source} alt={`${character.name}`} className='character-profile-icon'/>
           <div className='character-profile'>
@@ -43,7 +46,13 @@ export default function Character(props) {
             <p>Location: {loc} </p>
             <p>Action at time of death: ? </p>
             <p>Possible motive: ?</p>
-            <p><em><Link to={`/characters/${addDashesToName(character.name)}/interview`} className="underline">Interview</Link></em></p>
+            <p>
+              <em>
+                <Link to={`/characters/${addDashesToName(character.name)}/interview`} className="underline">
+                  Interview
+                </Link>
+              </em>
+            </p>
           </div>    
         </div>
       </div>

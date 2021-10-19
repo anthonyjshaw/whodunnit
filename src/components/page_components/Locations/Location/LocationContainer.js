@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 import Location from './Location';
-import removeDashes from '../../../../lib/remove_dashes';
+import removeDashes from '../../../../lib/__utils__/remove_dashes';
 import Bedroom from '../../../ui_components/svg_components/Bedroom';
 import DiningRoom from '../../../ui_components/svg_components/DiningRoom';
 import Garden from '../../../ui_components/svg_components/Garden';
@@ -9,7 +9,7 @@ import Kitchen from '../../../ui_components/svg_components/Kitchen';
 import Lounge from '../../../ui_components/svg_components/Lounge';
 import Study from '../../../ui_components/svg_components/Study';
 
-import camelCaseName from '../../../../lib/camel_case_name';
+import camelCaseName from '../../../../lib/__utils__/camel_case_name';
 import { faSkull } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 

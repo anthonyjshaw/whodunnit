@@ -1,7 +1,7 @@
 import {React, useState, useEffect} from 'react';
 import { useParams } from 'react-router';
-import addDashesToName from '../../../../../lib/add_dashes_to_name';
-import removeDashes from '../../../../../lib/remove_dashes';
+import addDashesToName from '../../../../../lib/__utils__/add_dashes_to_name';
+import removeDashes from '../../../../../lib/__utils__/remove_dashes';
 import BackArrow from '../../../../ui_components/BackArrow/BackArrow';
 
 

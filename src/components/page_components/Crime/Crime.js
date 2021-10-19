@@ -25,7 +25,7 @@ export default function Crime(props) {
     useEffect(()=> {
         localStorage.setItem('death', death);
         localStorage.setItem('location', loc);
-        document.title = "Whodunnit? | Crime";
+        document.title = "Crime";
     })
 
     const crimeobj = {
@@ -66,18 +66,6 @@ export default function Crime(props) {
             </div>
             <div className="crime-actions">
                     {mappedActions}
-                    {/* <Link to={`/characters`}>
-                        <div className='action'>
-                                <img src='/assets/items/question.svg' alt="question clip art" className="crime-icon"/>
-                                <p>Question suspects</p>
-                        </div>
-                    </Link>
-                    <Link to={`/locations/${loc}`}>
-                        <div className='action'>
-                                <img src='/assets/items/chalk-outline.svg' alt='chalk outline' className='crime-icon'/>
-                                <p>Visit crime scene</p>
-                        </div>
-                    </Link> */}
             </div>
         </div>
         
