@@ -12,7 +12,9 @@ const About = () => {
             </div>
             <hr />
             <div>
-                
+                <p>
+                    
+                </p>
             </div>
         </div>
     );

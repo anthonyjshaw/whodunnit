@@ -1,6 +1,6 @@
-const express = require('express');
-const compression = require('compression');
-const path = require('path');
+import express from 'express';
+import compression from 'compression';
+import path from 'path';
 const app = express();
 const PORT = process.env.PORT || 5000;
 
