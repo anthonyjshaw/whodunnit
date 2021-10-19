@@ -64,7 +64,7 @@
 @keyframes containerFadeInAndTranslate {
     from {
         opacity: 0;
-        transform: translateY(-5%);
+        transform: translateY(-50px);
     } 
     
     to {
@@ -77,17 +77,15 @@
     animation-name: containerFadeInAndTranslate;
     animation-iteration-count: 1;
     animation-duration: 0.5s;
-    animation-delay: 0s;
-    animation-timing-function: ease-out;
+    animation-timing-function: ease;
     
 }
 
 .container-fade-in-and-translate {
     animation-name: containerFadeInAndTranslate;
     animation-iteration-count: 1;
-    animation-duration: 0.5s;
-    animation-delay: 0s;
-    animation-timing-function: ease-in;
+    animation-duration: 1s;
+    animation-timing-function: ease;
 
 }
 

@@ -1,8 +1,6 @@
 .card {
 	font-family: "Reenie Beanie";
-    // border-radius: 4px;
     text-align: center;
-    
     color: white;
     transition-property: box-shadow;
     transition-duration: 0.5s;
@@ -10,7 +8,7 @@
 }
 
 .card:hover {
-	box-shadow: 0px 4px 0px 0px rgba(255,255,255,1);
+	// box-shadow: 0px 4px 0px 0px rgba(255,255,255,1);
 
 }
 

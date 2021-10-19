@@ -4,7 +4,6 @@
     border-top: 1px solid black;
     align-items: flex-end;
     justify-content: space-around;
-    width: 100%;
     a {
         transition: color 0.2s ease;
     }
@@ -16,7 +15,5 @@
 @media (min-width: 1200px) {
     .footer {
         font-size: 1.5em;
-        // position: absolute;
-        // bottom: 0;
     }
 }

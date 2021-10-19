@@ -16,8 +16,11 @@ export default function Homepage() {
 
     function newGame() {
                 const random = Math.floor(Math.random() * suspects.length)
-                const culprit = suspects[random].name;
-                localStorage.setItem('culprit', culprit);
+                let culprit;
+                if (localStorage.getItem('culprit') === '') {
+                    culprit = suspects[random].name;
+                    localStorage.setItem('culprit', culprit);
+                }
     }
 
     function quitGame() {

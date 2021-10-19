@@ -5,3 +5,4 @@ const capitalize = (s) => {
 }
 
 export {capitalize};
+

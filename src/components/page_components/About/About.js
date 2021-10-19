@@ -10,6 +10,10 @@ const About = () => {
                 <p>You play the role of private investigator, hired to solve the murder of an English lord.</p>
                 <p>Interview the six suspects, search the different rooms for clues and find out <span>Whodunnit?</span></p>
             </div>
+            <hr />
+            <div>
+                
+            </div>
         </div>
     );
 }

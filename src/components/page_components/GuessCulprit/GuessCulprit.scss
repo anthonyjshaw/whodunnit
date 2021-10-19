@@ -1,0 +1,49 @@
+.guess-culprit {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border: none;
+	border-bottom: 1px solid white;
+	padding: 8px;
+	align-items: center;
+	margin: auto;
+	position: fixed;
+	right: 10px;
+	background-color: transparent;
+	color: white;
+	transition: color 0.2s ease, background-color 0.2s ease, border-bottom 0.2s ease; 
+	font-family: 'Indie Flower', cursive;
+	cursor: pointer;
+	text-align: center;
+	p {
+		display: none;
+	}
+}
+
+.guess-modal {
+	position: fixed;
+	padding: 20px;
+	border-radius: 4px;
+	top: 50%;
+	right: 50%;
+	border: 1px solid #fff;
+}
+
+.guess-culprit:hover {
+	// background-color: #fff;
+	border-bottom: 1px solid black;
+	color: #000;
+}
+.guess-culprit:active {
+	color: #fff;
+}
+
+@media (min-width: 1200px) {
+	.guess-culprit {
+		p {
+			display: block;
+			margin: 0;
+		}
+	}
+}
+

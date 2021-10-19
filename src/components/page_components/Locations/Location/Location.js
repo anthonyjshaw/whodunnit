@@ -1,5 +1,5 @@
 import React from 'react';
-import { capitalize } from '../../../../lib/capitalize';
+import { capitalize } from '../../../../lib/__utils__/capitalize';
 import BackArrow from '../../../ui_components/BackArrow/BackArrow';
 
 const pStyle = {

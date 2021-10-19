@@ -25,7 +25,7 @@ export default function Crime(props) {
     useEffect(()=> {
         localStorage.setItem('death', death);
         localStorage.setItem('location', loc);
-        document.title = "Whodunnit? | Crime";
+        document.title = "Crime";
     })
 
     const crimeobj = {
@@ -52,32 +52,20 @@ export default function Crime(props) {
             <h1 className="page-header">Crime</h1>
             <div className="crime-wrapper">
                 <div className="crime-info">
-                <img src="assets/character-avis/lord_of_the_manor.svg" alt="lord of the manor" className="crime-avatar" />
+                <img src={`${process.env.PUBLIC_URL}/assets/character-avis/lord_of_the_manor.svg`} alt="lord of the manor" className="crime-avatar" />
                     <p>Victim: Lord Marberry</p>
                 </div>
                 <div className='crime-info'>
-                    <img src={`/assets/items/${crimeobj.deaths[`${death}`]}`} className='crime-icon' alt={death}/>
+                    <img src={`${process.env.PUBLIC_URL}/assets/items/${crimeobj.deaths[`${death}`]}`} className='crime-icon' alt={death}/>
                     <p>Cause of death: {death}</p>
                 </div>
                 <div className='crime-info'>
-                    <img src={`/assets/items/${crimeobj.location[`${loc}`]}`} alt={loc} className='crime-icon'/>
+                    <img src={`${process.env.PUBLIC_URL}/assets/items/${crimeobj.location[`${loc}`]}`} alt={loc} className='crime-icon'/>
                     <p>Location: {loc}</p>
                 </div>
             </div>
             <div className="crime-actions">
                     {mappedActions}
-                    {/* <Link to={`/characters`}>
-                        <div className='action'>
-                                <img src='/assets/items/question.svg' alt="question clip art" className="crime-icon"/>
-                                <p>Question suspects</p>
-                        </div>
-                    </Link>
-                    <Link to={`/locations/${loc}`}>
-                        <div className='action'>
-                                <img src='/assets/items/chalk-outline.svg' alt='chalk outline' className='crime-icon'/>
-                                <p>Visit crime scene</p>
-                        </div>
-                    </Link> */}
             </div>
         </div>
         
