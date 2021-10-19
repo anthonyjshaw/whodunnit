@@ -11,6 +11,9 @@
         transition-property: font-size;
         transition-duration: 0.1s;
     }
+    a:hover {
+        font-size: 1.5em; 
+    }
     
 }
 
@@ -26,7 +29,6 @@
 }
 
 .location-card:hover {
-    font-size: 1.5em;
     box-shadow: 0px 0px 10px 0px white;
     
 }
