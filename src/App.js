@@ -12,6 +12,7 @@ import Interview from './components/page_components/Characters/Character/Intervi
 import Locations from './components/page_components/Locations/Locations';
 import LocationContainer from './components/page_components/Locations/Location/LocationContainer';
 import Navbar from './components/page_components/Navbar/Navbar';
+import NotFound from './components/page_components/NotFound/NotFound';
 import './App.scss';
 import EmptyDiv from './components/ui_components/EmptyDiv/EmptyDiv';
 
@@ -32,10 +33,10 @@ function App() {
         <Route exact path="/locations" component={Locations} />
         <Route exact path="/locations/:location" component={LocationContainer}/>
         <Route exact path="/clues" component={Clues} />
+        <Route component={NotFound}/>
       </Switch>
     </div>
       <Footer />
-      {/* <EmptyDiv /> */}
     </>
   );
 }
