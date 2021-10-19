@@ -20,6 +20,15 @@
 	}
 }
 
+.guess-modal {
+	position: fixed;
+	padding: 20px;
+	border-radius: 4px;
+	top: 50%;
+	right: 50%;
+	border: 1px solid #fff;
+}
+
 .guess-culprit:hover {
 	// background-color: #fff;
 	border-bottom: 1px solid black;
@@ -37,3 +46,4 @@
 		}
 	}
 }
+

@@ -11,12 +11,12 @@ const GuessCulprit = () => {
 
 	return (
 		<div>
-			<button className='guess-culprit' onClick={() => window.alert(`It's the ${localStorage.getItem('culprit')}!`)}>
+			<button className='guess-culprit' onClick={() => window.alert(`Guess the culprit!`)}>
 				<p>guess culprit</p>
 				<FontAwesomeIcon icon={faQuestion} />
 			</button>
-			<div>
-				
+			<div class='guess-modal'>
+				<p>It's the...</p>
 			</div>
 		</div>
 	)
