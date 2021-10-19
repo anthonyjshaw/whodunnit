@@ -38,8 +38,9 @@ export default function Characters() {
             <Card linkClass='carousel-item' 
             link={`${process.env.PUBLIC_URL}/characters/${addDashesToName(e.name)}`} 
             key={`${suspects.indexOf(e) + 1}: ${e.name}`} 
-            divClass={`card`} text={e.name} 
-            image={`assets/character-avis/${addDashesToName(e.name.toLowerCase())}.svg`} 
+            divClass='card' 
+            text={e.name} 
+            image={`${process.env.PUBLIC_URL}/assets/character-avis/${addDashesToName(e.name.toLowerCase())}.svg`} 
             imageClass='character-icon'/>
         );
     });
