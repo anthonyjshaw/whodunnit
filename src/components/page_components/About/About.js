@@ -16,6 +16,9 @@ const About = () => {
                     
                 </p>
             </div>
+            <div style={{height:200}}>
+
+            </div>
         </div>
     );
 }

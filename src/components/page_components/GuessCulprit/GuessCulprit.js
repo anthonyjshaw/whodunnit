@@ -15,7 +15,7 @@ const GuessCulprit = () => {
 				<p>guess culprit</p>
 				<FontAwesomeIcon icon={faQuestion} />
 			</button>
-			<div class='guess-modal'>
+			<div className='guess-modal'>
 				<p>It's the...</p>
 			</div>
 		</div>

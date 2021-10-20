@@ -46,6 +46,9 @@ export default function Homepage() {
                     <button className='homepage-btn' onClick={quitGame}>Quit Game</button>
                 </div>
             </div>
+            <div style={{height:200}}>
+
+            </div>
         </div>
     );
 }
