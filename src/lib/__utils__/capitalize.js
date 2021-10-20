@@ -4,5 +4,5 @@ const capitalize = (s) => {
     return s.join('');
 }
 
-export {capitalize};
+export { capitalize };
 

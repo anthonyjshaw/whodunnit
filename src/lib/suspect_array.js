@@ -1,4 +1,4 @@
-import Suspect from './Suspect'
+import Suspect from "./Suspect.js";
 
 const butler = new Suspect('Butler', 'Long time servant of the house.', 64, 180);
 const maid = new Suspect('Maid', 'Recent addition to the household.', 22, 180);
