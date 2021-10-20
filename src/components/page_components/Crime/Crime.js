@@ -12,16 +12,16 @@ export default function Crime(props) {
     const randomDeath = deaths[Math.floor(Math.random() * deaths.length)];
     const randomLocation = randomDeath === 'pushed out of window' ? location.filter(e => e !== 'garden')[Math.floor(Math.random() * location.length)] : location[Math.floor(Math.random() * location.length)];
     
-    if (localStorage.death === '') localStorage.setItem('death', randomDeath);
     if (localStorage.location === '') localStorage.setItem('location', randomLocation);
-
+    if (localStorage.death === '') localStorage.setItem('death', randomDeath);
+    
     const [death, setDeath] = useState(() => {
         return localStorage.getItem('death');
     });
     const [loc, setLoc] = useState(() => {
         return localStorage.getItem('location');
     });
-
+    
     useEffect(()=> {
         localStorage.setItem('death', death);
         localStorage.setItem('location', loc);
