@@ -11,7 +11,7 @@ export default function HomepageContainer() {
     
     useEffect(() => {
         localStorage.setItem('hasSession', 'true');
-        document.title = 'Whodunnit?';
+        document.title = 'Whodunnit? - The murder mystery game!';
     });
 
     function newGame() {
@@ -35,7 +35,8 @@ export default function HomepageContainer() {
             }
     } 
     const link = localStorage.getItem('hasSession') === 'true' ? '/characters' : '/crime';
+
     return (
         <Homepage link={link} newGame={newGame} quitGame={quitGame} gameText={gameText}/>
-    )
+    );
 }

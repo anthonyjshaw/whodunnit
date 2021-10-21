@@ -3,7 +3,7 @@ import './App.scss';
 import Routes from './components/Routes';
 
 const App = () => {
-  
+
   return (
     <Routes />
   );
