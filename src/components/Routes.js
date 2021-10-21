@@ -11,10 +11,10 @@ import FooterContainer from './page_components/Footer/FooterContainer';
 import GuessCulprit from './page_components/GuessCulprit/GuessCulprit';
 import HomepageContainer from './page_components/Homepage/HomepageContainer';
 import InterviewContainer from './page_components/Characters/Character/Interview/InterviewContainer';
-import Locations from './page_components/Locations/Locations';
 import LocationContainer from './page_components/Locations/Location/LocationContainer';
 import NavbarContainer from './page_components/Navbar/NavbarContainer';
 import NotFound from './page_components/NotFound/NotFound';
+import LocationsContainer from "./page_components/Locations/LocationsContainer";
 
 const Routes = () => {
 	return (
@@ -28,10 +28,10 @@ const Routes = () => {
 				<Route exact path={`${process.env.PUBLIC_URL}/characters`} component={CharactersContainer} />
 				<Route exact path={`${process.env.PUBLIC_URL}/characters/:name`} component={CharacterContainer} />
 				<Route exact path={`${process.env.PUBLIC_URL}/characters/:name/interview`} component={InterviewContainer} />
-				<Route exact path={"/about"} component={About} />
-				<Route exact path={"/locations"} component={Locations} />
-				<Route exact path={"/locations/:location"} component={LocationContainer} />
-				<Route exact path={"/clues"} component={Clues} />
+				<Route exact path={`${process.env.PUBLIC_URL}/about`} component={About} />
+				<Route exact path={`${process.env.PUBLIC_URL}/locations`} component={LocationsContainer} />
+				<Route exact path={`${process.env.PUBLIC_URL}/locations/:location`} component={LocationContainer} />
+				<Route exact path={`${process.env.PUBLIC_URL}/clues`} component={Clues} />
 				<Route component={NotFound}/>
 			</Switch>
 		</div>
