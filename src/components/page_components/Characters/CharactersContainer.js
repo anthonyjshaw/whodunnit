@@ -84,6 +84,6 @@ export default function CharactersContainer() {
          		{characterCarousel}
         	</div>
 		</Characters>
-	)
+	);
 
 }

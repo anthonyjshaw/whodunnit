@@ -15,7 +15,6 @@ export default function Clues() {
             <h1 className="page-header">Clues</h1>
             {mappedClues}
             <div style={{height: 400}}>
-
             </div>
         </div>
     );

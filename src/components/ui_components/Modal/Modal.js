@@ -4,7 +4,9 @@ const Modal = (props) => {
 	return (
 		<div className='modal'>
 				<div>
-					<section></section>
+					<section>
+						
+					</section>
 					<p>It's the...</p>
 				</div>
 		</div>
