@@ -9,4 +9,4 @@ const capitalizeMultipleWords = (s) => {
 	}
 }
 
-export {capitalizeMultipleWords};
+export { capitalizeMultipleWords };

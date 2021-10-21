@@ -5,6 +5,7 @@ const About = () => {
     return (
         <div className="container container-fade-in-and-translate">
             <h1 className="page-header">About</h1>
+            <hr />
             <div style={divStyle}>
                 <p>Welcome to Whodunnit, the murder mystery game!</p>
                 <p>You play the role of private investigator, hired to solve the murder of an English lord.</p>

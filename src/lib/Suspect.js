@@ -9,6 +9,6 @@ export default class Suspect {
     this.height = height;
     this.suspicious = true;
   }
-}
+};
 
 
