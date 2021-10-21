@@ -10,7 +10,7 @@ import CrimeContainer from './page_components/Crime/CrimeContainer';
 import FooterContainer from './page_components/Footer/FooterContainer';
 import GuessCulprit from './page_components/GuessCulprit/GuessCulprit';
 import HomepageContainer from './page_components/Homepage/HomepageContainer';
-import Interview from './page_components/Characters/Character/Interview/Interview';
+import InterviewContainer from './page_components/Characters/Character/Interview/InterviewContainer';
 import Locations from './page_components/Locations/Locations';
 import LocationContainer from './page_components/Locations/Location/LocationContainer';
 import NavbarContainer from './page_components/Navbar/NavbarContainer';
@@ -27,7 +27,7 @@ const Routes = () => {
 				<Route exact path={`${process.env.PUBLIC_URL}/crime`} component={CrimeContainer} />
 				<Route exact path={`${process.env.PUBLIC_URL}/characters`} component={CharactersContainer} />
 				<Route exact path={`${process.env.PUBLIC_URL}/characters/:name`} component={CharacterContainer} />
-				<Route exact path={`${process.env.PUBLIC_URL}/characters/:name/interview`} component={Interview} />
+				<Route exact path={`${process.env.PUBLIC_URL}/characters/:name/interview`} component={InterviewContainer} />
 				<Route exact path={"/about"} component={About} />
 				<Route exact path={"/locations"} component={Locations} />
 				<Route exact path={"/locations/:location"} component={LocationContainer} />
