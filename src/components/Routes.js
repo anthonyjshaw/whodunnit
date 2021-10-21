@@ -9,21 +9,21 @@ import Clues from './page_components/Clues/Clues';
 import CrimeContainer from './page_components/Crime/CrimeContainer';
 import FooterContainer from './page_components/Footer/FooterContainer';
 import GuessCulprit from './page_components/GuessCulprit/GuessCulprit';
-import Homepage from './page_components/Homepage/Homepage';
+import HomepageContainer from './page_components/Homepage/HomepageContainer';
 import Interview from './page_components/Characters/Character/Interview/Interview';
 import Locations from './page_components/Locations/Locations';
 import LocationContainer from './page_components/Locations/Location/LocationContainer';
-import Navbar from './page_components/Navbar/Navbar';
+import NavbarContainer from './page_components/Navbar/NavbarContainer';
 import NotFound from './page_components/NotFound/NotFound';
 
 const Routes = () => {
 	return (
 	<>
-		<Navbar />
+		<NavbarContainer />
 		<div className='flex-wrapper'>
 			<GuessCulprit/>
 			<Switch>
-				<Route exact path={`${process.env.PUBLIC_URL}/`} component={Homepage} />
+				<Route exact path={`${process.env.PUBLIC_URL}/`} component={HomepageContainer} />
 				<Route exact path={`${process.env.PUBLIC_URL}/crime`} component={CrimeContainer} />
 				<Route exact path={`${process.env.PUBLIC_URL}/characters`} component={CharactersContainer} />
 				<Route exact path={`${process.env.PUBLIC_URL}/characters/:name`} component={CharacterContainer} />
