@@ -37,11 +37,23 @@
     }
 }
 
-svg {
-    pointer-events: none;
+
+// // path{
+//     //     pointer-events: auto;
+//     cursor: pointer;;
+// // }
+ 
+.location-clue {
+    opacity: 0;
+    transition: opacity 1s ease;
 }
 
-path{
-    pointer-events: auto;
+
+@keyframes fadeOut {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
- 

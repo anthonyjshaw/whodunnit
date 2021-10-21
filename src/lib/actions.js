@@ -11,7 +11,7 @@ export const actions = {
 	'Lady_Of_The_House': { 
 		normal:[''], 
 		guilty: { 
-			'shooting': '', 
+			'shooting': 'Well... I was admiring the ', 
 			'set on fire': '', 
 			'stabbing': '', 
 			'poison': '', 
@@ -30,12 +30,32 @@ export const actions = {
 	},
 	'Maid': { 
 		normal:[''], 
-		guilty: {'shooting': '', 'set on fire': '', 'stabbing': '', 'poison': '', 'pushed out of window': ''}},
+		guilty: { 
+			'shooting': '', 
+			'set on fire': '', 
+			'stabbing': '', 
+			'poison': '', 
+			'pushed out of window': ''
+		}
+	},
 	'French_Teacher': { 
 		normal:[''], 
-		guilty: {'shooting': '', 'set on fire': '', 'stabbing': '', 'poison': '', 'pushed out of window': ''}},
+		guilty: { 
+			'shooting': '', 
+			'set on fire': '', 
+			'stabbing': '', 
+			'poison': '', 
+			'pushed out of window': '' 
+		}
+	},
 	'Business_Partner': { 
 		normal:[''], 
-		guilty: {'shooting': '', 'set on fire': '', 'stabbing': '', 'poison': '', 'pushed out of window': ''}},
-
+		guilty: { 
+			'shooting': '', 
+			'set on fire': '', 
+			'stabbing': '', 
+			'poison': '', 
+			'pushed out of window': '' 
+		}
+	},
 }

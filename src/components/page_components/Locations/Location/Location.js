@@ -14,9 +14,8 @@ export default function Location(props) {
             <h1 className="page-header">{capitalize(props.location)} {props.icon}</h1>
             <div className='location-wrapper'>
                 <div className='location-image-wrapper'>
-                    <p>Check: {props.clue}</p>  
+                    <p>Check: <span className="location-clue">{props.clue}</span></p>  
                         {props.svg}
-                    {/* <img src={`/assets/locations/${addDashesToName(location)}.svg`} alt={location} className='location-image'/>  */}
                 </div>
                 <div>
                 </div>
