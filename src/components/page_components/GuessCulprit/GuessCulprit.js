@@ -11,7 +11,7 @@ const GuessCulprit = () => {
 
 	return (
 		<div>
-			<button className='guess-culprit' onClick={() => window.alert(`Guess the culprit!`)}>
+			<button className='guess-culprit' aria-label='guess-culprit' onClick={() => window.alert(`Guess the culprit!`)}>
 				<p>guess culprit</p>
 				<FontAwesomeIcon icon={faQuestion} />
 			</button>

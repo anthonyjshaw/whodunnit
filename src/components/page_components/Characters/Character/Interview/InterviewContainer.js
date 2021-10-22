@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import Interview from './Interview';
 import { useParams } from 'react-router';
+
+// __utils__
 import addDashesToName from '../../../../../lib/__utils__/add_dashes_to_name';
+import { addUnderscoreToName } from '../../../../../lib/__utils__/add_underscore_to_name';
+import { capitalizeMultipleWords } from '../../../../../lib/__utils__/capitalize_multiple_words';
 import removeDashes from '../../../../../lib/__utils__/remove_dashes';
-import { locations } from '../../../../../lib/locations';
+
+// Scenario variables
 import { actions } from '../../../../../lib/actions';
+import { locations } from '../../../../../lib/locations';
 import { otherCharacters } from '../../../../../lib/other_characters';
 import { relationships } from '../../../../../lib/relationships';
-import { capitalizeMultipleWords } from '../../../../../lib/__utils__/capitalize_multiple_words';
 
 const InterviewContainer = () => {
 
@@ -20,7 +25,7 @@ const InterviewContainer = () => {
     });
 
     name = capitalizeMultipleWords(name);
-    
+
     let [location, setLocation] = useState(() => localStorage.getItem(`${name}-location`));
     let [action, setAction] = useState(() => localStorage.getItem(`${name}-action`));
     let [relationship, setRelationship] = useState(() => localStorage.getItem(`${name}-relationship`));
@@ -38,18 +43,19 @@ const InterviewContainer = () => {
             setLocation('garden');
         } else {
             const location = locations[Math.floor(Math.random() * locations.length)]
-            console.log(location)
             setLocation(location);
         }
     }
     function characterAction() {
+        let action;
         if (culprit) {
-            const action = actions[name]
-            setAction('why'); 
+            action = actions[addUnderscoreToName(name)].guilty[localStorage.getItem('death')];
         } else {
-            const action = actions[Math.floor(Math.random() * actions.length)]
-            setAction(action);
+            const normal = action = actions[addUnderscoreToName(name)].normal.length
+            action = actions[addUnderscoreToName(name)].normal[Math.floor(Math.random() * normal)];
         }
+        console.log(actions[addUnderscoreToName(name)]);
+        setAction(action);
     }
     
     

@@ -9,7 +9,7 @@ export const actions = {
 		}
 	},
 	'Lady_Of_The_House': { 
-		normal:[''], 
+		normal:['I was organizing something for his birthday...'], 
 		guilty: { 
 			'shooting': 'Well... I was admiring the ', 
 			'set on fire': '', 

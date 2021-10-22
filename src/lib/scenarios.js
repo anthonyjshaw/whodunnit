@@ -1,4 +1,4 @@
-import {locations} from './locations.js';
+import { locations } from './locations.js';
 import { actions } from './actions.js';
 import { relationships } from './relationships.js';
 import { culpritLocations } from './culprit_locations.js';
@@ -8,8 +8,8 @@ export const scenarios = (suspect, culprit, method) => {
 	if (suspect === culprit) {
 		return {
 			action: actions[culprit].guilty[method], 
-			location: culpritLocations[culprit],
-			relationships: [],
+			location: culpritLocations[culprit].guilty[method],
+			relationships: relationships[culprit].guilty[method],
 			otherCharacters: []
 		}
 	} else {
@@ -19,5 +19,8 @@ export const scenarios = (suspect, culprit, method) => {
 		}
 	}
 }
+
+
+
 
 console.log(scenarios('Butler', 'Butler', 'shooting'));

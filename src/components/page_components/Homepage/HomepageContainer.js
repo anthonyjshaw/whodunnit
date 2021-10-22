@@ -1,8 +1,11 @@
-import {React, useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect, lazy, Suspense} from 'react';
 import { locations } from '../../../lib/locations';
 import { murderMethods } from '../../../lib/murder_methods';
 import suspects from '../../../lib/suspect_array';
-import Homepage from './Homepage';
+
+const Homepage = lazy(() => import('./Homepage'));
+
+const renderLoader = () => <p>Loading...</p>
 
 export default function HomepageContainer() {
     const [gameText, setGameText] = useState(() => {
@@ -48,6 +51,8 @@ export default function HomepageContainer() {
     const link = localStorage.getItem('hasSession') === 'true' ? '/characters' : '/crime';
 
     return (
-        <Homepage link={link} newGame={newGame} quitGame={quitGame} gameText={gameText}/>
+        <Suspense fallback={renderLoader()}>
+            <Homepage link={link} newGame={newGame} quitGame={quitGame} gameText={gameText}/>
+        </Suspense>
     );
 }
