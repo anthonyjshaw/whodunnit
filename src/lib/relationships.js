@@ -1,4 +1,8 @@
 
-export const relationships = () => {
-	
+export const relationships =  {
+	"Butler": {
+		guilty: {
+			
+		}
+	}
 }

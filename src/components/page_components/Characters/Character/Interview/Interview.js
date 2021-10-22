@@ -10,7 +10,7 @@ export default function Interview(props) {
             <BackArrow link={`characters/${props.name}`} text={props.newName} />
             <h1 className="page-header">Interview {capitalizeMultipleWords(props.newName)}</h1>
             <div className="interview-container">
-                <div>
+                <div className='interview-image-wrapper'>
                     <img src={`/assets/character-avis/${props.imgSrc}.svg`} alt={props.newName}/> 
                 </div>
                 <div className="interview-action-wrapper">

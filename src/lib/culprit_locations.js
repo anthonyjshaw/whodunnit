@@ -1,10 +1,14 @@
 
 export const culpritLocations = {
-	'Butler': [],
-	'Lady Of The House': [],
-	'': []
+	"Butler": {
+		normal: '',
+		guilty: {'shooting': '',}
+	}
+
 }
 
-function getLocation(suspect, culprit) {
-	
-}
+// function getLocation(suspect, culprit) {
+// 	if (suspect === culprit) {
+// 		return culpritLocations[culprit]
+// 	}
+// }

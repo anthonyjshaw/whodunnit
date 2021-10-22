@@ -3,7 +3,8 @@ export const actions = {
 		normal: ['Cooking dinner', 'Getting the master\'s newspaper', 'Answering the door' ], 
 		guilty: { 
 			'shooting': 'cleaning the master\'s gun', 
-			'set on fire': '', 'stabbing': '', 
+			'set on fire': 'I was refilling his prized gold plated lighter with fluid', 
+			'stabbing': '', 
 			'poison': '', 
 			'pushed out of window': ''
 		}
@@ -21,7 +22,7 @@ export const actions = {
 	'Wayward_Son': {
 		normal:[''], 
 		guilty: { 
-			'shooting': '', 
+			'shooting': 'Yeah well... I was ', 
 			'set on fire': '', 
 			'stabbing': '', 
 			'poison': '', 

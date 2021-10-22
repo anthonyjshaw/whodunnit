@@ -28,3 +28,20 @@
 .interview-actions:hover {
     transform: translateY(5px);
 }
+
+@media (max-width: 1199px) {
+    .interview-action-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 16px;
+    }
+    .interview-container {
+        flex-direction: column;
+    }
+    .interview-image-wrapper {
+        margin: auto;
+        margin-bottom: 16px;
+    }
+
+}
