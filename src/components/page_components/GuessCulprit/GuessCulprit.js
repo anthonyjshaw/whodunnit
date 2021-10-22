@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, { useEffect } from 'react';
 import Modal from '../../ui_components/Modal/Modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faQuestion } from '@fortawesome/free-solid-svg-icons';
@@ -11,7 +11,7 @@ const GuessCulprit = () => {
 
 	return (
 		<div>
-			<button className='guess-culprit' onClick={() => window.alert(`Guess the culprit!`)}>
+			<button className='guess-culprit' aria-label='guess-culprit' onClick={() => window.alert(`Guess the culprit!`)}>
 				<p>guess culprit</p>
 				<FontAwesomeIcon icon={faQuestion} />
 			</button>

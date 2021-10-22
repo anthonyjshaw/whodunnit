@@ -3,17 +3,11 @@ import Crime from "./Crime";
 import { murderMethods } from '../../../lib/murder_methods';
 import { locations } from '../../../lib/locations';
 import Action from '../../ui_components/Action/Action';
+import addDashesToName from '../../../lib/__utils__/add_dashes_to_name';
 
 const CrimeContainer = () => {
 
-	const deaths = murderMethods;
-    const location = locations;
-    const randomDeath = deaths[Math.floor(Math.random() * deaths.length)];
-    const randomLocation = randomDeath === 'pushed out of window' ? location.filter(e => e !== 'garden')[Math.floor(Math.random() * location.length)] : location[Math.floor(Math.random() * location.length)];
-    
-    if (localStorage.location === ''|| localStorage.location === null) localStorage.setItem('location', randomLocation);
-    if (localStorage.death === '' || localStorage.death === null) localStorage.setItem('death', randomDeath);
-    
+ 
     const [death, setDeath] = useState(() => {
         return localStorage.getItem('death');
     });
@@ -23,7 +17,6 @@ const CrimeContainer = () => {
     });
     
     useEffect(()=> {
-		console.log(death)
         localStorage.setItem('death', death);
         localStorage.setItem('location', loc);
         document.title = "Crime";
@@ -47,7 +40,10 @@ const CrimeContainer = () => {
         }
     };
 
-	const actions = [{link: `characters`, text: 'Question suspects', alt: 'question clip art', src: 'question.svg'}, {link: `locations/${loc}`, text: 'Visit crime scene', alt: 'chalk outline', src:'chalk-outline.svg'}];
+	const actions = [
+        {link: `characters`, text: 'Question suspects', alt: 'question clip art', src: 'question.svg'}, 
+        {link: `locations/${addDashesToName(loc)}`, text: 'Visit crime scene', alt: 'chalk outline', src:'chalk-outline.svg'}
+    ];
     const mappedActions = actions.map((e) => {
 		return <Action key={actions.indexOf(e) + 1} link={e.link} text={e.text} alt={e.alt} imgSrc={e.src}/>
 	});
