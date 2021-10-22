@@ -8,18 +8,16 @@ import { capitalizeMultipleWords } from '../../../../lib/__utils__/capitalize_mu
 
 
 const CharacterContainer = () => {
+
   let { name } = useParams();
   name = removeDashes(name);
   const character = suspects.find(e => e.name === capitalizeMultipleWords(name));
-  const [suspicious, setSuspicious] = useState(() => {
-    return localStorage.getItem(`${character.name}-suspicious`);
-  });
 
   const [location, setLocation] = useState(() => {
     return localStorage.getItem(`${character.name}-location`);
   });
   
-  const loc = location === "" || location === null ? '?' : location;
+  const loc = location === "" || location === null || location === 'undefined' || location === 'null' ? '?' : location;
 
   useEffect(() => {
     localStorage.setItem(`${character.name}-location`, location);
