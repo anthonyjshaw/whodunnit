@@ -7,14 +7,16 @@ import CharacterContainer from './page_components/Characters/Character/Character
 import CharactersContainer from './page_components/Characters/CharactersContainer';
 import Clues from './page_components/Clues/Clues';
 import CrimeContainer from './page_components/Crime/CrimeContainer';
-import FooterContainer from './page_components/Footer/FooterContainer';
 import GuessCulprit from './page_components/GuessCulprit/GuessCulprit';
 import HomepageContainer from './page_components/Homepage/HomepageContainer';
 import InterviewContainer from './page_components/Characters/Character/Interview/InterviewContainer';
 import LocationContainer from './page_components/Locations/Location/LocationContainer';
-import NavbarContainer from './page_components/Navbar/NavbarContainer';
-import NotFound from './page_components/NotFound/NotFound';
 import LocationsContainer from "./page_components/Locations/LocationsContainer";
+import NotFound from './page_components/NotFound/NotFound';
+
+// Ui Components
+import FooterContainer from './ui_components/Footer/FooterContainer';
+import NavbarContainer from './ui_components/Navbar/NavbarContainer';
 
 const Routes = () => {
 	return (
