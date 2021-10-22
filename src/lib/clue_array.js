@@ -7,7 +7,7 @@ function clueArray(method) {
             clues = ['bullet hole', 'bullet casing', 'pistol'];
             break;
         case 'poison':
-            clues = ['empty bottle'];
+            clues = ['empty bottle', ];
             break;
         case 'set on fire':
             clues = ['lighter', 'gas'];
@@ -16,7 +16,7 @@ function clueArray(method) {
             clues = ['open window', ];
             break;
         case 'stabbing':
-            clues = ['knife', 'bloodstain']
+            clues = ['knife', 'bloodstain'];
             break;
         default: 
             console.log("Not a murder method");
@@ -25,5 +25,4 @@ function clueArray(method) {
     }
     return clues;
 }
-
-console.log(clueArray('poison'));
+export { clueArray };

@@ -8,5 +8,5 @@ describe('Scenarios', () => {
 		expect(typeof scenario).toBe("object");
 	});
 
-	 
+	test 
 })
