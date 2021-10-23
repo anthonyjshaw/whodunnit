@@ -8,7 +8,7 @@ import removeDashes from '../../../../lib/__utils__/remove_dashes';
 import { capitalizeMultipleWords } from '../../../../lib/__utils__/capitalize_multiple_words';
 
 const Character = lazy(() => import('./Character'));
-const renderLoader = () => <p>Loading...</p>;
+const renderLoader = () => <div>Loading...</div>;
 
 const CharacterContainer = () => {
 
@@ -41,5 +41,6 @@ const CharacterContainer = () => {
     </Suspense>
 		);
 }
+
 
 export default CharacterContainer;
