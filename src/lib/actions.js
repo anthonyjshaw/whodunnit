@@ -3,13 +3,13 @@ export const actions = {
 		normal: ['Cooking dinner', 'Getting the master\'s newspaper', 'Answering the door' ], 
 		guilty: { 
 			'shooting': 'cleaning the master\'s gun', 
-			'set on fire': 'I was refilling his prized gold plated lighter with fluid', 
+			'set on fire': 'I was refilling his prized gold plated lighter with fluid... what a tragedy.', 
 			'stabbing': '', 
 			'poison': '', 
 			'pushed out of window': ''
 		}
 	},
-	'Lady_Of_The_House': { 
+	'Lady Of The House': { 
 		normal:['I was organizing something for his birthday...'], 
 		guilty: { 
 			'shooting': 'Well... I was admiring the ', 
@@ -19,8 +19,8 @@ export const actions = {
 			'pushed out of window': ''
 		} 
 	},
-	'Wayward_Son': {
-		normal:[''], 
+	'Wayward Son': {
+		normal: {"dining room": "doing some business deals", "garden": "Um, chilling with the flowers..."}, 
 		guilty: { 
 			'shooting': 'Yeah well... I was ', 
 			'set on fire': '', 
@@ -30,7 +30,7 @@ export const actions = {
 		} 
 	},
 	'Maid': { 
-		normal:[''], 
+		normal: { "dining room": 'I was setting the table'}, 
 		guilty: { 
 			'shooting': '', 
 			'set on fire': '', 
@@ -39,22 +39,22 @@ export const actions = {
 			'pushed out of window': ''
 		}
 	},
-	'French_Teacher': { 
-		normal:[''], 
+	'French Teacher': { 
+		normal: {"dining room": "Well, I was preparing my notes for the lady's house"}, 
 		guilty: { 
-			'shooting': '', 
+			'shooting': 'Ah... I was discussing ', 
 			'set on fire': '', 
-			'stabbing': '', 
+			'stabbing': 'We were discussing Huis Clos', 
 			'poison': '', 
 			'pushed out of window': '' 
 		}
 	},
-	'Business_Partner': { 
+	'Business Partner': { 
 		normal:[''], 
 		guilty: { 
-			'shooting': '', 
-			'set on fire': '', 
-			'stabbing': '', 
+			'shooting': 'data', 
+			'set on fire': 'date', 
+			'stabbing': 'Yo', 
 			'poison': '', 
 			'pushed out of window': '' 
 		}

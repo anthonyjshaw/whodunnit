@@ -38,7 +38,12 @@ const CrimeContainer = () => {
             'bedroom': 'bedroom-crime-icon.svg'
         }
     };
-    const dash = addDashesToName(loc) === null ? '' : addDashesToName(loc);
+
+    let dash;
+    
+    if (loc) {
+        dash = addDashesToName(loc) === null ? '' : addDashesToName(loc);
+    }
     
 	const actions = [
         {link: `characters`, text: 'Question suspects', alt: 'question clip art', src: 'question.svg'}, 

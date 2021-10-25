@@ -20,10 +20,16 @@ const CharacterContainer = () => {
     return localStorage.getItem(`${character.name}-location`);
   });
   
+  const [action, setAction] = useState(() => {
+    return localStorage.getItem(`${character.name}-action`);
+  })
+  
   const loc = location === "" || location === null || location === 'undefined' || location === 'null' ? '?' : location;
+  const act = action === "" || action === null || action === 'undefined' || action === 'null' ? '?' : action;
 
   useEffect(() => {
     localStorage.setItem(`${character.name}-location`, location);
+    localStorage.setItem(`${character.name}-action`, action);
     document.title = `Characters | ${character.name}`;
   });
     
@@ -34,6 +40,7 @@ const CharacterContainer = () => {
       <Character name={character.name} 
       imgSrc={source} 
       loc={loc}
+      action={act}
       link={`/characters/${addDashesToName(character.name.toLowerCase())}/interview`} 
       source={source}
       profile={character.profile}
