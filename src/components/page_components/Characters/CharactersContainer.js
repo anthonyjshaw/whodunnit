@@ -11,6 +11,7 @@ export default function CharactersContainer() {
 	const carousel = useRef(null);
 
     useEffect(() => {
+        carousel.current.children[0].className = 'active-item'
         document.title = 'Characters';        
     });
 
@@ -71,7 +72,7 @@ export default function CharactersContainer() {
 
 	return (
 		<Characters 
-        onClick1={() => moveSlideBack} 
+        onClick1={moveSlideBack} 
         onClick2={() => moveSlide(1)} 
         grid={characterGrid} 
         carousel={characterCarousel} 

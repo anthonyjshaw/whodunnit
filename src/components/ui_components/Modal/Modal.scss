@@ -60,3 +60,10 @@
 		opacity: 1;
 	}
 }
+
+@media (max-width: 1199px) {
+	.modal-content {
+		width: 100vw;
+		height: 100vh;
+	}
+}
