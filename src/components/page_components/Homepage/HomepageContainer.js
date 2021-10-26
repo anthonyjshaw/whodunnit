@@ -45,6 +45,7 @@ export default function HomepageContainer() {
                     localStorage.removeItem(`${e.name}-relationship`); 
                     localStorage.removeItem(`${e.name}-otherCharacters`); 
                 });
+                
                 initSettings.forEach(e => e === 'hasSession' ? localStorage.setItem(e, 'false') : localStorage.setItem(e, ''));
                 localStorage.removeItem('clueList');
                 setGameText('Start');
@@ -53,10 +54,13 @@ export default function HomepageContainer() {
             }
     } 
     const link = localStorage.getItem('hasSession') === 'true' ? '/characters' : '/crime';
-
+    const hasSession = localStorage.getItem('hasSession') === 'true';
+    const quitButton = hasSession ? <button className='homepage-btn' onClick={quitGame}>Quit Game</button> : '';
+   
+    
     return (
         <Suspense fallback={renderLoader()}>
-            <Homepage link={link} newGame={newGame} quitGame={quitGame} gameText={gameText}/>
+            <Homepage link={link} newGame={newGame} quitGame={quitGame} quitButton={quitButton} gameText={gameText}/>
         </Suspense>
     );
 }

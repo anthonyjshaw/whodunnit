@@ -1,6 +1,6 @@
 export const actions = {
 	'Butler': { 
-		normal: ['Cooking dinner', 'Getting the master\'s newspaper', 'Answering the door' ], 
+		normal: {'kitchen': 'Cooking dinner', 'lounge': 'Getting the master\'s newspaper', 'dining room':'Answering the door', 'bedroom': 'folding laundry', 'garden': 'organising the master\'s letters.' }, 
 		guilty: { 
 			'shooting': 'cleaning the master\'s gun', 
 			'set on fire': 'I was refilling his prized gold plated lighter with fluid... what a tragedy.', 
@@ -10,13 +10,13 @@ export const actions = {
 		}
 	},
 	'Lady Of The House': { 
-		normal:['I was organizing something for his birthday...'], 
+		normal: { 'study': 'I was organizing something for his birthday...', 'lounge': 'I was watching my soaps', 'dining room': 'I was having some tea and biscuits' }, 
 		guilty: { 
-			'shooting': 'Well... I was admiring the ', 
-			'set on fire': '', 
-			'stabbing': '', 
-			'poison': '', 
-			'pushed out of window': ''
+			'shooting': 'Well... I was doing a reading of Chekov...', 
+			'set on fire': 'What was I doing...? Oh yes! I was ', 
+			'stabbing': "Oh... I can't remember! It's like a dagger through the heart!", 
+			'poison': "I was doing a reading of Macbeth...", 
+			'pushed out of window': ""
 		} 
 	},
 	'Wayward Son': {
@@ -27,10 +27,10 @@ export const actions = {
 			'stabbing': '', 
 			'poison': '', 
 			'pushed out of window': ''
-		} 
+		}
 	},
 	'Maid': { 
-		normal: { "dining room": 'I was setting the table'}, 
+		normal: { "dining room": 'I was setting the table', 'kitchen': 'making tea', 'lounge': 'sweeping the floor', 'bedroom': 'airing out the bedroom', 'garden': 'watering flowers'}, 
 		guilty: { 
 			'shooting': '', 
 			'set on fire': '', 

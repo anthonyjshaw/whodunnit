@@ -1,8 +1,8 @@
 
 export const relationships =  {
 	"Butler": {
-		normal: [],
-		guilty: { "shooting": '' } 
+		normal: ['The master and I have had our problems... but nothing too serious.'],
+		guilty: "I have served the master loyally for over 30 years. I would never wish harm on him!"
 	},
 
 	"Lady Of The House": {
@@ -17,7 +17,7 @@ export const relationships =  {
 
 	"Maid": {
 		normal: ["Well, we didn't talk that much, but he seemed all right to me..."],
-		guilty: {}
+		guilty: 'I really liked the master, what a loss...'
 	},
 	"French Teacher": {
 		normal: [''],
@@ -26,7 +26,7 @@ export const relationships =  {
 
 	"Business Partner": {
 		normal: [''],
-		guilty: {}
+		guilty: "Marberry and I"
 	}
 	
 }

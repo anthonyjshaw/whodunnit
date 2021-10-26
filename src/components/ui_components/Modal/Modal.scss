@@ -19,15 +19,21 @@
 }
 
 .modal-content {
+	animation: comeIn 0.5s;
 	background-color: white;
-	display: flex;
-	justify-content: center;
 	color: #000;
-	height: 200px;
-	width: 200px;
+	height: 700px;
+	width: 815px;
 	border-radius: 4px;
 	margin: auto;
+}
 
+.modal-character {
+	text-align: center;
+}
+
+.modal-icon {
+	height: 100px;
 }
 
 .modal-cross {
@@ -35,14 +41,22 @@
 	cursor: pointer;
 	color: black;
 	position: relative;
-	left: 184px;
-	top: 3px;
+	left: 747px;
+	top: 7px;
+}
+
+.modal-grid {
+	display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+    grid-gap: 10px;
+    gap: 10px;
 }
 
 @keyframes comeIn {
 	from {
 		opacity: 0;
-	}to {
+	} to {
 		opacity: 1;
 	}
 }

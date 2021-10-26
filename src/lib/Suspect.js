@@ -8,6 +8,8 @@ export default class Suspect {
     // In centimetres
     this.height = height;
   }
+
+  
 };
 
 
