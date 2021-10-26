@@ -1,6 +1,12 @@
 export const actions = {
 	'Butler': { 
-		normal: {'kitchen': 'Cooking dinner', 'lounge': 'Getting the master\'s newspaper', 'dining room':'Answering the door', 'bedroom': 'folding laundry', 'garden': 'organising the master\'s letters.' }, 
+		normal: {
+			'kitchen': 'Cooking dinner', 
+			'lounge': 'Getting the master\'s newspaper', 
+			'dining room':'Answering the door', 
+			'bedroom': 'folding laundry', 
+			'garden': 'organising the master\'s letters.' 
+		}, 
 		guilty: { 
 			'shooting': 'cleaning the master\'s gun', 
 			'set on fire': 'I was refilling his prized gold plated lighter with fluid... what a tragedy.', 
@@ -10,7 +16,11 @@ export const actions = {
 		}
 	},
 	'Lady Of The House': { 
-		normal: { 'study': 'I was organizing something for his birthday...', 'lounge': 'I was watching my soaps', 'dining room': 'I was having some tea and biscuits' }, 
+		normal: {
+			'study': 'I was organizing something for his birthday...', 
+			'lounge': 'I was watching my soaps', 
+			'dining room': 'I was having some tea and biscuits' 
+		}, 
 		guilty: { 
 			'shooting': 'Well... I was doing a reading of Chekov...', 
 			'set on fire': 'What was I doing...? Oh yes! I was ', 
@@ -20,7 +30,10 @@ export const actions = {
 		} 
 	},
 	'Wayward Son': {
-		normal: {"dining room": "doing some business deals", "garden": "Um, chilling with the flowers..."}, 
+		normal: {
+			"dining room": "doing some business deals", 
+			"garden": "Um, chilling with the flowers..."
+		}, 
 		guilty: { 
 			'shooting': 'Yeah well... I was ', 
 			'set on fire': '', 
@@ -40,17 +53,26 @@ export const actions = {
 		}
 	},
 	'French Teacher': { 
-		normal: {"dining room": "Well, I was preparing my notes for the lady's house"}, 
+		normal: {
+			"dining room": "Well, I was preparing my notes for the lady's house",
+			"garden": "",
+		}, 
 		guilty: { 
 			'shooting': 'Ah... I was discussing ', 
-			'set on fire': '', 
+			'set on fire': 'We were talking about', 
 			'stabbing': 'We were discussing Huis Clos', 
 			'poison': '', 
 			'pushed out of window': '' 
 		}
 	},
 	'Business Partner': { 
-		normal:[''], 
+		normal: {
+			"dining room": '',
+			"study": '',
+			"lounge": "",
+			"kitchen" : "",
+			"garden": ""
+		}, 
 		guilty: { 
 			'shooting': 'data', 
 			'set on fire': 'date', 

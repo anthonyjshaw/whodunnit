@@ -12,7 +12,6 @@ const GuessCulprit = () => {
 		return localStorage.getItem('answer');
 	});
 	
-	
 	useEffect(() => {
 		localStorage.setItem('answer', answer);
 	}, [answer])

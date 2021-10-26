@@ -2,7 +2,6 @@ import { actions } from './actions.js';
 import { relationships } from './relationships.js';
 import { culpritLocations } from './culprit_locations.js';
 import { otherCharacters } from './other_characters.js';
-import suspects from './suspect_array.js';
 
 export const scenarios = (suspect, culprit, method) => {
 
