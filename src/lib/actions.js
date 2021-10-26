@@ -36,7 +36,7 @@ export const actions = {
 		}, 
 		guilty: { 
 			'shooting': 'Yeah well... I was ', 
-			'set on fire': '', 
+			'set on fire': 'Outside, having a cigarette', 
 			'stabbing': '', 
 			'poison': '', 
 			'pushed out of window': ''

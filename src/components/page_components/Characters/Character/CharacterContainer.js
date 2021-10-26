@@ -22,7 +22,7 @@ const CharacterContainer = () => {
   
   const [action, setAction] = useState(() => {
     return localStorage.getItem(`${character.name}-action`);
-  })
+  });
   
   const loc = location === "" || location === null || location === 'undefined' || location === 'null' ? '?' : location;
   const act = action === "" || action === null || action === 'undefined' || action === 'null' ? '?' : action;
@@ -37,14 +37,16 @@ const CharacterContainer = () => {
   
 	return (
     <Suspense fallback={renderLoader()}>
-      <Character name={character.name} 
-      imgSrc={source} 
-      loc={loc}
-      action={act}
-      link={`/characters/${addDashesToName(character.name.toLowerCase())}/interview`} 
-      source={source}
-      profile={character.profile}
-      age={character.age}/>
+      <Character 
+        name={character.name} 
+        imgSrc={source} 
+        loc={loc}
+        action={act}
+        link={`/characters/${addDashesToName(character.name.toLowerCase())}/interview`} 
+        source={source}
+        profile={character.profile}
+        age={character.age}
+      />
     </Suspense>
 		);
 }

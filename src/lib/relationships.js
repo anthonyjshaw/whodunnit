@@ -11,8 +11,8 @@ export const relationships =  {
 	},
 
 	"Wayward Son": {
-		normal: [],
-		guilty: {}
+		normal: ['What can I say, he was larger than life...'],
+		guilty: "All I'll say is the old man liked his money"
 	},
 
 	"Maid": {

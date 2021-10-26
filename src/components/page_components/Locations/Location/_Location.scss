@@ -2,6 +2,18 @@
     text-align: center;
 }
 
+.location-clue-popup {
+    position: fixed;
+    opacity: 0;
+    transition: opacity 1s ease;
+    height: 200px;
+    width: 200px;
+    background-color: white;
+}
+
+.popup-show {
+    opacity: 1;
+}
 
 
 @media (min-width: 320px) {

@@ -25,20 +25,14 @@ export const culpritLocations = {
 
 	"Maid": {
 		normal: locations[Math.floor(Math.random() * locations.length)],
-		guilty: { 'shooting': 'kitchen', 'poison': '' }
+		guilty: { 'shooting': 'kitchen', 'poison': ''  }
 	},
 
 	"Wayward Son": {
 		normal: locations[Math.floor(Math.random() * locations.length)],
-		guilty: {"shooting": '', 'kitchen': '', }
+		guilty: {"shooting": '', 'kitchen': '', 'set on fire': 'garden' }
 	}
 
 
 }
 
-
-// function getLocation(suspect, culprit) {
-// 	if (suspect === culprit) {
-// 		return culpritLocations[culprit]
-// 	}
-// }
