@@ -1,9 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import Crime from "./Crime";
-import { murderMethods } from '../../../lib/murder_methods';
-import { locations } from '../../../lib/locations';
 import Action from '../../ui_components/Action/Action';
 import addDashesToName from '../../../lib/__utils__/add_dashes_to_name';
+import EmptyCrime from './EmptyCrime';
 
 const CrimeContainer = () => {
 
@@ -40,21 +39,29 @@ const CrimeContainer = () => {
         }
     };
 
+    let dash;
+    
+    if (loc) {
+        dash = addDashesToName(loc) === null ? '' : addDashesToName(loc);
+    }
+    
 	const actions = [
         {link: `characters`, text: 'Question suspects', alt: 'question clip art', src: 'question.svg'}, 
-        {link: `locations/${addDashesToName(loc)}`, text: 'Visit crime scene', alt: 'chalk outline', src:'chalk-outline.svg'}
+        {link: `locations/${dash}`, text: 'Visit crime scene', alt: 'chalk outline', src:'chalk-outline.svg'}
     ];
     const mappedActions = actions.map((e) => {
 		return <Action key={actions.indexOf(e) + 1} link={e.link} text={e.text} alt={e.alt} imgSrc={e.src}/>
 	});
 
+    const crimeContent = localStorage.getItem('hasSession') === 'true' ? <Crime deathImg={crimeobj.deaths[`${death}`]} 
+    locImg={crimeobj.location[`${loc}`]} 
+    actions={mappedActions} 
+    death={death} 
+    loc={loc}/> : <EmptyCrime />;
+
 	return (
-		<Crime deathImg={crimeobj.deaths[`${death}`]} 
-		locImg={crimeobj.location[`${loc}`]} 
-		actions={mappedActions} 
-		death={death} 
-		loc={loc}/>
-	)
+		crimeContent
+	);
 }
 
 export default CrimeContainer;

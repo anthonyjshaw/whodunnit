@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { capitalize } from '../../../../lib/__utils__/capitalize';
 import BackArrow from '../../../ui_components/BackArrow/BackArrow';
 
 const pStyle = {
     textAlign: 'center'
 }
-export default function Location(props) {
+const Location = forwardRef((props, ref) => {
     return (
         <div className="container container-fade-in-and-translate">
             <div className='arrow'>
@@ -21,6 +21,9 @@ export default function Location(props) {
                 </div>
             </div>
             <p style={pStyle}>Hover over the picture to look for clues!</p>
+            <div className='location-clue-popup' ref={ref}>Clue added!</div>
         </div>
     );
-}
+});
+
+export default Location;

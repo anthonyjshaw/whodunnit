@@ -1241,6 +1241,16 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/indie-flower@^4.5.0":
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/indie-flower/-/indie-flower-4.5.0.tgz#a0d9e972dedfe2f83127cd86af11d4b69299658c"
+  integrity sha512-pJHSLwBybGnG5gjOI/2MAyYi/lyvkwvcPO6g7vEfBgPhWNSQqBnMkKFmrl6dKKMsmzKuNrLndumVxetcwWgFIw==
+
+"@fontsource/reenie-beanie@^4.5.0":
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/reenie-beanie/-/reenie-beanie-4.5.0.tgz#4d05615419da486bcde96469f1989028c005cc6b"
+  integrity sha512-TtoSXXxipCN8+Ah0pEz/1dRxrJZjD1TwFNuNRwVt7lEZ8vT57mibbIZz6olmW0o62la83kR5UUWTMYWStQ+3SQ==
+
 "@fortawesome/fontawesome-common-types@^0.2.36":
   version "0.2.36"
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.36.tgz#b44e52db3b6b20523e0c57ef8c42d315532cb903"

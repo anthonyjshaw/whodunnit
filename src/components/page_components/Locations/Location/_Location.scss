@@ -2,6 +2,18 @@
     text-align: center;
 }
 
+.location-clue-popup {
+    position: fixed;
+    opacity: 0;
+    transition: opacity 1s ease;
+    height: 200px;
+    width: 200px;
+    background-color: white;
+}
+
+.popup-show {
+    opacity: 1;
+}
 
 
 @media (min-width: 320px) {
@@ -25,8 +37,8 @@
 
 @media (min-width: 1400px) {
     .location-image {
-        height: 400px;
-        width: 400px;
+        height: 303px;
+        width: 651px;
     }
       
     .location-wrapper {
@@ -35,17 +47,6 @@
     .location-image-wrapper{
         flex-grow: 2;
     }
-}
-
-
-// // path{
-//     //     pointer-events: auto;
-//     cursor: pointer;;
-// // }
- 
-.location-clue {
-    opacity: 0;
-    transition: opacity 1s ease;
 }
 
 

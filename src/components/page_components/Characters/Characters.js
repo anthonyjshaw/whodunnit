@@ -1,7 +1,7 @@
-import React from "react";
+import React, { forwardRef } from "react";
 
 
-export default function Characters(props) {
+const Characters = forwardRef((props, ref) => {
   
     return (
         <div className="container container-fade-in-and-translate">
@@ -9,7 +9,9 @@ export default function Characters(props) {
                 <div className="mobile-wrapper">
                     <div className='carousel-wrapper'>
                         <button className='carousel-button' onClick={props.onClick1}>&#10094;</button>
-                        {props.children}
+                        <div className="carousel" ref={ref}>
+         		            {props.carousel}
+        	            </div>
                         <button className='carousel-button' onClick={props.onClick2}>&#10095;</button>
                     </div>    
                 </div>
@@ -18,6 +20,8 @@ export default function Characters(props) {
             </div>
         </div>
     );
-}
+});
+
+export default Characters;
 
 

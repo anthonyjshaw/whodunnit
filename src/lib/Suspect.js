@@ -7,8 +7,9 @@ export default class Suspect {
     this.age = age;
     // In centimetres
     this.height = height;
-    this.suspicious = true;
   }
+
+  
 };
 
 

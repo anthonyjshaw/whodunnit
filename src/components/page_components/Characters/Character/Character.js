@@ -17,7 +17,7 @@ export default function Character(props) {
             <p>Bio: {props.profile}</p>
             <p>Age: {props.age}</p>
             <p>Location: {props.loc} </p>
-            <p>Action at time of death: ? </p>
+            <p>Action at time of death: {props.action} </p>
             <p>Possible motive: ?</p>
             <p>
               <em>

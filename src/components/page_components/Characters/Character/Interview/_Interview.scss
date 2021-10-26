@@ -29,6 +29,13 @@
     transform: translateY(5px);
 }
 
+.interview-actions {
+    p {
+        width: 300px;
+        margin: auto;
+    }
+}
+
 @media (max-width: 1199px) {
     .interview-action-wrapper {
         display: flex;
@@ -43,5 +50,6 @@
         margin: auto;
         margin-bottom: 16px;
     }
-
+    
+    
 }

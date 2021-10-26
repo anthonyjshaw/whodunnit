@@ -1,10 +1,10 @@
 import { capitalize } from "./capitalize";
 
-const capitalizeMultipleWords = (s) => {
-	if (s.split(' ').length === 1) {
-		return capitalize(s);
+const capitalizeMultipleWords = (str) => {
+	if (str.split(' ').length === 1) {
+		return capitalize(str);
 	} else {
-		const sentence = s.split(' ');
+		const sentence = str.split(' ');
 		return sentence.map(e => capitalize(e)).join(' '); 
 	}
 }

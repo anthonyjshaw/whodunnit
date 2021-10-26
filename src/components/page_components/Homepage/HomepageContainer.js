@@ -8,9 +8,11 @@ const Homepage = lazy(() => import('./Homepage'));
 const renderLoader = () => <p>Loading...</p>
 
 export default function HomepageContainer() {
+
     const [gameText, setGameText] = useState(() => {
         return localStorage.getItem('hasSession') === 'true' ? 'Continue': "Start";
     }); 
+
     const initSettings = ['death', 'location', 'culprit', 'hasSession'];
     
     useEffect(() => {
@@ -36,11 +38,14 @@ export default function HomepageContainer() {
     function quitGame() {
             const confirm  = window.confirm("Are you sure you want to quit?");
             if (confirm) {
-                suspects.forEach(e => localStorage.removeItem(`${e.name}-action`));
-                suspects.forEach(e => localStorage.removeItem(`${e.name}-suspicious`));
-                suspects.forEach(e => localStorage.removeItem(`${e.name}-location`));
-                suspects.forEach(e => localStorage.removeItem(`${e.name}-relationship`));
-                suspects.forEach(e => localStorage.removeItem(`${e.name}-otherCharacters`));
+                suspects.forEach(e => { 
+                    localStorage.removeItem(`${e.name}-action`); 
+                    localStorage.removeItem(`${e.name}-suspicious`); 
+                    localStorage.removeItem(`${e.name}-location`); 
+                    localStorage.removeItem(`${e.name}-relationship`); 
+                    localStorage.removeItem(`${e.name}-otherCharacters`); 
+                });
+                
                 initSettings.forEach(e => e === 'hasSession' ? localStorage.setItem(e, 'false') : localStorage.setItem(e, ''));
                 localStorage.removeItem('clueList');
                 setGameText('Start');
@@ -49,10 +54,13 @@ export default function HomepageContainer() {
             }
     } 
     const link = localStorage.getItem('hasSession') === 'true' ? '/characters' : '/crime';
-
+    const hasSession = localStorage.getItem('hasSession') === 'true';
+    const quitButton = hasSession ? <button className='homepage-btn' onClick={quitGame}>Quit Game</button> : '';
+   
+    
     return (
         <Suspense fallback={renderLoader()}>
-            <Homepage link={link} newGame={newGame} quitGame={quitGame} gameText={gameText}/>
+            <Homepage link={link} newGame={newGame} quitGame={quitGame} quitButton={quitButton} gameText={gameText}/>
         </Suspense>
     );
 }

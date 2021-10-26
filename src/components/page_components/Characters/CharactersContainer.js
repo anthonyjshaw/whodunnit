@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, { useEffect, useRef } from 'react';
 import suspects from '../../../lib/suspect_array';
 import { Link } from 'react-router-dom';
 import addDashesToName from "../../../lib/__utils__/add_dashes_to_name";
@@ -7,17 +7,11 @@ import Characters from './Characters';
 
 export default function CharactersContainer() {
 	let index = 1;
-    const [lastIndex, setLastIndex] = useState(() => {
-		return localStorage.getItem('lastIndex-character');
-    });
+
 	const carousel = useRef(null);
+
     useEffect(() => {
-		
-		localStorage.setItem('lastIndex-character', lastIndex);
-        if (lastIndex !== 1) {
-			    carousel.current.children[index].className = 'carousel-item'
-            carousel.current.children[0].className ='active-item'
-			}
+        carousel.current.children[0].className = 'active-item'
         document.title = 'Characters';        
     });
 
@@ -57,13 +51,11 @@ export default function CharactersContainer() {
             } else {
                 carousel.current.children[index - n].className ='carousel-item';
                 carousel.current.children[index].className ='active-item';
-            }
-            
+            }       
+            index++;
         } catch (error) {
-            console.error(error)
+            console.error(error);
         }
-        index++;
-       
     }
 
     function moveSlideBack() {
@@ -79,11 +71,11 @@ export default function CharactersContainer() {
     }
 
 	return (
-		<Characters thing={carousel} onClick1={() => moveSlideBack} onClick2={() => moveSlide(1)} grid={characterGrid}>
-			<div className="carousel" ref={carousel}>
-         		{characterCarousel}
-        	</div>
-		</Characters>
+		<Characters 
+        onClick1={moveSlideBack} 
+        onClick2={() => moveSlide(1)} 
+        grid={characterGrid} 
+        carousel={characterCarousel} 
+        ref={carousel}/>
 	);
-
 }
