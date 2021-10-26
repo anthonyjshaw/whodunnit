@@ -30,6 +30,7 @@ const CluesContainer = () => {
 				return culClues.description;
 			}
 		} 
+		
        	return (
             <div key={clues.indexOf(e) + 1} className="clue">
                 <img src={`${process.env.PUBLIC_URL}/assets/clues/${addDashesToName(e)}.svg`} alt={e}/>
