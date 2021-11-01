@@ -8,7 +8,6 @@ import { faSkull } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import removeDashes from '../../../../lib/__utils__/remove_dashes';
 import { culpritClues } from '../../../../lib/culprit_clues';
-import { locations } from '../../../../lib/locations';
 import { clueArray } from '../../../../lib/clue_array';
 
 // SVG Components
@@ -34,23 +33,24 @@ export default function LocationContainer() {
     const [clue, setClue] = useState();
     const [clueItem, setClueItem] = useState();
 
+
     const [clueList, setClueList] = useState(() => {
         return localStorage.getItem(`clueList`) === undefined || localStorage.getItem(`clueList`) === null ? [] : localStorage.getItem(`clueList`).split(',');
     });
     
     const culprit = localStorage.getItem('culprit');
-
+    
     const locationSvgs = {
         "lounge": <Suspense fallback={renderLoader()}><Lounge mouseOver={handleMouseOver} click={handleClick} mouseOut={handleMouseOut}/></Suspense>,
         "diningRoom": <Suspense fallback={renderLoader()}><DiningRoom mouseOver={handleMouseOver} click={handleClick} clue={clueArray(localStorage.getItem('death'))[1].name} mouseOut={handleMouseOut}/></Suspense>,
         "study": <Suspense fallback={renderLoader()}><Study mouseOver={handleMouseOver} click={handleClick} mouseOut={handleMouseOut} clue={clueArray(localStorage.getItem('death'))[0].name}/></Suspense>,
         "kitchen": <Suspense fallback={renderLoader()}><Kitchen mouseOver={handleMouseOver} click={handleClick} mouseOut={handleMouseOut}/></Suspense>,
-        "garden": <Suspense fallback={renderLoader()}><Garden mouseOver={handleMouseOver} click={handleClick} mouseOut={handleMouseOut}/></Suspense>,
+        "garden": <Suspense fallback={renderLoader()}><Garden mouseOver={handleMouseOver} click={handleClick} mouseOut={handleMouseOut} clue={culpritClues[culprit].guilty[1].name}/></Suspense>,
         "bedroom": <Suspense fallback={renderLoader()}><Bedroom mouseOver={handleMouseOver} click={handleClick} mouseOut={handleMouseOut} clue={culpritClues[culprit].guilty[0].name}/></Suspense>
     };
-
+    
     const locationSvg = locationSvgs[`${camelCaseName(location)}`];
-
+    
     useEffect(() => {
         localStorage.setItem(`clueList`, clueList.join(','))
         document.title = `Locations | ${capitalizeMultipleWords(location)}`;
@@ -58,25 +58,23 @@ export default function LocationContainer() {
     
     function handleMouseOver(e) {
         setClue(e.target.dataset.name);
+        setClueItem(e.target.dataset.clue);
     }
-
+    
     function handleMouseOut() {
         setClue('');
     }
-
+    
     function handleClick(e) {
-        setClueItem(e.target.dataset.clue);
-        console.log(clueItem);
         setClueList((prev) => {
-            if (prev.includes(clueItem)) {
-                e.target.setAttribute('disabled', ''); 
-                return [...prev];
-            } else {
+            if (!prev.includes(clueItem)) {
                 cluePopup.current.classList.add('popup-show');
                 setTimeout(() => {
                     cluePopup.current.classList.remove('popup-show');
-                }, 3000);
+                }, 1000);
                 return [...prev, clueItem];
+            } else {
+                return [...prev];
             }
         });
     }

@@ -6,7 +6,7 @@ export const relationships =  {
 	},
 
 	"Lady Of The House": {
-		normal: ["We had a really good relationship"],
+		normal: ["We had a really good relationship..."],
 		guilty: "(Sobs)... We were happy!"
 	},
 

@@ -24,12 +24,13 @@ function clueArray(method) {
             break;
         case 'pushed out of window': 
             clues = [
-                { name: 'open window', description: "" }, 
+                { name: 'open window', description: "" },
+                { name: 'fingerprints',  description: "a set of grubby fingerprints"} 
             ];
             break;
         case 'stabbing':
             clues = [
-                { name: 'knife', description: '' }, 
+                { name: 'knife', description: 'Knife stained with blood of the Lord' }, 
                 { name: 'bloodstain', description: ''}
             ];
             break;

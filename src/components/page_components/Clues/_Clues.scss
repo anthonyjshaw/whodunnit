@@ -8,4 +8,23 @@
 
 .clue {
 	margin: auto;
+	text-align: center;
+}
+
+@media (max-width: 1199px) {
+	.clue-icon {
+		height: 200px;
+		width: 200px;
+	}
+	.clue-grid {
+		grid-template-columns: repeat(1, 1fr);
+
+	}
+}
+
+@media (min-width: 1200px) {
+	.clue-icon {
+		height: 200px;
+		width: 200px;
+	}
 }

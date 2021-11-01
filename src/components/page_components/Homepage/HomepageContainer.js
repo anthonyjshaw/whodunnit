@@ -48,6 +48,7 @@ export default function HomepageContainer() {
                 
                 initSettings.forEach(e => e === 'hasSession' ? localStorage.setItem(e, 'false') : localStorage.setItem(e, ''));
                 localStorage.removeItem('clueList');
+                localStorage.removeItem('answer');
                 setGameText('Start');
             } else {
                 return;
