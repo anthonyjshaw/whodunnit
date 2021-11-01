@@ -3,10 +3,11 @@ import Clues from './Clues';
 import { culpritClues, normalClues } from "../../../lib/culprit_clues";
 import addDashesToName from "../../../lib/__utils__/add_dashes_to_name";
 import { clueArray } from "../../../lib/clue_array";
+import { Link } from "react-router-dom";
 
 const CluesContainer = () => {
 
-	const clues = () => {
+	const storedClues = () => {
         const clues = localStorage.getItem('clueList');
         if (clues) {
             return clues.split(',');
@@ -15,16 +16,14 @@ const CluesContainer = () => {
         }
     };
 
-    console.log(clues());
-
-    const clueList = clues().filter(e => e.length > 1);
-    const noClues = <p style={{ height: 200, fontSize: '2em', textAlign: 'center' }}>No clues!</p>;
+    const clueList = storedClues().filter(e => e.length > 1);
+    const noClues = <p style={{ height: 200, fontSize: '2em', textAlign: 'center' }}>No clues! Why don't you <Link to="/locations">search for some clues?</Link></p>;
     const culprit = localStorage.getItem('culprit');
-    const mappedClues = clues().length === 0 ? noClues : clueList.map((e) => {
+    const mappedClues = storedClues().length === 0 ? noClues : clueList.map((e) => {
 
 		const culClues = culpritClues[culprit].guilty.find(f => e === f.name);
 		const arrClues = clueArray(localStorage.getItem('death')).find(f => e === f.name);
-        const newNormalClue = normalClues.find(f => f.name === e);
+        const newNormalClue = normalClues.find(f => e === f.name);
 
 		const description = () => {
 			if (culClues === undefined && arrClues !== undefined) {
@@ -34,7 +33,7 @@ const CluesContainer = () => {
 			} else {
                 return newNormalClue.description;
             }
-		} 
+		}
 
        	return (
             <div key={clueList.indexOf(e) + 1} className="clue">

@@ -85,7 +85,7 @@ export default function LocationContainer() {
 
     return (
         <Suspense fallback={renderLoader()}>
-            <Location clue={clue} ref={cluePopup} location={location} svg={locationSvg} icon={icon}/>
+            <Location clue={clue} ref={cluePopup} location={location} svg={locationSvg} clueName={clueItem} icon={icon}/>
         </Suspense>
     );
 }
