@@ -74,7 +74,7 @@ export const actions = {
 			"garden": ""
 		}, 
 		guilty: { 
-			'shooting': 'data', 
+			'shooting': 'Shot eh? I was uh... getting some papers from my car...', 
 			'set on fire': 'date', 
 			'stabbing': 'Yo', 
 			'poison': '', 

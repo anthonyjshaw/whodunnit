@@ -27,6 +27,6 @@ export const otherCharacters = {
 
 	"Business Partner": {
 		normal: "",
-		guilty: "",
+		guilty: "Ah, well... the maid always came across as... peculiar...",
 	}
 }

@@ -12,7 +12,7 @@ export const relationships =  {
 
 	"Wayward Son": {
 		normal: ['What can I say, he was larger than life...'],
-		guilty: "All I'll say is the old man liked his money"
+		guilty: "All I'll say is the old man liked his money..."
 	},
 
 	"Maid": {
@@ -20,13 +20,13 @@ export const relationships =  {
 		guilty: 'I really liked the master, what a loss...'
 	},
 	"French Teacher": {
-		normal: [''],
-		guilty: "He was a... consumate gentleman",
+		normal: ['A consumate gentleman! Always paid on time.'],
+		guilty: "He was a... consumate gentleman...",
 	},
 
 	"Business Partner": {
-		normal: [''],
-		guilty: "Marberry and I"
+		normal: ['Our relationship was good. You might even say we were thick as thieves ah ha!'],
+		guilty: "Marberry and I, well we were uh... thick as thieves ha ha!"
 	}
 	
 }
