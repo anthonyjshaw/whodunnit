@@ -7,7 +7,7 @@ const Location = forwardRef((props, ref) => {
 
     const pStyle = {
         textAlign: 'center'
-    }
+    };
 
     return (
         <div className="container container-fade-in-and-translate">
