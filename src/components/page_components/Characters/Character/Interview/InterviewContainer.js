@@ -17,13 +17,10 @@ const InterviewContainer = () => {
 	let { name } = useParams();
 
     name = capitalizeMultipleWords(removeDashes(name));
-    console.log(name)
 
     name = capitalizeMultipleWords(name);
 
-    const [death, setDeath] = useState(() => {
-        return localStorage.getItem('death');
-    })
+    const death = localStorage.getItem('death');
 
     let [location, setLocation] = useState(() => localStorage.getItem(`${name}-location`));
     let [action, setAction] = useState(() => localStorage.getItem(`${name}-action`));

@@ -10,7 +10,7 @@ export const culpritLocations = {
 
 	"Lady Of The House": {
 		normal: locations[Math.floor(Math.random() * locations.length)],
-		guilty: {'shooting': 'garden', 'poison': 'bedroom', 'set on fire': 'lounge', "pushed out of window": 'study'}
+		guilty: {'shooting': 'garden', 'poison': 'bedroom', 'set on fire': 'lounge', "pushed out of window": 'study', "stabbing": 'kitchen'}
 	},
 
 	"French Teacher": {

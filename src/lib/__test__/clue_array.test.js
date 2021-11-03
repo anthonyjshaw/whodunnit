@@ -9,6 +9,10 @@ describe('Clue Array', () => {
 	test('should return array of clues based on a specific murder method', () => {
 		const clues = clueArray('poison');
 		console.log(clues);
-		expect(clues).toEqual(['empty bottle']);
+		expect(clues).toEqual( 
+			[ 
+				{ name: 'empty bottle', description: 'Empty bottle of poison' }, 
+				{ name: 'stain', description: 'greenish stain' }
+			]);
 	});
 })

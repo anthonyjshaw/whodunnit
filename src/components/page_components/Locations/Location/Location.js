@@ -2,10 +2,13 @@ import React, { forwardRef } from 'react';
 import { capitalize } from '../../../../lib/__utils__/capitalize';
 import BackArrow from '../../../ui_components/BackArrow/BackArrow';
 
-const pStyle = {
-    textAlign: 'center'
-}
+
 const Location = forwardRef((props, ref) => {
+
+    const pStyle = {
+        textAlign: 'center'
+    }
+
     return (
         <div className="container container-fade-in-and-translate">
             <div className='arrow'>
@@ -15,13 +18,14 @@ const Location = forwardRef((props, ref) => {
             <div className='location-wrapper'>
                 <div className='location-image-wrapper'>
                     <p>Check: <span className="location-clue">{props.clue}</span></p>  
-                        {props.svg}
-                </div>
-                <div>
+                    {props.svg}
                 </div>
             </div>
             <p style={pStyle}>Hover over the picture to look for clues!</p>
-            <div className='location-clue-popup' ref={ref}>Clue added!</div>
+            <div className='location-clue-popup' ref={ref}>
+                <p>Clue added: {props.clueName}</p>
+                <img src={props.clueImg} alt={props.clueName}/>
+            </div>
         </div>
     );
 });

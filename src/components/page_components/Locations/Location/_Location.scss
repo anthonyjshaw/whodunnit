@@ -5,9 +5,12 @@
 .location-clue-popup {
     position: fixed;
     opacity: 0;
+    top: 236px;
+    right: 150px;
     transition: opacity 1s ease;
     height: 200px;
     width: 200px;
+    color: black;
     background-color: white;
 }
 

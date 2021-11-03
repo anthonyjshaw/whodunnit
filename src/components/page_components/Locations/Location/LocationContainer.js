@@ -8,8 +8,8 @@ import { faSkull } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import removeDashes from '../../../../lib/__utils__/remove_dashes';
 import { culpritClues } from '../../../../lib/culprit_clues';
-import { locations } from '../../../../lib/locations';
 import { clueArray } from '../../../../lib/clue_array';
+import suspects from '../../../../lib/suspect_array';
 
 // SVG Components
 
@@ -34,23 +34,27 @@ export default function LocationContainer() {
     const [clue, setClue] = useState();
     const [clueItem, setClueItem] = useState();
 
+
     const [clueList, setClueList] = useState(() => {
         return localStorage.getItem(`clueList`) === undefined || localStorage.getItem(`clueList`) === null ? [] : localStorage.getItem(`clueList`).split(',');
     });
     
     const culprit = localStorage.getItem('culprit');
 
+    const normalClues = localStorage.getItem('normalClues').split(', ');
+    const newNormalClues = normalClues.map(e => JSON.parse(e));
+
     const locationSvgs = {
-        "lounge": <Suspense fallback={renderLoader()}><Lounge mouseOver={handleMouseOver} click={handleClick} mouseOut={handleMouseOut}/></Suspense>,
-        "diningRoom": <Suspense fallback={renderLoader()}><DiningRoom mouseOver={handleMouseOver} click={handleClick} clue={clueArray(localStorage.getItem('death'))[1].name} mouseOut={handleMouseOut}/></Suspense>,
-        "study": <Suspense fallback={renderLoader()}><Study mouseOver={handleMouseOver} click={handleClick} mouseOut={handleMouseOut} clue={clueArray(localStorage.getItem('death'))[0].name}/></Suspense>,
-        "kitchen": <Suspense fallback={renderLoader()}><Kitchen mouseOver={handleMouseOver} click={handleClick} mouseOut={handleMouseOut}/></Suspense>,
-        "garden": <Suspense fallback={renderLoader()}><Garden mouseOver={handleMouseOver} click={handleClick} mouseOut={handleMouseOut}/></Suspense>,
-        "bedroom": <Suspense fallback={renderLoader()}><Bedroom mouseOver={handleMouseOver} click={handleClick} mouseOut={handleMouseOut} clue={culpritClues[culprit].guilty[0].name}/></Suspense>
+        "lounge": <Suspense fallback={renderLoader()}><Lounge mouseOver={handleMouseOver} click={handleClick} mouseOut={handleMouseOut} normalClue={newNormalClues[0].name}/></Suspense>,
+        "diningRoom": <Suspense fallback={renderLoader()}><DiningRoom mouseOver={handleMouseOver} click={handleClick} clue={clueArray(localStorage.getItem('death'))[1].name} normalClue={newNormalClues[1].name} mouseOut={handleMouseOut}/></Suspense>,
+        "study": <Suspense fallback={renderLoader()}><Study mouseOver={handleMouseOver} click={handleClick} mouseOut={handleMouseOut} normalClue={newNormalClues[2].name} clue={clueArray(localStorage.getItem('death'))[0].name}/></Suspense>,
+        "kitchen": <Suspense fallback={renderLoader()}><Kitchen mouseOver={handleMouseOver} click={handleClick} mouseOut={handleMouseOut} normalClue={newNormalClues[3].name}/></Suspense>,
+        "garden": <Suspense fallback={renderLoader()}><Garden mouseOver={handleMouseOver} click={handleClick} mouseOut={handleMouseOut} normalClue={newNormalClues[4]} clue={culpritClues[culprit].guilty[1].name}/></Suspense>,
+        "bedroom": <Suspense fallback={renderLoader()}><Bedroom mouseOver={handleMouseOver} click={handleClick} mouseOut={handleMouseOut} normalClue={newNormalClues[5]} clue={culpritClues[culprit].guilty[0].name}/></Suspense>
     };
-
+    
     const locationSvg = locationSvgs[`${camelCaseName(location)}`];
-
+    
     useEffect(() => {
         localStorage.setItem(`clueList`, clueList.join(','))
         document.title = `Locations | ${capitalizeMultipleWords(location)}`;
@@ -58,32 +62,30 @@ export default function LocationContainer() {
     
     function handleMouseOver(e) {
         setClue(e.target.dataset.name);
+        setClueItem(e.target.dataset.clue);
     }
-
+    
     function handleMouseOut() {
         setClue('');
     }
-
+    
     function handleClick(e) {
-        setClueItem(e.target.dataset.clue);
-        console.log(clueItem);
         setClueList((prev) => {
-            if (prev.includes(clueItem)) {
-                e.target.setAttribute('disabled', ''); 
-                return [...prev];
-            } else {
+            if (!prev.includes(clueItem)) {
                 cluePopup.current.classList.add('popup-show');
                 setTimeout(() => {
                     cluePopup.current.classList.remove('popup-show');
-                }, 3000);
+                }, 1000);
                 return [...prev, clueItem];
+            } else {
+                return [...prev];
             }
         });
     }
 
     return (
         <Suspense fallback={renderLoader()}>
-            <Location clue={clue} ref={cluePopup} location={location} svg={locationSvg} icon={icon}/>
+            <Location clue={clue} ref={cluePopup} location={location} svg={locationSvg} clueName={clueItem} icon={icon}/>
         </Suspense>
     );
 }

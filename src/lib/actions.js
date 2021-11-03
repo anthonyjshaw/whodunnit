@@ -18,8 +18,8 @@ export const actions = {
 	'Lady Of The House': { 
 		normal: {
 			'study': 'I was organizing something for his birthday...', 
-			'lounge': 'I was watching my soaps', 
-			'dining room': 'I was having some tea and biscuits' 
+			'lounge': 'I was watching my soaps...', 
+			'dining room': 'I was having some tea and biscuits...' 
 		}, 
 		guilty: { 
 			'shooting': 'Well... I was doing a reading of Chekov...', 
@@ -74,7 +74,7 @@ export const actions = {
 			"garden": ""
 		}, 
 		guilty: { 
-			'shooting': 'data', 
+			'shooting': 'Shot eh? I was uh... getting some papers from my car...', 
 			'set on fire': 'date', 
 			'stabbing': 'Yo', 
 			'poison': '', 

@@ -12,7 +12,6 @@ export const otherCharacters = {
 
 	"Wayward Son": {
 		normal: "Don't like the maid, seems like she'd do the old man in...",
-
 		guilty: "If you ask me, the maid. Too mysterious for my liking..."
 	},
 
@@ -28,6 +27,6 @@ export const otherCharacters = {
 
 	"Business Partner": {
 		normal: "",
-		guilty: "",
+		guilty: "Ah, well... the maid always came across as... peculiar...",
 	}
 }

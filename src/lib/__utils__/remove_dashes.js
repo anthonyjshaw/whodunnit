@@ -1,3 +1,3 @@
 export default function removeDashes(name) {
-    return name.replace(/-/g, ' ');
-  }
+  return name.replace(/-/g, ' ');
+}

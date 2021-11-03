@@ -1,5 +1,3 @@
-
-
 function clueArray(method) {
     let clues = [];
     switch (method) {
@@ -7,7 +5,7 @@ function clueArray(method) {
             clues = [
                 { name: 'bullet hole', description: 'Hole made by bullet'}, 
                 { name: 'bullet casing', description: '' }, 
-                { name: 'pistol', description: '' }
+                { name: 'pistol', description: 'six round revolver. Smells of cordite.' }
             ];
             break;
         case 'poison':
@@ -24,13 +22,14 @@ function clueArray(method) {
             break;
         case 'pushed out of window': 
             clues = [
-                { name: 'open window', description: "" }, 
+                { name: 'open window', description: "" },
+                { name: 'fingerprints',  description: "a set of grubby fingerprints"} 
             ];
             break;
         case 'stabbing':
             clues = [
-                { name: 'knife', description: '' }, 
-                { name: 'bloodstain', description: ''}
+                { name: 'knife', description: 'Knife stained with blood of the Lord' }, 
+                { name: 'bloodstain', description: 'Most likely from Lord Marberry'}
             ];
             break;
         default: 

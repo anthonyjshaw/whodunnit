@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import Crime from "./Crime";
 import Action from '../../ui_components/Action/Action';
 import addDashesToName from '../../../lib/__utils__/add_dashes_to_name';
@@ -7,13 +7,9 @@ import EmptyCrime from './EmptyCrime';
 const CrimeContainer = () => {
 
  
-    const [death, setDeath] = useState(() => {
-        return localStorage.getItem('death');
-    });
+    const death = localStorage.getItem('death');
+    const loc = localStorage.getItem('location');
 
-    const [loc, setLoc] = useState(() => {
-        return localStorage.getItem('location');
-    });
     
     useEffect(()=> {
         localStorage.setItem('death', death);

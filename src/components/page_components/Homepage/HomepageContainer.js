@@ -1,4 +1,5 @@
 import React, {useState, useEffect, lazy, Suspense} from 'react';
+import { culpritClues } from '../../../lib/culprit_clues';
 import { locations } from '../../../lib/locations';
 import { murderMethods } from '../../../lib/murder_methods';
 import suspects from '../../../lib/suspect_array';
@@ -32,7 +33,14 @@ export default function HomepageContainer() {
                     localStorage.setItem('culprit', culprit);
                     localStorage.setItem('death', death);
                     localStorage.setItem('location', location);
+                    let normalClues = [];
+                    suspects.forEach(e => {
+                         normalClues.push(culpritClues[e.name].normal);
+                    });
+                    const newNormalClues = normalClues.sort(() => Math.random() - 0.5).map(e => JSON.stringify(e)).join(', ');
+                    localStorage.setItem('normalClues', newNormalClues);
                 }
+
     }
 
     function quitGame() {
@@ -48,6 +56,8 @@ export default function HomepageContainer() {
                 
                 initSettings.forEach(e => e === 'hasSession' ? localStorage.setItem(e, 'false') : localStorage.setItem(e, ''));
                 localStorage.removeItem('clueList');
+                localStorage.removeItem('normalClues');
+                localStorage.removeItem('answer');
                 setGameText('Start');
             } else {
                 return;

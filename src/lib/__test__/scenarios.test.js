@@ -1,4 +1,3 @@
-import { relationships } from "../relationships";
 import { scenarios } from "../scenarios";
 
 describe('Scenarios', () => {
@@ -8,4 +7,10 @@ describe('Scenarios', () => {
 		expect(typeof scenario).toBe("object");
 	});
 
-})
+	test('should return object if suspect is not culprit', () => {
+		const scenario = scenarios('Lady Of The House', 'Maid', 'stabbing');
+		console.log(scenario);
+		expect(typeof scenario).toBe('object');
+	});
+
+});
