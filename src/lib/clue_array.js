@@ -4,7 +4,7 @@ function clueArray(method) {
         case 'shooting':
             clues = [
                 { name: 'bullet hole', description: 'Hole made by bullet'}, 
-                { name: 'bullet casing', description: '' }, 
+            { name: 'bullet casing', description: '' }, 
                 { name: 'pistol', description: 'six round revolver. Smells of cordite.' }
             ];
             break;
