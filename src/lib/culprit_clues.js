@@ -5,7 +5,7 @@ export const culpritClues = {
 	"Butler": {
 		normal: { name: 'white gloves', description: 'Pair of white gloves. Seems to have been well worn.' },
 		guilty: [
-			{ name: 'note to bank manager', description: 'Reads: You owe £20000. Please pay by the end of the month.' },
+			{ name: 'note from bank manager', description: 'Reads: You owe £20000. Please pay by the end of the month.' },
 			{ name: 'glasses case', description: "Glasses case with embossed mustache"}
 		]
 	},
@@ -58,4 +58,4 @@ suspects.forEach(e => {
 	normalClues.push(culpritClues[e.name].normal);
 });
 
-export {normalClues };
+export { normalClues };

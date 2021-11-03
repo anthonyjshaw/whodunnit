@@ -55,9 +55,7 @@ const CrimeContainer = () => {
     death={death} 
     loc={loc}/> : <EmptyCrime />;
 
-	return (
-		crimeContent
-	);
+	return crimeContent;
 }
 
 export default CrimeContainer;

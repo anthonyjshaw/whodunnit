@@ -1,6 +1,6 @@
-export function addUnderscoreToName(name) {
+export default function addUnderscoreToName(str) {
     try {
-        return name.replace(/\s/g, '_');
+        return str.replace(/\s/g, '_');
     } catch (error) {
         console.error(error);
     }
