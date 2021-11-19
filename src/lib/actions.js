@@ -78,16 +78,17 @@ export const actions = {
 		normal: {
 			"dining room": 'Preparing to eat an exquisite meal of course!',
 			"study": 'I was preparing to discuss certain... business matters...',
-			"lounge": "",
-			"kitchen" : "",
-			"garden": "Taking some time to reflect on my successful career ah ha!"
+			"lounge": "I was waiting... for Marberry to finalise some dealings.",
+			"kitchen" : "Having elevenses...",
+			"garden": "Taking some time to reflect on my successful career ah ha!",
+			"bedroom": "Admiring the view... what's wrong with that?"
 		}, 
 		guilty: { 
 			'shooting': 'Shot eh? I was uh... getting some papers from my car...', 
-			'set on fire': 'Well.. I was ', 
-			'stabbing': 'Yo', 
-			'poison': '', 
-			'pushed out of window': '' 
+			'set on fire': 'Well.. I was firing up the engine to my car...', 
+			'stabbing': 'A stabbing? The only sharp object I was using was my wit! Ha ha!', 
+			'poison': 'I find this line of questioning poisonous if I\'m to be perfectly honest... I was probably on a call...', 
+			'pushed out of window': 'I have no idea... making a transaction of some kind...' 
 		}
 	},
 }
