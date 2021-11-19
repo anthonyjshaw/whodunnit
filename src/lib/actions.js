@@ -5,14 +5,15 @@ export const actions = {
 			'lounge': 'Getting the master\'s newspaper', 
 			'dining room':'Answering the door', 
 			'bedroom': 'Folding laundry', 
-			'garden': 'Organising the master\'s letters.' 
+			'garden': 'Organising the master\'s letters.',
+			'study': 'Dusting the master\'s desk...'
 		}, 
 		guilty: { 
 			'shooting': 'cleaning the master\'s gun', 
 			'set on fire': 'I was refilling his prized gold plated lighter with fluid... what a tragedy.', 
-			'stabbing': '', 
-			'poison': '', 
-			'pushed out of window': ''
+			'stabbing': 'Polishing the silverware', 
+			'poison': 'Administering the master\'s medicine', 
+			'pushed out of window': 'Cleaning the furniture...'
 		}
 	},
 	'Lady Of The House': { 
@@ -26,20 +27,24 @@ export const actions = {
 			'set on fire': 'What was I doing...? Oh yes! I was ', 
 			'stabbing': "Oh... I can't remember! It's like a dagger through the heart!", 
 			'poison': "I was doing a reading of Macbeth...", 
-			'pushed out of window': ""
+			'pushed out of window': "He was pushed?! I... I was using the computer..."
 		} 
 	},
 	'Wayward Son': {
 		normal: {
 			"dining room": "Doing some business deals...", 
-			"garden": "Um, chilling with the flowers..."
+			"garden": "Um, chilling with the flowers...",
+			"study": "What else, studying!",
+			"lounge": "Watching telly...",
+			"kitchen": "Making some food y'know...",
+			"bedroom": "Looking for... valuables..."
 		}, 
 		guilty: { 
-			'shooting': 'Yeah well... I was ', 
+			'shooting': 'Yeah well... I was checking out the armoury...', 
 			'set on fire': 'Outside, having a cigarette', 
-			'stabbing': '', 
-			'poison': '', 
-			'pushed out of window': ''
+			'stabbing': 'I dunno, dealing with my hangover...', 
+			'poison': 'Beats me... Wait, I was listening to some classic rock... Alice Cooper...', 
+			'pushed out of window': 'Fell out the window? Classic Dad...'
 		}
 	},
 	'Maid': { 
