@@ -7,6 +7,7 @@ import addDashesToName from '../../../../lib/__utils__/add_dashes_to_name';
 import removeDashes from '../../../../lib/__utils__/remove_dashes';
 import { capitalizeMultipleWords } from '../../../../lib/__utils__/capitalize_multiple_words';
 
+// lazy loading
 const Character = lazy(() => import('./Character'));
 const renderLoader = () => <div>Loading...</div>;
 
@@ -16,14 +17,12 @@ const CharacterContainer = () => {
   name = removeDashes(name);
 
   const character = suspects.find(e => e.name === capitalizeMultipleWords(name));
-
   const location = localStorage.getItem(`${character.name}-location`);
-
   const action = localStorage.getItem(`${character.name}-action`);
   
   
-  const loc = location === "" || location === null || location === 'undefined' || location === 'null' ? '?' : location;
-  const act = action === "" || action === null || action === 'undefined' || action === 'null' ? '?' : action;
+  const characterLocation = location === "" || location === null || location === 'undefined' || location === 'null' ? '?' : location;
+  const characterAction = action === "" || action === null || action === 'undefined' || action === 'null' ? '?' : action;
 
   useEffect(() => {
     localStorage.setItem(`${character.name}-location`, location);
@@ -38,8 +37,8 @@ const CharacterContainer = () => {
       <Character 
         name={character.name} 
         imgSrc={source} 
-        loc={loc}
-        action={act}
+        location={characterLocation}
+        action={characterAction}
         link={`/characters/${addDashesToName(character.name.toLowerCase())}/interview`} 
         source={source}
         profile={character.profile}

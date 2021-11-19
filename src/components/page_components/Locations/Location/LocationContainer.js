@@ -84,7 +84,8 @@ export default function LocationContainer() {
                 }
             });
         }
-        renderLocation = <Location clue={clue} ref={cluePopup} location={location} svg={locationSvg} clueName={clueItem} icon={icon} clueImg={`${process.env.PUBLIC_URL}/assets/clues/${addDashesToName(clueItem)}.svg`}/>;
+        const clueImgPath = clueItem ? `${process.env.PUBLIC_URL}/assets/clues/${addDashesToName(clueItem)}.svg` : ''
+        renderLocation = <Location clue={clue} ref={cluePopup} location={location} svg={locationSvg} clueName={clueItem} icon={icon} clueImg={clueImgPath}/>;
     } else {
         renderLocation = <h1 className="page-header"><Link to="/">Start Game</Link></h1>;
     }   

@@ -80,7 +80,7 @@ const InterviewContainer = () => {
     const newName = name.toLowerCase();
 
 	return (
-		<Interview name={name.toLowerCase()} actions={mappedActions} imgSrc={addDashesToName(newName)} newName={newName} />
+		<Interview name={newName} actions={mappedActions} imgSrc={addDashesToName(newName)} newName={newName} />
 	);
 }
 

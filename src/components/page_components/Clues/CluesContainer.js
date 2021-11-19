@@ -17,9 +17,8 @@ const CluesContainer = () => {
     };
 
     const clueList = storedClues().filter(e => e.length > 1);
-    const noClues = <p style={{ height: 200, fontSize: '2em', textAlign: 'center' }}>No clues! Why don't you <Link to="/locations">search for some clues?</Link></p>;
     const culprit = localStorage.getItem('culprit');
-    const mappedClues = storedClues().length === 0 ? noClues : clueList.map((e) => {
+    const mappedClues = storedClues().length === 0 ? null : clueList.map((e) => {
 
 		const culClues = culpritClues[culprit].guilty.find(f => e === f.name);
 		const arrClues = clueArray(localStorage.getItem('death')).find(f => e === f.name);

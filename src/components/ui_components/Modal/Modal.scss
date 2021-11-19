@@ -41,7 +41,7 @@
 	cursor: pointer;
 	color: black;
 	position: relative;
-	left: 747px;
+	left: 7px;
 	top: 7px;
 }
 
@@ -61,9 +61,18 @@
 	}
 }
 
+
 @media (max-width: 1199px) {
+	.modal {
+		width: 100vw;
+		height: 100vw;
+		padding: 0;
+	}
 	.modal-content {
 		width: 100vw;
 		height: 100vh;
+	}
+	.modal-show {
+		z-index: 1;
 	}
 }

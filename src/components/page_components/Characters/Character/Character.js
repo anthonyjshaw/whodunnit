@@ -16,9 +16,8 @@ export default function Character(props) {
           <div className='character-profile'>
             <p>Bio: {props.profile}</p>
             <p>Age: {props.age}</p>
-            <p>Location: {props.loc} </p>
+            <p>Location: {props.location} </p>
             <p>Action at time of death: {props.action} </p>
-            <p>Possible motive: ?</p>
             <p>
               <em>
                 <Link to={props.link} className="underline">

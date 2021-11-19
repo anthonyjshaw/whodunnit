@@ -20,7 +20,7 @@ export const culpritLocations = {
 
 	"Business Partner": {
 		normal: locations[Math.floor(Math.random() * locations.length)],
-		guilty: {'shooting': 'dining room', "poison": 'dining room', 'stabbing': 'kitchen', 'set on fire': 'garden'}
+		guilty: {'shooting': 'dining room', "poison": 'dining room', 'stabbing': 'kitchen', 'set on fire': 'garden', 'pushed out of window': 'bedroom'}
 	},
 
 	"Maid": {
@@ -30,7 +30,7 @@ export const culpritLocations = {
 
 	"Wayward Son": {
 		normal: locations[Math.floor(Math.random() * locations.length)],
-		guilty: {"shooting": '', 'kitchen': '', 'set on fire': 'garden' }
+		guilty: {"shooting": 'bedroom', 'poison': 'kitchen', 'set on fire': 'garden', 'pushed out of window': 'lounge' }
 	}
 
 

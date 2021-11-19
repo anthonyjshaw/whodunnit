@@ -4,6 +4,10 @@
 
 .location-clue-popup {
     position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
     padding: 24px;
     opacity: 0;
     top: 236px;
@@ -13,6 +17,10 @@
     width: 200px;
     color: black;
     background-color: white;
+}
+
+.popup-icon {
+    margin: auto;
 }
 
 .popup-show {
@@ -36,6 +44,10 @@
 @media (min-width: 1200px) {
     .location-image {
         width: 500px;
+    }
+    .popup-icon {
+        width: 100px;
+        height: 100px;
     }
 }  
 

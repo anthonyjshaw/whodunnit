@@ -24,7 +24,7 @@ const Location = forwardRef((props, ref) => {
             <p style={pStyle}>Hover over the picture to look for clues!</p>
             <div className='location-clue-popup' ref={ref}>
                 <p>Clue added: {props.clueName}</p>
-                <img src={props.clueImg} alt={props.clueName}/>
+                <img src={props.clueImg} className="popup-icon" alt={props.clueName}/>
             </div>
         </div>
     );
