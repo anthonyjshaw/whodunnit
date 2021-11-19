@@ -4,7 +4,7 @@ function clueArray(method) {
         case 'shooting':
             clues = [
                 { name: 'bullet hole', description: 'Hole made by bullet'}, 
-            { name: 'bullet casing', description: '' }, 
+                { name: 'bullet casing', description: '' }, 
                 { name: 'pistol', description: 'six round revolver. Smells of cordite.' }
             ];
             break;
@@ -16,14 +16,14 @@ function clueArray(method) {
             break;
         case 'set on fire':
             clues = [
-                { name: 'lighter', description: ''}, 
-                { name: 'gas', description: ''}
+                { name: 'lighter', description: 'Lighter with ornate pattern... half full'}, 
+                { name: 'lighter fluid', description: 'Gas canister used to refill lighter'}
             ];
             break;
         case 'pushed out of window': 
             clues = [
-                { name: 'open window', description: "" },
-                { name: 'fingerprints',  description: "a set of grubby fingerprints"} 
+                { name: 'fingerprints',  description: "a set of grubby fingerprints"}, 
+                { name: 'open window', description: "Window left open..." },
             ];
             break;
         case 'stabbing':
