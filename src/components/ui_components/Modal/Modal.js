@@ -6,12 +6,12 @@ import { Link } from "react-router-dom";
 const Modal = React.forwardRef((props, ref) => {
 
 	return (
-		<div className='modal' ref={ref} key={Number.toString()}>
-			<div className="modal-content">
+		<div className='modal' ref={ref}>
+			<div className="modal-content" >
 				<FontAwesomeIcon icon={faTimes} className='modal-cross' onClick={props.onClick}/>
 				<h2 style={{fontSize: '3.2em'}} className="page-header">Who's the culprit?</h2>
 				<h2 style={{textAlign: 'center'}}>It's the ...</h2>
-				<div className='modal-grid'>
+				<div className='modal-grid' key={Number.toString()}>
 					{props.grid}
 				</div>
 				<p style={{textAlign: 'center'}}>{props.answer}</p>

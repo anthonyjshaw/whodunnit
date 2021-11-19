@@ -59,7 +59,7 @@ const GuessCulprit = () => {
 
 	const mappedSuspects = suspects.map((e) => { 
 		return(
-			<div className='modal-character'>
+			<div className='modal-character' key={e.name}>
 				<p style={{cursor:'pointer'}} onClick={guess}>{e.name}</p>
 				<img src={`${process.env.PUBLIC_URL}/assets/character-avis/${addDashesToName(e.name.toLowerCase())}.svg`} alt={e.name} className='modal-icon'/>
 			</div> 

@@ -59,23 +59,23 @@ export const actions = {
 		}, 
 		guilty: { 
 			'shooting': 'Ah... I was discussing ', 
-			'set on fire': 'We were talking about', 
-			'stabbing': 'We were discussing Huis Clos', 
+			'set on fire': 'We were talking about the Bazar de la Charité...', 
+			'stabbing': 'We were discussing Huis Clos...', 
 			'poison': '', 
 			'pushed out of window': '' 
 		}
 	},
 	'Business Partner': { 
 		normal: {
-			"dining room": '',
-			"study": '',
+			"dining room": 'Preparing to eat an exquisite meal of course!',
+			"study": 'I was preparing to discuss certain... business matters...',
 			"lounge": "",
 			"kitchen" : "",
-			"garden": ""
+			"garden": "Taking some time to reflect on my successful career ah ha!"
 		}, 
 		guilty: { 
 			'shooting': 'Shot eh? I was uh... getting some papers from my car...', 
-			'set on fire': 'date', 
+			'set on fire': 'Well.. I was ', 
 			'stabbing': 'Yo', 
 			'poison': '', 
 			'pushed out of window': '' 

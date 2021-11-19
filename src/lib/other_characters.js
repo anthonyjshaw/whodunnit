@@ -21,12 +21,12 @@ export const otherCharacters = {
 	},
 
 	"French Teacher": {
-		normal: "The ",
-		guilty: ""
+		normal: "I've never had a great relationship with the lady...",
+		guilty: "The lady has alwas been a suspicious one..."
 	},
 
 	"Business Partner": {
-		normal: "",
+		normal: "That maid... seems peculiar methinks...",
 		guilty: "Ah, well... the maid always came across as... peculiar...",
 	}
 }
