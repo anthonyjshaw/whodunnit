@@ -21,6 +21,9 @@ export const actions = {
 			'study': 'I was organizing something for his birthday...', 
 			'lounge': 'I was watching my soaps...', 
 			'dining room': 'I was having some tea and biscuits...',
+			"garden": 'I was enjoying the chrysanthemums...',
+			"bedroom": "Well... it's my bedroom, I can do what I want!",
+			"kitchen": "I was asking the butler to make my favourite dish..."
 		}, 
 		guilty: { 
 			'shooting': 'Well... I was doing a reading of Chekov...', 
@@ -48,10 +51,10 @@ export const actions = {
 		}
 	},
 	'Maid': { 
-		normal: { "dining room": 'I was setting the table', 'kitchen': 'making tea', 'lounge': 'sweeping the floor', 'bedroom': 'airing out the bedroom', 'garden': 'watering flowers'}, 
+		normal: { "dining room": 'I was setting the table', 'kitchen': 'Making tea', 'lounge': 'Sweeping the floor', 'bedroom': 'Airing out the bedroom', 'garden': 'Watering flowers'}, 
 		guilty: { 
-			'shooting': '', 
-			'set on fire': '', 
+			'shooting': 'A shooting? I was... taking orders from the butler...', 
+			'set on fire': 'Oh goodness! I.. ', 
 			'stabbing': '', 
 			'poison': '', 
 			'pushed out of window': ''
@@ -67,11 +70,11 @@ export const actions = {
 
 		}, 
 		guilty: { 
-			'shooting': 'Ah... I was discussing ', 
+			'shooting': 'Ah... I was discussing the tale of François Fournier-Sarlovèze...', 
 			'set on fire': 'We were talking about the Bazar de la Charité...', 
 			'stabbing': 'We were discussing Huis Clos...', 
-			'poison': '', 
-			'pushed out of window': '' 
+			'poison': 'We were discussing the case of Catherine Deshayes, a.k.a La Voisin...', 
+			'pushed out of window': 'We... were discussing the work of Niépce...' 
 		}
 	},
 	'Business Partner': { 
