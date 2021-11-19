@@ -27,7 +27,7 @@ export const actions = {
 		}, 
 		guilty: { 
 			'shooting': 'Well... I was doing a reading of Chekov...', 
-			'set on fire': 'What was I doing...? Oh yes! I was ', 
+			'set on fire': 'What was I doing...? Oh yes! I was um... having a cigarette...', 
 			'stabbing': "Oh... I can't remember! It's like a dagger through the heart!", 
 			'poison': "I was doing a reading of Macbeth...", 
 			'pushed out of window': "He was pushed?! I... I was using the computer..."
@@ -51,13 +51,20 @@ export const actions = {
 		}
 	},
 	'Maid': { 
-		normal: { "dining room": 'I was setting the table', 'kitchen': 'Making tea', 'lounge': 'Sweeping the floor', 'bedroom': 'Airing out the bedroom', 'garden': 'Watering flowers'}, 
+		normal: { 
+			"dining room": 'I was setting the table I believe...', 
+			'kitchen': 'Making tea sir...', 
+			'lounge': 'Sweeping the floor... it\'s fairly dusty', 
+			'bedroom': 'Airing out the bedroom... pretty musty...', 
+			'garden': 'Watering flowers, keeping them alive...',
+			"study": 'Organising the bookshelf...'
+		}, 
 		guilty: { 
 			'shooting': 'A shooting? I was... taking orders from the butler...', 
-			'set on fire': 'Oh goodness! I.. ', 
-			'stabbing': '', 
-			'poison': '', 
-			'pushed out of window': ''
+			'set on fire': 'Oh goodness! I.. was... lighting the fireplace in the kitchen...', 
+			'stabbing': 'He was stabbed? I was... cleaning... something...', 
+			'poison': 'Poisoned? How could have he been poisoned? I must\'ve been asking the butler for some help...', 
+			'pushed out of window': 'What? Impossible! I was washing the windows... I mean... the downstairs ones of course...'
 		}
 	},
 	'French Teacher': { 
@@ -66,8 +73,8 @@ export const actions = {
 			"garden": "Smelling the flowers...",
 			"lounge": "Admiring the classic Versailles-esque furniture...",
 			"study": "Taking a lesson with the lady...",
-			"bedroom": "Ahem, admiring the classic Versailles-esque bedframe..."
-
+			"bedroom": "Ahem, admiring the classic Versailles-esque bedframe...",
+			"kitchen": "Preparing a café au lait..."
 		}, 
 		guilty: { 
 			'shooting': 'Ah... I was discussing the tale of François Fournier-Sarlovèze...', 
@@ -94,4 +101,4 @@ export const actions = {
 			'pushed out of window': 'I have no idea... making a transaction of some kind...' 
 		}
 	},
-}
+};
