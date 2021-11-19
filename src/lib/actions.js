@@ -4,8 +4,8 @@ export const actions = {
 			'kitchen': 'Cooking dinner', 
 			'lounge': 'Getting the master\'s newspaper', 
 			'dining room':'Answering the door', 
-			'bedroom': 'folding laundry', 
-			'garden': 'organising the master\'s letters.' 
+			'bedroom': 'Folding laundry', 
+			'garden': 'Organising the master\'s letters.' 
 		}, 
 		guilty: { 
 			'shooting': 'cleaning the master\'s gun', 
@@ -19,7 +19,7 @@ export const actions = {
 		normal: {
 			'study': 'I was organizing something for his birthday...', 
 			'lounge': 'I was watching my soaps...', 
-			'dining room': 'I was having some tea and biscuits...' 
+			'dining room': 'I was having some tea and biscuits...',
 		}, 
 		guilty: { 
 			'shooting': 'Well... I was doing a reading of Chekov...', 
@@ -31,7 +31,7 @@ export const actions = {
 	},
 	'Wayward Son': {
 		normal: {
-			"dining room": "doing some business deals", 
+			"dining room": "Doing some business deals...", 
 			"garden": "Um, chilling with the flowers..."
 		}, 
 		guilty: { 
@@ -54,8 +54,12 @@ export const actions = {
 	},
 	'French Teacher': { 
 		normal: {
-			"dining room": "Well, I was preparing my notes for the lady's house",
-			"garden": "",
+			"dining room": "Well, I was preparing my notes for the lady's lesson...",
+			"garden": "Smelling the flowers...",
+			"lounge": "Admiring the classic Versailles-esque furniture...",
+			"study": "Taking a lesson with the lady...",
+			"bedroom": "Ahem, admiring the classic Versailles-esque bedframe..."
+
 		}, 
 		guilty: { 
 			'shooting': 'Ah... I was discussing ', 
